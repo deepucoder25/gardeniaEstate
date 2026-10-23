@@ -1,0 +1,643 @@
+/* Home Modules - Pricing & Project Overview Styles */
+.pricing-overview-section {
+  background-color: var(--bg-offwhite, #FAFAF7);
+}
+
+.section-title {
+  color: var(--btn-green, #094B32);
+  letter-spacing: 2px;
+}
+
+/* Enquiry Form Parallax Overlay Background */
+.enquiry-section {
+  background-image:  url('../images/slider/gardenia_hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Why Choose Us Section - Transparent Overlay Background Image */
+.why-choose-section {
+  background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('../images/slider/gardenia_hero.png') center / cover no-repeat;
+}
+
+/* Gold Ornament Line Dividers */
+.gold-ornament-divider .ornament-line {
+  display: inline-block;
+  width: 70px;
+  height: 1.5px;
+  background-color: var(--btn-gold-hover, #A88A4A);
+}
+
+.gold-ornament-divider .ornament-icon {
+  color: var(--btn-gold-hover, #A88A4A);
+  font-size: 1rem;
+}
+
+/* Pricing Card Styles */
+.pricing-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(168, 138, 74, 0.25);
+  transition: all 0.35s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(9, 75, 50, 0.12);
+  border-color: var(--btn-gold-hover, #A88A4A);
+}
+
+/* Double Gold-Ring Circular Badge */
+.pricing-icon-badge {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2.5px solid var(--btn-gold-hover, #A88A4A);
+  padding: 4px;
+  background-color: #ffffff;
+}
+
+.badge-inner-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--btn-green, #094B32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.65rem;
+}
+
+.pricing-amount {
+  color: var(--btn-green, #094B32);
+  letter-spacing: -0.5px;
+}
+
+/* Card Ornament Divider */
+.card-ornament-divider .card-line {
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: var(--btn-gold-hover, #A88A4A);
+}
+
+.card-ornament-divider .card-ornament-icon {
+  color: var(--btn-gold-hover, #A88A4A);
+  font-size: 0.8rem;
+}
+
+.pricing-type {
+  color: var(--btn-green, #094B32);
+  font-size: 1.15rem;
+}
+
+.pricing-size-pill {
+  background-color: #F4F7F5;
+  border: 1px solid #E2E9E4;
+  color: var(--text-dark, #26352F);
+  font-size: 0.95rem;
+}
+
+/* Enquire Now Button */
+.btn-pricing-enquire {
+  background-color: var(--btn-green, #094B32);
+  border-color: var(--btn-green, #094B32);
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-pricing-enquire:hover,
+.btn-pricing-enquire:focus {
+  background-color: var(--btn-gold-hover, #A88A4A);
+  border-color: var(--btn-gold-hover, #A88A4A);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(168, 138, 74, 0.35);
+}
+
+/* Project Overview Table Card */
+.overview-card {
+  border: 1px solid rgba(168, 138, 74, 0.25);
+  background-color: #ffffff;
+}
+
+.overview-header {
+  background-color: var(--btn-green, #094B32);
+}
+
+.overview-header-divider {
+  color: var(--btn-gold-hover, #A88A4A);
+  opacity: 0.8;
+  font-size: 1.25rem;
+}
+
+.row-icon {
+  color: var(--btn-gold-hover, #A88A4A);
+  font-size: 1.25rem;
+}
+
+.overview-row:hover {
+  background-color: rgba(9, 75, 50, 0.04);
+}
+
+/* Site Visit & Countdown Timer Section */
+.site-visit-countdown-section {
+  background-color: #ffffff;
+}
+
+.site-visit-main-title {
+  color: var(--btn-green, #094B32);
+  letter-spacing: -0.5px;
+}
+
+.hurry-title-red {
+  color: #e52521;
+  text-decoration-color: #e52521;
+  text-underline-offset: 6px;
+}
+
+.prelaunch-subtitle {
+  color: var(--text-dark, #26352F);
+  font-family: inherit;
+}
+
+.countdown-digit-col {
+  min-width: 90px;
+}
+
+/* Compact Digit Font Size */
+.countdown-digits {
+  font-family: inherit;
+  font-size: 1.65rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+@media (min-width: 992px) {
+  .countdown-digits {
+    font-size: 3.2rem;
+    letter-spacing: 6px;
+    font-weight: 700;
+  }
+}
+
+.countdown-divider-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d1d5db;
+}
+
+.countdown-label-blue {
+  color: #4a72d4;
+  font-weight: 500;
+}
+
+.btn-countdown-cta {
+  background-color: var(--btn-green, #094B32);
+  border-color: var(--btn-green, #094B32);
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 25px rgba(9, 75, 50, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-countdown-cta:hover,
+.btn-countdown-cta:focus {
+  background-color: var(--btn-gold-hover, #A88A4A);
+  border-color: var(--btn-gold-hover, #A88A4A);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(168, 138, 74, 0.4);
+}
+
+/* AMENITIES & LOCATION MAP SECTIONS */
+.section-title-theme {
+  color: #4a72d4;
+  letter-spacing: -0.5px;
+}
+
+.bounce-chevron-icon {
+  color: #4a72d4;
+  animation: bounceChevron 2s infinite;
+}
+
+@keyframes bounceChevron {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+.highlights-card {
+  background-color: var(--bg-offwhite, #FAFAF7);
+  border: 1px solid rgba(9, 75, 50, 0.1);
+}
+
+.highlights-heading {
+  color: var(--text-dark, #26352F);
+  border-bottom: 2px solid var(--btn-gold-hover, #A88A4A);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.bullet-dot {
+  color: var(--btn-green, #094B32);
+  font-weight: bold;
+}
+
+.amenity-grid-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(9, 75, 50, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.amenity-grid-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--btn-gold-hover, #A88A4A);
+  box-shadow: 0 10px 24px rgba(9, 75, 50, 0.12);
+}
+
+.amenity-icon-box {
+  color: var(--btn-green, #094B32);
+  transition: color 0.3s ease;
+}
+
+.amenity-grid-card:hover .amenity-icon-box {
+  color: var(--btn-gold-hover, #A88A4A);
+}
+
+.amenity-title {
+  color: var(--text-dark, #26352F);
+}
+
+.location-map-section {
+  background-color: var(--bg-offwhite, #FAFAF7);
+}
+
+.location-map-card {
+  border: 1px solid rgba(9, 75, 50, 0.1);
+}
+
+.map-iframe-box iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map-footer-bar {
+  background-color: #ffffff;
+  border-top: 1px solid #eef2f5;
+}
+
+/* Helper Styling Rules for Homepage Modules */
+.divider-line-gold {
+  width: 60px;
+  height: 3px;
+  background-color: var(--btn-gold-hover, #A88A4A);
+  border-radius: 2px;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(180deg, transparent 0%, rgba(38, 53, 47, 0.95) 100%);
+}
+
+.amenity-icon-circle {
+  width: 64px;
+  height: 64px;
+  transition: all 0.3s ease;
+}
+
+.amenity-card-item:hover .amenity-icon-circle {
+  background-color: var(--btn-green, #094B32);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.custom-estate-faq .accordion-button:not(.collapsed) {
+  background-color: rgba(9, 75, 50, 0.06);
+  color: var(--btn-green, #094B32);
+}
+
+/* --- LUXURY ESTATE GLOBAL & AMENITIES DESIGN --- */
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --bg-cream-estate: #FAF8F5;
+  --color-dark-estate: #0C3823;
+  --color-gold-estate: #C5A059;
+  --color-gold-light: #E5C985;
+}
+
+body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
+  font-family: var(--font-sans);
+}
+
+.text-dark-estate {
+  color: var(--color-dark-estate);
+}
+
+.bg-dark-estate {
+  background-color: var(--color-dark-estate);
+}
+
+.text-gold {
+  color: var(--color-gold-estate);
+}
+
+.border-gold-light {
+  border-color: rgba(197, 160, 89, 0.4);
+}
+
+.amenities-luxury-section {
+  background-color: var(--bg-cream-estate);
+}
+
+/* Gold Line Ornament Divider */
+.gold-line {
+  display: inline-block;
+  width: 60px;
+  height: 1.5px;
+  background-color: var(--color-gold-estate);
+}
+
+.gold-diamond {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-gold-estate);
+  transform: rotate(45deg);
+}
+
+/* Luxury Amenity Cards */
+.amenity-luxury-card {
+  transition: all 0.35s ease;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.amenity-luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(12, 56, 35, 0.08);
+  border-color: var(--color-gold-estate);
+}
+
+/* Icon Container with Circle and Gold Arc Accent */
+.amenity-icon-container {
+  width: 80px;
+  height: 80px;
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #F2FAF5;
+  border: 1.5px solid rgba(12, 56, 35, 0.15);
+  transition: all 0.3s ease;
+}
+
+.amenity-luxury-card:hover .icon-circle {
+  background-color: var(--color-dark-estate);
+}
+
+.amenity-luxury-card:hover .icon-circle i {
+  color: #ffffff;
+}
+
+.icon-gold-arc {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 36px;
+  border-bottom: 2px solid var(--color-gold-estate);
+  border-radius: 0 0 40px 40px;
+  pointer-events: none;
+}
+
+/* Dark Estate Pill Button */
+.btn-dark-estate {
+  background-color: var(--color-dark-estate);
+  border-color: var(--color-dark-estate);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-dark-estate:hover {
+  background-color: #062315;
+  border-color: #062315;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(12, 56, 35, 0.25);
+}
+
+.icon-box-size-48 {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-box-size-60 {
+  width: 60px;
+  height: 60px;
+}
+
+/* --- ESTATE THEME FORM CONTROLS & DROPDOWN STYLES --- */
+.estate-form-group {
+  border: 1.5px solid #D2E0D7;
+  transition: all 0.25s ease-in-out;
+}
+
+.estate-form-group:focus-within {
+  border-color: var(--color-dark-estate);
+  box-shadow: 0 0 0 3px rgba(12, 56, 35, 0.15);
+  background-color: #ffffff;
+}
+
+.estate-form-group .input-group-text {
+  background-color: #E2ECE5;
+  color: var(--color-dark-estate);
+}
+
+.estate-select-field option {
+  background-color: #ffffff;
+  color: #1A2821;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.estate-select-field option:hover,
+.estate-select-field option:focus,
+.estate-select-field option:checked {
+  background-color: #E2ECE5;
+  color: var(--color-dark-estate);
+  font-weight: 600;
+}
+
+/* COVERFLOW GALLERY CAROUSEL STYLES (FLAT, CLEAR & SOLID) */
+.coverflow-stage {
+  width: 100%;
+  max-width: 1050px;
+  height: 440px;
+  position: relative;
+}
+
+.coverflow-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.coverflow-card {
+  width: 320px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -160px;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid rgba(9, 75, 50, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Center Card (100% Solid & Crisp - No Skewing) */
+.coverflow-card.active {
+  transform: translateX(0%) scale(1.06);
+  z-index: 10;
+  opacity: 1;
+  filter: brightness(1);
+  box-shadow: 0 20px 45px rgba(9, 75, 50, 0.28);
+}
+
+/* Immediate Left Card (-1, Flat Un-skewed Solid) */
+.coverflow-card.side-left {
+  transform: translateX(-70%) scale(0.9);
+  z-index: 6;
+  opacity: 1;
+  filter: brightness(0.92);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+/* Immediate Right Card (+1, Flat Un-skewed Solid) */
+.coverflow-card.side-right {
+  transform: translateX(70%) scale(0.9);
+  z-index: 6;
+  opacity: 1;
+  filter: brightness(0.92);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+/* Far Left Card (-2, Flat Un-skewed Solid) */
+.coverflow-card.far-left {
+  transform: translateX(-128%) scale(0.78);
+  z-index: 3;
+  opacity: 1;
+  filter: brightness(0.82);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Far Right Card (+2, Flat Un-skewed Solid) */
+.coverflow-card.far-right {
+  transform: translateX(128%) scale(0.78);
+  z-index: 3;
+  opacity: 1;
+  filter: brightness(0.82);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.coverflow-card.hidden-card {
+  transform: translateX(0%) scale(0.5);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Mobile Responsive Adjustments for Coverflow Cards */
+@media (max-width: 992px) {
+  .coverflow-stage {
+    height: 390px;
+  }
+  .coverflow-card {
+    width: 270px;
+    height: 350px;
+    margin-top: -175px;
+    margin-left: -135px;
+  }
+  .coverflow-card.side-left {
+    transform: translateX(-56%) scale(0.88);
+  }
+  .coverflow-card.side-right {
+    transform: translateX(56%) scale(0.88);
+  }
+  .coverflow-card.far-left {
+    transform: translateX(-102%) scale(0.75);
+  }
+  .coverflow-card.far-right {
+    transform: translateX(102%) scale(0.75);
+  }
+}
+
+@media (max-width: 576px) {
+  .coverflow-stage {
+    height: 340px;
+  }
+  .coverflow-card {
+    width: 230px;
+    height: 310px;
+    margin-top: -155px;
+    margin-left: -115px;
+  }
+  .coverflow-card.side-left {
+    transform: translateX(-42%) scale(0.86);
+  }
+  .coverflow-card.side-right {
+    transform: translateX(42%) scale(0.86);
+  }
+  .coverflow-card.far-left,
+  .coverflow-card.far-right {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Navigation Circular Buttons (Theme Color #094B32) */
+.coverflow-btn-prev,
+.coverflow-btn-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.coverflow-btn-prev {
+  background-color: #ffffff;
+  border: 2px solid #094B32;
+  color: #094B32;
+}
+
+.coverflow-btn-prev:hover {
+  background-color: #094B32;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.coverflow-btn-next {
+  background-color: #094B32;
+  border: 2px solid #094B32;
+  color: #ffffff;
+}
+
+.coverflow-btn-next:hover {
+  background-color: #063322;
+  border-color: #063322;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+
+

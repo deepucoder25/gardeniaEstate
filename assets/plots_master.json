@@ -1,0 +1,105 @@
+[
+    {
+        "id": 1,
+        "name": "Gardenia Phase 1 Villa Plots",
+        "about": "Exclusive RERA-approved luxury villa plots in Devanahalli with 40ft wide internal roads, underground electrical cabling, and 40% open green spaces.",
+        "image": "assets/images/reviews/plot_gardenia_phase1.webp",
+        "land_area": "20 Acres",
+        "total_plots": "180 Plots",
+        "plot_sizes": "1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60)",
+        "project_type": "Residential Plots",
+        "project_status": "Ongoing",
+        "address": "Satellite Town Ring Road (STRR), Devanahalli, Bengaluru, Karnataka 562110",
+        "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "nearby_places": [
+            {
+                "name": "Kempegowda International Airport",
+                "distance": "15 km"
+            },
+            {
+                "name": "STRR Expressway Junction",
+                "distance": "1.5 km"
+            },
+            {
+                "name": "KIADB Aerospace Park",
+                "distance": "8 km"
+            }
+        ],
+        "status": "Active",
+        "amenity_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Gardenia Commercial Boulevard",
+        "about": "Prime high-yield commercial plot spaces positioned directly along the Satellite Town Ring Road (STRR). High visibility and rapid capital appreciation.",
+        "image": "assets/images/reviews/plot_gardenia_boulevard.webp",
+        "land_area": "12 Acres",
+        "total_plots": "45 Commercial Plots",
+        "plot_sizes": "2400 Sq.Ft (40x60), 4000 Sq.Ft (50x80)",
+        "project_type": "Commercial Plots",
+        "project_status": "Pre-Launching",
+        "address": "Main STRR Highway Corridor, Devanahalli, North Bengaluru",
+        "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "nearby_places": [
+            {
+                "name": "Kempegowda International Airport",
+                "distance": "14 km"
+            },
+            {
+                "name": "Hardware Park & Financial City",
+                "distance": "9 km"
+            }
+        ],
+        "status": "Active",
+        "amenity_ids": [
+            2,
+            3,
+            4,
+            6,
+            8
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Gardenia Sanctuary Estate Phase 2",
+        "about": "Ultra-luxury sanctuary themed villa plots surrounded by dense tree-lined parkways, clubhouse, reflexology tracks, and rainwater harvesting.",
+        "image": "assets/images/reviews/plot_gardenia_sanctuary.webp",
+        "land_area": "18 Acres",
+        "total_plots": "150 Premium Plots",
+        "plot_sizes": "1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60), 4000 Sq.Ft (50x80)",
+        "project_type": "Residential Plots",
+        "project_status": "Upcoming",
+        "address": "Opp. KIADB IT Park, Devanahalli, Bengaluru",
+        "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "nearby_places": [
+            {
+                "name": "Devanahalli Business Park",
+                "distance": "6 km"
+            },
+            {
+                "name": "Nandi Hills Expressway",
+                "distance": "20 km"
+            }
+        ],
+        "status": "Active",
+        "amenity_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    }
+]

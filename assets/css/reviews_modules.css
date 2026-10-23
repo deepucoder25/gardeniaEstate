@@ -1,0 +1,118 @@
+/* Review Modal Styling matching 1st Image */
+.review-modal-header {
+  background: linear-gradient(135deg, #093822 0%, #0d462b 100%);
+}
+
+.review-modal-icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d462b;
+}
+
+.review-modal-subtitle {
+  color: #d4af37;
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.review-modal-heading {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.review-input-box {
+  background-color: #f8faf9;
+  border: 1px solid #e2e9e5;
+  border-radius: 10px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-input-box:focus-within {
+  border-color: #0d462b;
+  box-shadow: 0 0 0 3px rgba(13, 70, 43, 0.1);
+  background-color: #ffffff;
+}
+
+.review-input-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #212529;
+  outline: none;
+}
+
+.review-upload-dropzone {
+  background-color: #f8faf9;
+  border: 1.5px dashed #c3d5cb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-upload-dropzone:hover {
+  background-color: #eff6f2;
+  border-color: #0d462b;
+}
+
+.review-rating-card {
+  background-color: #f0f7f3;
+  border: 1px solid #c8e3d3;
+  border-radius: 12px;
+  padding: 12px 18px;
+}
+
+.review-textarea-box {
+  background-color: #f8faf9;
+  border: 1px solid #e2e9e5;
+  border-radius: 12px;
+  padding: 12px;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-textarea-box:focus-within {
+  border-color: #0d462b;
+  box-shadow: 0 0 0 3px rgba(13, 70, 43, 0.1);
+  background-color: #ffffff;
+}
+
+.review-textarea-box textarea {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #212529;
+  outline: none;
+  resize: none;
+}
+
+.btn-review-submit {
+  background-color: #0d462b;
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-review-submit:hover {
+  background-color: #092818;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

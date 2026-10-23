@@ -1,0 +1,166 @@
+/* THEME FOOTER CUSTOM OVERRIDES (CLEAN WHITE BACKGROUND WITH THEME OUTLINE) */
+.footer-section {
+  background-color: #FAFAF7;
+  color: #26352F;
+  border-top: 4px solid #094B32; /* Green Gold Top Accent Outline */
+  box-shadow: 0 -10px 25px rgba(9, 75, 50, 0.04);
+}
+
+.footer-logo {
+  max-height: 110px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-icon-circle {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background-color: #EBF2ED;
+  color: #094B32;
+}
+
+.footer-heading-leaf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #A88A4A;
+  font-size: 0.85rem;
+}
+
+.footer-heading-leaf::before,
+.footer-heading-leaf::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: rgba(168, 138, 74, 0.4);
+}
+
+.footer-nav-link {
+  color: #26352F;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 4px 0;
+  transition: all 0.25s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-nav-link:hover {
+  color: #A88A4A;
+  transform: translateX(3px);
+}
+
+.footer-contact-item {
+  color: #26352F;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.footer-contact-item:hover {
+  color: #094B32;
+}
+
+/* Colorful Social Media Circles */
+.social-circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.social-circle-btn:hover {
+  transform: translateY(-3px) scale(1.08);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.social-facebook {
+  background-color: #1877F2;
+}
+
+.social-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-youtube {
+  background-color: #FF0000;
+}
+
+.social-linkedin {
+  background-color: #0A66C2;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}
+
+.extra-small {
+  font-size: 0.72rem;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.footer-policy-link {
+  color: #556860;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.footer-policy-link:hover {
+  color: #094B32;
+}
+
+/* CIRCULAR FLOATING ACTION BUTTONS (Left & Right) */
+.float-circle-btn {
+  width: 58px;
+  height: 58px;
+  z-index: 99999;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.float-circle-btn:hover {
+  transform: scale(1.12) translateY(-3px);
+  color: #ffffff;
+}
+
+/* WhatsApp Button (Bottom Left) */
+.float-btn-whatsapp-left {
+  background-color: #25D366;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+}
+
+.float-btn-whatsapp-left:hover {
+  background-color: #128C7E;
+  box-shadow: 0 12px 28px rgba(18, 140, 126, 0.55);
+}
+
+/* Call Button (Bottom Right) */
+.float-btn-call-right {
+  background-color: #094B32;
+  box-shadow: 0 8px 22px rgba(9, 75, 50, 0.45);
+}
+
+.float-btn-call-right:hover {
+  background-color: #A88A4A;
+  box-shadow: 0 12px 28px rgba(168, 138, 74, 0.55);
+}
+
+@media (min-width: 992px) {
+  .border-end-lg {
+    border-right: 1px solid rgba(9, 75, 50, 0.1);
+  }
+}

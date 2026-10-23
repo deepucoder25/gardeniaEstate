@@ -1,0 +1,25 @@
+/* Contact Page Styles */
+.contact-info-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-icon-circle {
+  width: 52px;
+  height: 52px;
+  background-color: #eef7f2;
+  color: #0d462b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+}

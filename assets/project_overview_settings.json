@@ -1,0 +1,81 @@
+{
+    "project_name": "ruchisahaiiiiiiiiiiiiiiiiiiiii",
+    "short_description": "Pre-Launching Luxury Plotted Development in STRR-Devanahalli, North Bangalore.",
+    "full_description": "Devanahalli, a rapidly evolving suburb in North Bengaluru, has emerged as a prime destination for real estate investments, particularly in residential plots. Its strategic location, robust infrastructure development, and proximity to key economic hubs make it an attractive choice for investors and homebuyers alike.",
+    "location": "STRR, Devanahalli, North Bengaluru, Karnataka 562110",
+    "total_land_area": "50+ Acres",
+    "total_plots": "500+ Premium Plots",
+    "plot_sizes": "1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60)",
+    "project_type": "Commercial Plots",
+    "project_status": "Upcoming",
+    "master_plan_image": "assets/images/uploads/master_plan_1788329113.png",
+    "master_plan_description": "40% Open spaces with tree-lined avenues, reflexology parks, underground cabling & 24/7 security.",
+    "amenities": [
+        {
+            "name": "Tree-lined Gardens & Parks",
+            "icon": "bi-tree-fill"
+        },
+        {
+            "name": "24/7 Gated Security & CCTV",
+            "icon": "bi-shield-check"
+        },
+        {
+            "name": "Underground Power & Utilities",
+            "icon": "bi-lightning-charge-fill"
+        },
+        {
+            "name": "Wide Asphalt Internal Roads",
+            "icon": "bi-signpost-2-fill"
+        }
+    ],
+    "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    "nearby_places": [
+        {
+            "name": "Kempegowda International Airport",
+            "distance": "15 km"
+        },
+        {
+            "name": "NH 44 & NH 648 Highways",
+            "distance": "2 km"
+        },
+        {
+            "name": "BIAL IT Investment Region",
+            "distance": "10 km"
+        },
+        {
+            "name": "KIADB Aerospace SEZ",
+            "distance": "8 km"
+        }
+    ],
+    "status": "Active",
+    "properties": [
+        {
+            "number": "Plot #101",
+            "size": "1200 Sq.Ft (30x40)",
+            "facing": "East",
+            "price": "\u20b945 Lakhs",
+            "status": "Available"
+        },
+        {
+            "number": "Plot #102",
+            "size": "1500 Sq.Ft (30x50)",
+            "facing": "North-East",
+            "price": "\u20b956 Lakhs",
+            "status": "Booked"
+        },
+        {
+            "number": "Plot #103",
+            "size": "2400 Sq.Ft (40x60)",
+            "facing": "West",
+            "price": "\u20b989 Lakhs",
+            "status": "Available"
+        },
+        {
+            "number": "ruchi",
+            "size": "1200 Sq.Ft (30x40)",
+            "facing": "East",
+            "price": "\u20b945 Lakhs",
+            "status": "Available"
+        }
+    ]
+}

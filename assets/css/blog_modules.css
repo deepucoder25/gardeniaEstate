@@ -1,0 +1,146 @@
+/* BLOG MODULE STYLES */
+
+/* Blog Cards */
+.blog-card {
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(9, 75, 50, 0.08);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(9, 75, 50, 0.12);
+  border-color: rgba(9, 75, 50, 0.2);
+}
+
+.blog-card-img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-img {
+  transform: scale(1.06);
+}
+
+.blog-title-link {
+  transition: color 0.25s ease;
+}
+
+.blog-title-link:hover {
+  color: #094B32;
+}
+
+.blog-read-btn {
+  transition: all 0.25s ease;
+}
+
+.blog-card:hover .blog-read-btn {
+  background-color: #094B32;
+  color: #ffffff;
+  border-color: #094B32;
+}
+
+/* Pagination Styling */
+.custom-page-link {
+  transition: all 0.25s ease;
+}
+
+.custom-page-link:hover {
+  background-color: #094B32;
+  color: #ffffff;
+  border-color: #094B32;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(9, 75, 50, 0.25);
+}
+
+.page-item.active .page-link {
+  background-color: #094B32;
+  border-color: #094B32;
+  box-shadow: 0 4px 12px rgba(9, 75, 50, 0.3);
+}
+
+/* Social Share Buttons (With Explicit Spacing Between Buttons) */
+.social-share-btns {
+  gap: 12px;
+}
+
+.social-share-btns a {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.share-fb {
+  background-color: #1877F2;
+  border-color: #1877F2;
+  transition: all 0.2s ease;
+}
+
+.share-fb:hover {
+  background-color: #1464cc;
+  transform: translateY(-2px);
+}
+
+.share-wa {
+  background-color: #25D366;
+  border-color: #25D366;
+  transition: all 0.2s ease;
+}
+
+.share-wa:hover {
+  background-color: #1eb956;
+  transform: translateY(-2px);
+}
+
+.share-tw {
+  background-color: #111111;
+  border-color: #111111;
+  transition: all 0.2s ease;
+}
+
+.share-tw:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.share-in {
+  background-color: #0A66C2;
+  border-color: #0A66C2;
+  transition: all 0.2s ease;
+}
+
+.share-in:hover {
+  background-color: #084e96;
+  transform: translateY(-2px);
+}
+
+/* Sidebar Recent Posts */
+.post-link-item {
+  transition: all 0.25s ease;
+  background-color: transparent;
+}
+
+.post-link-item:hover {
+  background-color: rgba(9, 75, 50, 0.04);
+}
+
+.post-link-item:hover .recent-post-thumb {
+  transform: scale(1.08);
+}
+
+.post-link-item:hover .recent-title-text {
+  color: #094B32;
+}
+
+/* Typography & Layout Spacing */
+.leading-relaxed {
+  line-height: 1.8;
+}
+
+.tracking-wide {
+  letter-spacing: 0.8px;
+}
+
+.blog-sidebar-sticky {
+  top: 100px;
+  z-index: 1020;
+}

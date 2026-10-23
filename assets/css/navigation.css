@@ -1,0 +1,304 @@
+/* Minimal Supporting CSS for Navigation Drawer */
+:root {
+  --bs-font-sans-serif: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bg-offwhite: #FAFAF7;
+  --btn-green: #094B32;
+  --btn-gold-hover: #A88A4A;
+}
+
+html, body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: var(--bg-offwhite);
+  color: #26352F;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+/* Top Header Bar */
+.top-header-bar {
+  background-color: #063322;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  z-index: 1035;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.top-bar-link {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-weight: 700;
+}
+
+.top-bar-link:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* Custom Navbar Header (Sticky Top with Solid Background & Shadow on Mobile & Desktop) */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #FAFAF7;
+  border-bottom: 1px solid rgba(38, 53, 47, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  z-index: 1040;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-quote-btn {
+  background-color: var(--btn-green);
+  border-color: var(--btn-green);
+  transition: all 0.25s ease-in-out;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 768px) {
+  .header-quote-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-logo {
+    max-height: 46px;
+    max-width: 145px;
+  }
+
+  .header-quote-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .top-header-bar {
+    font-size: 0.78rem;
+  }
+}
+
+.header-quote-btn:hover {
+  background-color: var(--btn-gold-hover);
+  border-color: var(--btn-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(168, 138, 74, 0.35);
+}
+
+/* Header Logo & Offcanvas Logo Dimensions */
+.header-logo {
+  max-height: 82px;
+  width: auto;
+  object-fit: contain;
+}
+
+.offcanvas-logo {
+  height: 65px;
+  max-height: 75px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Header Action Buttons */
+.action-btn {
+  border: 1.5px solid var(--btn-green);
+  color: var(--btn-green);
+  font-weight: 600;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.action-btn:hover {
+  background-color: var(--btn-gold-hover);
+  border-color: var(--btn-gold-hover);
+  color: #ffffff;
+}
+
+.action-btn:hover i {
+  color: #ffffff;
+}
+
+.menu-toggle-btn {
+  background-color: var(--btn-green);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-toggle-btn:hover {
+  background-color: var(--btn-gold-hover);
+  color: #ffffff;
+}
+
+/* Heading Leaf Line Accent */
+.menu-heading-leaf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #A88A4A;
+}
+
+.menu-heading-leaf::before,
+.menu-heading-leaf::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 1px;
+  background-color: rgba(168, 138, 74, 0.4);
+}
+
+/* Nav Drawer Item Pill & Colorful Icon Badges */
+.nav-drawer-pill {
+  color: #26352F;
+  border-radius: 0.6rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(9, 75, 50, 0.06);
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  margin-bottom: 6px;
+}
+
+.nav-icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 0.45rem;
+  font-size: 0.88rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.bg-whatsapp-green {
+  background-color: #25D366;
+}
+
+.bg-gradient-green-gold {
+  background: linear-gradient(135deg, #094B32 0%, #A88A4A 100%);
+}
+
+.nav-drawer-pill i {
+  transition: color 0.2s ease;
+}
+
+.nav-drawer-pill:hover {
+  background-color: #A88A4A;
+  color: #ffffff;
+  border-color: #A88A4A;
+  transform: translateX(3px);
+}
+
+.nav-drawer-pill:hover i {
+  color: #ffffff;
+}
+
+.nav-drawer-pill.active {
+  background-color: #E5EDE8;
+  color: #094B32;
+  font-weight: 700;
+  border: 1px solid rgba(9, 75, 50, 0.15);
+}
+
+.nav-drawer-pill.active .nav-icon-box {
+  background-color: #094B32;
+  color: #ffffff;
+  border-radius: 0.4rem;
+  padding: 4px 7px;
+}
+
+.nav-drawer-pill.active i {
+  color: #094B32;
+}
+
+.nav-drawer-pill.active .nav-icon-box i {
+  color: #ffffff;
+}
+
+.menu-banner-card {
+  min-height: 250px;
+}
+
+.menu-banner-img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu-banner-overlay {
+  background: linear-gradient(135deg, rgba(9, 75, 50, 0.9) 0%, rgba(168, 138, 74, 0.85) 100%);
+  backdrop-filter: blur(1px);
+}
+
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.nav-contact-card {
+  transition: all 0.25s ease-in-out;
+  border: 1px solid rgba(9, 75, 50, 0.08);
+}
+
+.nav-contact-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--btn-green);
+  box-shadow: 0 8px 20px rgba(9, 75, 50, 0.1);
+}
+
+@media (min-width: 992px) {
+  .border-end-lg {
+    border-right: 1px solid rgba(9, 75, 50, 0.1);
+  }
+}
+
+/* Responsive Offcanvas Placement: Top on Desktop (>=992px), Right on Mobile (<992px) */
+#mainNavbarOffcanvas.offcanvas {
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+@media (max-width: 991.98px) {
+  #mainNavbarOffcanvas.offcanvas {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    transform: translateX(100%);
+  }
+  #mainNavbarOffcanvas.offcanvas.show {
+    transform: translateX(0) !important;
+  }
+  #mainNavbarOffcanvas.offcanvas.hiding {
+    transform: translateX(100%) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #mainNavbarOffcanvas.offcanvas {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: auto !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    max-height: 92vh !important;
+    transform: translateY(-100%);
+    border-bottom: 3px solid #094B32 !important;
+  }
+  #mainNavbarOffcanvas.offcanvas.show {
+    transform: translateY(0) !important;
+  }
+  #mainNavbarOffcanvas.offcanvas.hiding {
+    transform: translateY(-100%) !important;
+  }
+}

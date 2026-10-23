@@ -1,0 +1,150 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+<!-- FAQ SECTION (2-Column Layout with Image on Left & Accordion FAQs on Right) -->
+<section class="faqs-section py-5 bg-light position-relative" id="estateFaqSection">
+  <div class="container py-3">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">Got Questions?</span>
+      <h2 class="display-6 fw-bold text-dark mb-2">Frequently Asked Questions</h2>
+      <p class="text-muted fs-6">Find quick answers to common queries about plot sizes, pricing, possession, and booking.</p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- LEFT COLUMN: Image Card -->
+      <div class="col-lg-5 col-md-12">
+        <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 position-relative">
+          <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="The Gardenia Estate FAQ & Investment Guide Banner" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+          <div class="position-absolute bottom-0 start-0 w-100 bg-dark-gradient p-4 text-white">
+            <h5 class="fw-bold mb-1">Have More Questions?</h5>
+            <p class="small mb-3 text-white-50">Our dedicated estate advisory team is available 24/7 to guide your investment.</p>
+            <a href="<?= site_url('contact-us') ?>" class="btn btn-warning btn-sm rounded-pill fw-bold px-3 py-2 text-dark">
+              <i class="bi bi-telephone-fill me-1"></i> Speak to Advisor
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Accordion with Expanded FAQs -->
+      <div class="col-lg-7 col-md-12">
+        <div class="accordion custom-estate-faq" id="estateFaqAccordion">
+          
+          <!-- Q1: Plot sizes? -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                <i class="bi bi-question-circle-fill text-success me-3 fs-5"></i> What plot sizes are available at The Gardenia Estate?
+              </button>
+            </h3>
+            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                The Gardenia Estate offers multiple plot dimensions to suit various requirements:
+                <ul class="mt-2 mb-0 ps-3">
+                  <li><strong>1200 Sq.Ft</strong> (30 ft x 40 ft)</li>
+                  <li><strong>1500 Sq.Ft</strong> (30 ft x 50 ft)</li>
+                  <li><strong>2400 Sq.Ft</strong> (40 ft x 60 ft)</li>
+                  <li>Custom odd dimensions and corner plot options.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2: Starting price? -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                <i class="bi bi-cash-stack text-success me-3 fs-5"></i> What is the starting price for residential plots?
+              </button>
+            </h3>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                Pre-launch prices start at <strong>&#8377;1.2 Cr*</strong> for 1200 Sq.Ft plots. Special launch discounts and easy EMI financing options (up to 80% bank loan approval from leading banks like HDFC, ICICI, and SBI) are currently available for early bookings.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3: Location? -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading3">
+              <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                <i class="bi bi-geo-alt-fill text-success me-3 fs-5"></i> Where is The Gardenia Estate located?
+              </button>
+            </h3>
+            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                The project is strategically located along the <strong>Satellite Town Ring Road (STRR) in Devanahalli, Bengaluru</strong>. It is just 15 minutes drive from Kempegowda International Airport (KIAB) and 10 minutes from major IT/Aerospace hubs.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4: Possession? -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading4">
+              <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                <i class="bi bi-key-fill text-success me-3 fs-5"></i> What is the possession status of the plots?
+              </button>
+            </h3>
+            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                The project is fully RERA approved with completed layout infrastructure (roads, underground power, water lines). Plots are <strong>ready for immediate registration and villa construction</strong>.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5: Booking process? -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading5">
+              <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                <i class="bi bi-file-earmark-check-fill text-success me-3 fs-5"></i> What is the booking process for a plot?
+              </button>
+            </h3>
+            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                The booking process is seamless:
+                <ol class="mt-2 mb-0 ps-3">
+                  <li>Schedule a free site visit using our contact form or phone call.</li>
+                  <li>Select your preferred plot number and orientation on the master layout map.</li>
+                  <li>Pay an initial booking amount to block your plot.</li>
+                  <li>Complete bank loan processing and execute plot registration.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6: RERA & Bank Approval -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading6">
+              <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                <i class="bi bi-shield-check text-success me-3 fs-5"></i> Is the project RERA approved and bank loan eligible?
+              </button>
+            </h3>
+            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                Yes, The Gardenia Estate is 100% RERA approved (Reg No: <strong>PRM/KA/RERA/1251/310/AG/170819/000018</strong>) with 100% clear title. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7: Infrastructure & Amenities -->
+          <div class="accordion-item border-0 rounded-4 shadow-sm mb-0 overflow-hidden">
+            <h3 class="accordion-header" id="faqHeading7">
+              <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                <i class="bi bi-tree-fill text-success me-3 fs-5"></i> What infrastructure &amp; amenities are included in the township?
+              </button>
+            </h3>
+            <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#estateFaqAccordion">
+              <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
+                The township features wide asphalt roads, underground electrical &amp; cabling, 24/7 security with CCTV surveillance, grand clubhouse, swimming pool, landscaped parks, children’s play area, and dedicated jogging tracks across 40% open green space.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
