@@ -107,7 +107,7 @@
   </header>
 
   <!-- Offcanvas Navigation Menu Drawer (Smooth Animation) -->
-  <div class="offcanvas offcanvas-top custom-offcanvas-top vh-100 min-vh-100 overflow-y-auto border-0" tabindex="-1" id="mainNavbarOffcanvas" aria-labelledby="mainNavbarOffcanvasLabel">
+  <div class="offcanvas offcanvas-top custom-offcanvas-top vh-100 min-vh-100 overflow-y-auto overflow-x-hidden border-0" tabindex="-1" id="mainNavbarOffcanvas" aria-labelledby="mainNavbarOffcanvasLabel">
     
     <!-- Drawer Header Bar (Logo aligned with main navbar logo on desktop) -->
     <div class="offcanvas-header py-3 px-3 px-md-4 border-bottom bg-white sticky-top">
@@ -120,7 +120,7 @@
     </div>
 
     <!-- Drawer Body -->
-    <div class="offcanvas-body p-4 bg-light">
+    <div class="offcanvas-body p-4 bg-light overflow-x-hidden">
       <div class="container">
         
         <!-- MAIN 3-COLUMN LAYOUT -->

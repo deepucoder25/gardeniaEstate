@@ -127,7 +127,7 @@ if ($active_tab == 'company_info') {
                 <div class="po-panel">
                     <div class="po-panel-heading">
                         <span><i class="fa fa-tree" style="color:#0F382C;margin-right:8px;"></i> Master Amenities List</span>
-                        <button type="button" class="btn-po-add" id="btnAddAmenity">
+                        <button type="button" class="btn-po-add" id="btnAddAmenity" onclick="addAmenityRow();">
                             <i class="fa fa-plus"></i> Add Amenity
                         </button>
                     </div>
@@ -156,7 +156,7 @@ if ($active_tab == 'company_info') {
                                             <input type="text" class="po-input" name="amenity_name[]" value="<?= htmlspecialchars($am['name']) ?>" placeholder="e.g. Swimming Pool" required>
                                         </td>
                                         <td style="text-align:center;">
-                                            <button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;">
+                                            <button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest('tr').remove();" style="border-radius:6px;" title="Delete Amenity">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </td>
@@ -181,7 +181,7 @@ if ($active_tab == 'company_info') {
                     <div class="po-panel-heading">
                         <span><i class="fa fa-th-large" style="color:#0F382C;margin-right:8px;"></i> Dynamic Plots &amp; Properties List</span>
                         <button type="button" class="btn-po-add" onclick="openAddPlotForm()">
-                            <i class="fa fa-plus"></i> + Add New Plot
+                            <i class="fa fa-plus"></i> Add New Plot
                         </button>
                     </div>
                     <div class="po-panel-body">
@@ -323,7 +323,7 @@ if ($active_tab == 'company_info') {
                             <div class="form-group" style="margin-top:20px;">
                                 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
                                     <span class="po-label" style="margin:0!important;">Nearby Places &amp; Distances</span>
-                                    <button type="button" class="btn-po-add" id="btnAddPlotPlace">
+                                    <button type="button" class="btn-po-add" id="btnAddPlotPlace" onclick="addPlotPlaceRow();">
                                         <i class="fa fa-plus"></i> Add Place
                                     </button>
                                 </div>
@@ -340,7 +340,7 @@ if ($active_tab == 'company_info') {
                                         <tr>
                                             <td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" value="Kempegowda International Airport"></td>
                                             <td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 15 km" value="15 km"></td>
-                                            <td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td>
+                                            <td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest('tr').remove();" style="border-radius:6px;" title="Delete Place"><i class="fa fa-trash"></i></button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -491,11 +491,11 @@ function editPlot(id) {
             tbody += '<tr>' +
                 '<td><input type="text" class="po-input" name="place_name[]" value="' + (pl.name || '').replace(/"/g, '&quot;') + '" required></td>' +
                 '<td><input type="text" class="po-input" name="place_distance[]" value="' + (pl.distance || '').replace(/"/g, '&quot;') + '"></td>' +
-                '<td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td>' +
+                '<td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest(\'tr\').remove();" style="border-radius:6px;" title="Delete Place"><i class="fa fa-trash"></i></button></td>' +
                 '</tr>';
         });
     } else {
-        tbody = '<tr><td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name"></td><td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 15 km"></td><td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td></tr>';
+        tbody = '<tr><td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name"></td><td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 15 km"></td><td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest(\'tr\').remove();" style="border-radius:6px;" title="Delete Place"><i class="fa fa-trash"></i></button></td></tr>';
     }
     $("#plotPlacesTable tbody").html(tbody);
 
@@ -602,40 +602,38 @@ function deletePlot(id) {
     }
 }
 
-$(document).ready(function() {
-    // Add Amenity Row
-    $("#btnAddAmenity").on("click", function() {
-        var row = '<tr>' +
-            '<td><input type="text" class="po-input" name="amenity_name[]" placeholder="Amenity Name" required></td>' +
-            '<td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td>' +
-            '</tr>';
-        $("#amenitiesTable tbody").append(row);
-    });
+// Add Amenity Row Function
+function addAmenityRow() {
+    var row = '<tr>' +
+        '<td><input type="text" class="po-input" name="amenity_name[]" placeholder="Amenity Name" required></td>' +
+        '<td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest(\'tr\').remove();" style="border-radius:6px;" title="Delete Amenity"><i class="fa fa-trash"></i></button></td>' +
+        '</tr>';
+    $("#amenitiesTable tbody").append(row);
+}
 
-    // Add Plot Nearby Place Row
-    $("#btnAddPlotPlace").on("click", function() {
-        var row = '<tr>' +
-            '<td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" required></td>' +
-            '<td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 10 km"></td>' +
-            '<td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td>' +
-            '</tr>';
-        $("#plotPlacesTable tbody").append(row);
-    });
+// Add Plot Nearby Place Row Function
+function addPlotPlaceRow() {
+    var row = '<tr>' +
+        '<td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" required></td>' +
+        '<td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 15 km"></td>' +
+        '<td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest(\'tr\').remove();" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td>' +
+        '</tr>';
+    $("#plotPlacesTable tbody").append(row);
+}
 
-    // Delete Row
-    $(document).on("click", ".btn-delete-row", function() {
-        $(this).closest("tr").remove();
-    });
+// Global Event Delegation for Delete Row
+$(document).off("click", ".btn-delete-row").on("click", ".btn-delete-row", function() {
+    $(this).closest("tr").remove();
+});
 
-    // Instant Live Preview on Plot Image Selection
-    $("#plot_image_input").on("change", function(e) {
-        if (e.target.files && e.target.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(evt) {
-                $("#plot_img_preview").attr("src", evt.target.result);
-            };
-            reader.readAsDataURL(e.target.files[0]);
-        }
-    });
+// Instant Live Preview on Plot Image Selection
+$(document).off("change", "#plot_image_input").on("change", "#plot_image_input", function(e) {
+    if (e.target.files && e.target.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(evt) {
+            $("#plot_img_preview").attr("src", evt.target.result);
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    }
 });
 </script>
