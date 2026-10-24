@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Client Testimonials',
-    'bc_desc' => "Discover what our plot buyers and investors say about their experience with The Gardenia Estate.",
+    'bc_desc' => "Discover what our plot buyers and investors say about their experience with " . $company3 . ".",
     'breadcrumbs' => [
         ['name' => 'Testimonials']
     ]
@@ -18,7 +18,7 @@
     <div class="text-center mb-5 max-w-800 mx-auto">
       <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">CLIENT TESTIMONIALS</span>
       <h2 class="display-6 fw-bold text-dark mb-2">What Our Plot Buyers Say</h2>
-      <p class="text-secondary fs-6 mb-0">Read authentic stories and experiences from plot owners, villa builders, and real estate investors at The Gardenia Estate.</p>
+      <p class="text-secondary fs-6 mb-0">Read authentic stories and experiences from plot owners, villa builders, and real estate investors at <?= htmlspecialchars($company3) ?>.</p>
     </div>
 
     <!-- Testimonial Cards Grid (6 Cards Per Page, 2 Columns on Desktop, 1 on Mobile) -->

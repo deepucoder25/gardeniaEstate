@@ -6,20 +6,12 @@ if (file_exists($plots_file)) {
     $plots = json_decode(file_get_contents($plots_file), true);
     if (!is_array($plots)) $plots = [];
 }
-
-$company_file = FCPATH . 'assets/company_info_settings.json';
-$company_info = [];
-if (file_exists($company_file)) {
-    $company_info = json_decode(file_get_contents($company_file), true);
-}
-$c_name = isset($company_info['company_name']) ? $company_info['company_name'] : 'The Gardenia Estate';
-$c_loc  = isset($company_info['location']) ? $company_info['location'] : 'Airport Road, Bagdogra, Siliguri';
 ?>
 
 <!-- DYNAMIC BREADCRUMB HEADER -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Plots & Bungalows For Sale',
-    'bc_desc' => 'Explore transparent plot sizes, bungalow specs, RERA approval status, and available listings at The Gardenia Estate.',
+    'bc_desc' => 'Explore transparent plot sizes, bungalow specs, RERA approval status, and available listings at ' . $company3 . '.',
     'breadcrumbs' => [
         ['name' => 'Plots & Bungalows']
     ]
@@ -66,7 +58,7 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : 'Airpor
               <!-- Card Thumbnail & Status Badges -->
               <div class="position-relative bg-light">
                 <div class="ratio ratio-16x9">
-                  <img src="<?= $p_img ?>" alt="<?= htmlspecialchars($p['name']) ?> - The Gardenia Estate Plot Project" class="img-fluid object-fit-cover" loading="lazy">
+                  <img src="<?= $p_img ?>" alt="<?= htmlspecialchars($p['name']) ?> - <?= htmlspecialchars($company3) ?> Plot Project" class="img-fluid object-fit-cover" loading="lazy">
                 </div>
 
                 <div class="position-absolute top-0 start-0 m-3 d-flex gap-2 z-index-2">

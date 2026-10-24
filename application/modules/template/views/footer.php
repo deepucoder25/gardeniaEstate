@@ -17,7 +17,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           
           <!-- Larger Brand Logo -->
           <a href="<?= site_url() ?>" class="d-inline-block mb-3 text-decoration-none">
-            <img src="<?= base_url('assets/images/logo/logo.webp') ?>" alt="The Gardenia Estate Logo - Luxury Plotted Township Bagdogra Siliguri" class="footer-logo img-fluid" loading="lazy">
+            <img src="<?= base_url('assets/images/logo/logo.webp') ?>" alt="<?= htmlspecialchars($company3) ?> Logo - Luxury Plotted Township Bagdogra Siliguri" class="footer-logo img-fluid" loading="lazy">
           </a>
 
           <div class="footer-heading-leaf justify-content-center justify-content-md-start mb-3">
@@ -25,7 +25,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           </div>
 
           <p class="small text-muted mb-4 leading-relaxed">
-            The Gardenia Estate is a 50+ Acre luxury township offering premium residential plots and luxury bungalows for sale situated along Airport Road &amp; Asian Highway 2, Bagdogra, Siliguri. Featuring 40% open green spaces &amp; 30+ world class amenities.
+            <?= htmlspecialchars($company3) ?> is a 50+ Acre luxury township offering premium residential plots and luxury bungalows for sale situated along Airport Road &amp; Asian Highway 2, <?= htmlspecialchars($addressRegion) ?>. Featuring 40% open green spaces &amp; 30+ world class amenities.
           </p>
 
           <!-- RERA & Bank Loan Badges (Fit Cleanly Inside Footer Column Without Overflowing) -->
@@ -119,7 +119,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
 
         <div class="d-flex flex-column gap-3 pt-1">
           <!-- Phone -->
-          <a href="<?= $phonehtml ?>" class="footer-contact-item d-flex align-items-center gap-3">
+          <a <?= $phonehtml ?> class="footer-contact-item d-flex align-items-center gap-3">
             <div class="footer-icon-circle rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
               <i class="bi bi-telephone-fill fs-6"></i>
             </div>
@@ -266,7 +266,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
         <!-- BOTTOM BAR: COPYRIGHT & LEGAL LINKS (Tight & Compact Spacing) -->
         <div class="pt-3 pb-3 mb-1 border-top d-flex justify-content-between align-items-center flex-column flex-md-row gap-3 text-center text-md-start">
           <div class="small text-muted">
-            &copy; <?= date('Y') ?> <strong class="text-success">The Gardenia Estate</strong>. All Rights Reserved.
+            &copy; <?= date('Y') ?> <strong class="text-success"><?= htmlspecialchars($company3) ?></strong>. All Rights Reserved.
           </div>
 
           <div class="d-flex flex-wrap justify-content-center gap-3 small">
@@ -291,7 +291,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
 </a>
 
 <!-- Floating Call Button (Bottom Right) -->
-<a href="<?= $phonehtml ?>" class="btn rounded-circle shadow-lg position-fixed bottom-0 end-0 m-3 m-md-4 d-flex align-items-center justify-content-center border-0 text-white float-circle-btn float-btn-call-right" title="Call Now" aria-label="Call <?= $company3 ?> now">
+<a <?= $phonehtml ?> class="btn rounded-circle shadow-lg position-fixed bottom-0 end-0 m-3 m-md-4 d-flex align-items-center justify-content-center border-0 text-white float-circle-btn float-btn-call-right" title="Call Now" aria-label="Call <?= $company3 ?> now">
   <i class="bi bi-telephone-fill fs-4"></i>
 </a>
 

@@ -52,7 +52,7 @@ class MX_Controller
         $this->load->initialize($this);
 
         $this->comp['phone'] = '+91 91080 34519';
-        $this->comp['phonehtml'] = 'tel:+9191080 34519';
+        $this->comp['phonehtml'] = 'href="tel:+9191080 34519"';
         $this->comp['supportmail'] = 'info@thegardeniaestate.in';
         $this->comp['replyToMail'] = 'info@thegardeniaestate.in';
         $this->comp['mail'] = 'info@thegardeniaestate.in';

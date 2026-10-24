@@ -26,7 +26,7 @@ try {
             <!-- Title & Subtitle -->
             <h2 class="display-6 fw-bold text-dark mb-2">What Our Plot Buyers Say</h2>
             <p class="text-muted small mb-4 leading-relaxed mx-auto max-w-650">
-                Read authentic stories, reviews, and site visit experiences from real estate investors and plot owners at The Gardenia Estate.
+                Read authentic stories, reviews, and site visit experiences from real estate investors and plot owners at <?= htmlspecialchars($company3) ?>.
             </p>
         </div>
 

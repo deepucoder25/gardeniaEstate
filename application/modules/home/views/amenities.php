@@ -35,7 +35,7 @@ if (file_exists($amenities_file)) {
     <!-- Section Main Title -->
     <h2 class="display-5 text-dark fw-bold text-center mb-2">Master Amenities</h2>
     <p class="text-secondary fs-6 text-center mb-5 max-w-600 mx-auto">
-      Modern infrastructure &amp; lifestyle features designed for plot and luxury bungalow owners in Bagdogra.
+      Modern infrastructure &amp; lifestyle features designed for plot and luxury bungalow owners in <?= htmlspecialchars($addressRegion) ?>.
     </p>
 
     <!-- Amenities Grid -->

@@ -22,7 +22,7 @@
           
             <h2 class="h2 fw-bold text-dark mb-3">REAL ESTATE LEGAL DISCLAIMER</h2>
             <p class="text-secondary leading-relaxed mb-0">
-              The information and materials provided on this website are intended exclusively for general informational and marketing purposes and should not be construed as a binding legal offer or contract. The Gardenia Estate is a luxury plotted and bungalow development in Bagdogra, Siliguri registered under the West Bengal Real Estate Regulatory Authority (WBRERA Reg No: <strong>WBRERA/P/DAR/2024/000188</strong>).
+              The information and materials provided on this website are intended exclusively for general informational and marketing purposes and should not be construed as a binding legal offer or contract. <?= htmlspecialchars($company3) ?> is a luxury plotted and bungalow development in <?= htmlspecialchars($addressRegion) ?> registered under the West Bengal Real Estate Regulatory Authority (WBRERA Reg No: <strong>WBRERA/P/DAR/2024/000188</strong>).
             </p>
           </div>
 
@@ -32,7 +32,7 @@
               <i class="bi bi-patch-check-fill text-success"></i> 1. Official Project Representation &amp; WBRERA Compliance
             </h3>
             <p class="text-secondary leading-relaxed mb-0">
-              This website serves as the official digital marketing platform for <strong>The Gardenia Estate</strong>. All communications, site visit arrangements, cost sheet distribution, and booking documentation are conducted directly through our authorized sales advisory team and verified developers. All transactions, plot allocations, and bungalow sales are subject to official sale agreements and conveyance deeds executed directly with the project developers.
+              This website serves as the official digital marketing platform for <strong><?= htmlspecialchars($company3) ?></strong>. All communications, site visit arrangements, cost sheet distribution, and booking documentation are conducted directly through our authorized sales advisory team and verified developers. All transactions, plot allocations, and bungalow sales are subject to official sale agreements and conveyance deeds executed directly with the project developers.
             </p>
           </div>
 
@@ -72,7 +72,7 @@
               <i class="bi bi-lock-fill text-success"></i> 5. Data Collection &amp; Communications Consent
             </h3>
             <p class="text-secondary leading-relaxed mb-0">
-              By filling out inquiry forms, requesting callback services, or submitting phone/email details on this website, you explicitly authorize <strong>The Gardenia Estate</strong> and our authorized sales advisory team to contact you via Phone Call, SMS, Email, or WhatsApp. We may share your inquiry details with partner financial institutions (banks) for processing home loan pre-approvals and site visit coordination as requested by you.
+              By filling out inquiry forms, requesting callback services, or submitting phone/email details on this website, you explicitly authorize <strong><?= htmlspecialchars($company3) ?></strong> and our authorized sales advisory team to contact you via Phone Call, SMS, Email, or WhatsApp. We may share your inquiry details with partner financial institutions (banks) for processing home loan pre-approvals and site visit coordination as requested by you.
             </p>
           </div>
 
@@ -82,7 +82,7 @@
               <i class="bi bi-c-circle-fill text-success"></i> 6. Copyrights &amp; Trademarks
             </h3>
             <p class="text-secondary leading-relaxed mb-0">
-              All content, logos, graphics, brand names, and page layouts are protected under applicable intellectual property laws. &copy; <?= date('Y') ?> <strong>The Gardenia Estate</strong>. All Rights Reserved.
+              All content, logos, graphics, brand names, and page layouts are protected under applicable intellectual property laws. &copy; <?= date('Y') ?> <strong><?= htmlspecialchars($company3) ?></strong>. All Rights Reserved.
             </p>
           </div>
 

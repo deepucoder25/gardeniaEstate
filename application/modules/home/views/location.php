@@ -6,9 +6,9 @@ if (file_exists($overview_file)) {
     $overview = json_decode(file_get_contents($overview_file), true);
 }
 
-$google_map_url = isset($overview['google_map_url']) ? $overview['google_map_url'] : '';
+$google_map_url = !empty($overview['google_map_url']) ? $overview['google_map_url'] : (isset($gmap) ? $gmap : '');
 $nearby_places  = isset($overview['nearby_places']) && is_array($overview['nearby_places']) ? $overview['nearby_places'] : [];
-$location_name  = isset($overview['location']) ? $overview['location'] : '';
+$location_name  = !empty($overview['location']) ? $overview['location'] : (isset($address) ? $address : '');
 ?>
 
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->

@@ -22,7 +22,7 @@
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">LEGAL INFORMATION</span>
             <h2 class="h2 fw-bold text-dark mb-3">PRIVACY POLICY &amp; TERMS OF USE</h2>
             <p class="text-secondary leading-relaxed mb-0">
-              <strong>The Gardenia Estate</strong> (&quot;The Gardenia Estate&quot; or &quot;We&quot;) operates in full compliance with the West Bengal Real Estate Regulatory Authority (WBRERA Registration No: <strong>WBRERA/P/DAR/2024/000188</strong>). We prioritize your privacy. Our Privacy Policy outlines the personal information we collect through our website, including sub-domains and inquiry forms, the purposes of collection, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns.
+              <strong><?= htmlspecialchars($company3) ?></strong> (&quot;<?= htmlspecialchars($company3) ?>&quot; or &quot;We&quot;) operates in full compliance with the West Bengal Real Estate Regulatory Authority (WBRERA Registration No: <strong>WBRERA/P/DAR/2024/000188</strong>). We prioritize your privacy. Our Privacy Policy outlines the personal information we collect through our website, including sub-domains and inquiry forms, the purposes of collection, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns.
             </p>
           </div>
 
@@ -40,7 +40,7 @@
                 <strong>&ldquo;Service Providers&rdquo;</strong> includes entities which provide services to and to whom we may disclose your Data for a specific purpose pursuant to a written contract.
               </li>
               <li class="p-3 bg-light rounded-3 border-start border-4 border-success">
-                <strong>&ldquo;The Gardenia Estate/We&rdquo;</strong> shall mean The Gardenia Estate, its development partners, subsidiaries, and affiliates.
+                <strong>&ldquo;<?= htmlspecialchars($company3) ?>/We&rdquo;</strong> shall mean <?= htmlspecialchars($company3) ?>, its development partners, subsidiaries, and affiliates.
               </li>
               <li class="p-3 bg-light rounded-3 border-start border-4 border-success">
                 <strong>&ldquo;User or You&rdquo;</strong> shall mean the natural person who accesses our website/pages or Platform.

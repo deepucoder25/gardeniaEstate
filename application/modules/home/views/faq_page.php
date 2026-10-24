@@ -40,7 +40,7 @@
             </h3>
             <div id="faqPageCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqPageHeading1" data-bs-parent="#faqAccordionCol1">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                The Gardenia Estate offers premium residential plots and luxury bungalows for sale:
+                <?= htmlspecialchars($company3) ?> offers premium residential plots and luxury bungalows for sale:
                 <ul class="mt-2 mb-0 ps-3">
                   <li><strong>Residential Plots:</strong> 1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), and 2400 Sq.Ft (40x60).</li>
                   <li><strong>Luxury Bungalows:</strong> 3 BHK and 4 BHK standalone bungalows built on 1500 to 2400 Sq.Ft plots with private lawns.</li>
@@ -55,7 +55,7 @@
             <h3 class="accordion-header" id="faqPageHeading2">
               <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqPageCollapse2" aria-expanded="false" aria-controls="faqPageCollapse2">
                 <i class="bi bi-geo-alt-fill text-success me-3 fs-5 flex-shrink-0"></i>
-                <span>Where is The Gardenia Estate located?</span>
+                <span>Where is <?= htmlspecialchars($company3) ?> located?</span>
               </button>
             </h3>
             <div id="faqPageCollapse2" class="accordion-collapse collapse" aria-labelledby="faqPageHeading2" data-bs-parent="#faqAccordionCol1">
@@ -133,7 +133,7 @@
             </h3>
             <div id="faqPageCollapse6" class="accordion-collapse collapse" aria-labelledby="faqPageHeading6" data-bs-parent="#faqAccordionCol2">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                Yes, The Gardenia Estate is 100% RERA approved with 100% clear title. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
+                Yes, <?= htmlspecialchars($company3) ?> is 100% RERA approved with 100% clear title. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
               </div>
             </div>
           </div>

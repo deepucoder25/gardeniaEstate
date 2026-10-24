@@ -6,14 +6,6 @@ if (file_exists($plots_file)) {
     $plots = json_decode(file_get_contents($plots_file), true);
     if (!is_array($plots)) $plots = [];
 }
-
-$company_file = FCPATH . 'assets/company_info_settings.json';
-$company_info = [];
-if (file_exists($company_file)) {
-    $company_info = json_decode(file_get_contents($company_file), true);
-}
-$c_name = isset($company_info['company_name']) ? $company_info['company_name'] : '';
-$c_loc  = isset($company_info['location']) ? $company_info['location'] : '';
 ?>
 
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->
@@ -38,7 +30,7 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : '';
         FEATURED DEVELOPMENTS
       </span>
       <h2 class="display-6 fw-bold text-dark mb-2">
-        Exclusive Plots &amp; Luxury Bungalows For Sale In <?= !empty($c_loc) ? htmlspecialchars($c_loc) : htmlspecialchars($c_name) ?>
+        Exclusive Plots &amp; Luxury Bungalows For Sale In <?= htmlspecialchars($addressRegion) ?> - <?= htmlspecialchars($company3) ?>
       </h2>
       <p class="text-secondary fs-6 mb-0">Browse our active residential plots and luxury bungalow developments listed live from our project database.</p>
     </div>
@@ -56,7 +48,7 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : '';
                 elseif ($st == 'pre-launching') $st_badge = 'bg-warning text-dark';
                 elseif ($st == 'completed') $st_badge = 'bg-info text-white';
             }
-            $p_img = !empty($p['image']) ? base_url($p['image']) : base_url('assets/images/slider/gardenia_hero.webp');
+            $p_img = !empty($p['image']) ? (base_url($p['image']) . '?v=2') : base_url('assets/images/slider/gardenia_hero.webp');
         ?>
           <div class="col-lg-4 col-md-6">
             <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden bg-white border">
@@ -64,7 +56,7 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : '';
               <!-- Card Thumbnail & Status Badges -->
               <div class="position-relative bg-light">
                 <div class="ratio ratio-16x9">
-                  <img src="<?= $p_img ?>" alt="<?= htmlspecialchars($p['name']) ?> - The Gardenia Estate Plot Project" class="img-fluid object-fit-cover" loading="lazy">
+                  <img src="<?= $p_img ?>" alt="<?= htmlspecialchars($p['name']) ?> - <?= htmlspecialchars($company3) ?> Plot Project" class="img-fluid object-fit-cover" loading="lazy">
                 </div>
 
                 <div class="position-absolute top-0 start-0 m-3 d-flex gap-2 z-index-2">

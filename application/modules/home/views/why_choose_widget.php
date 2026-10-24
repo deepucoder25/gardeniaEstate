@@ -7,7 +7,7 @@
     <!-- Section Header -->
     <div class="text-center mb-5">
       <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">The Gardenia Advantage</span>
-      <h2 class="display-6 text-dark fw-bold mb-2">Why Invest in The Gardenia Estate?</h2>
+      <h2 class="display-6 text-dark fw-bold mb-2">Why Invest in <?= htmlspecialchars($company3) ?>?</h2>
       <div class="divider-line-gold mx-auto"></div>
     </div>
 

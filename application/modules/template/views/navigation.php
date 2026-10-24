@@ -43,7 +43,7 @@
     <div class="container-fluid fs-5 container-lg d-flex align-items-center justify-content-between gap-3">
       <!-- Contact Info (Phone & Email with generous icon-text gaps) -->
       <div class="d-none d-md-flex  align-items-center gap-3.5 text-nowrap extra-small fw-bold">
-        <a href="<?= $phonehtml ?>" class="text-white text-decoration-none d-flex align-items-center fs-6 gap-2 top-bar-link" title="Call Us">
+        <a <?= $phonehtml ?> class="text-white text-decoration-none d-flex align-items-center fs-6 gap-2 top-bar-link" title="Call Us">
           <i class="bi bi-telephone-fill text-warning me-1.5 fs-6"></i>
           <span class="fw-bold"><?= $phone ?></span>
         </a>
@@ -68,13 +68,13 @@
       <div class="d-none d-lg-flex align-items-center gap-2 text-nowrap">
       
         <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1.5 extra-small fw-bold d-flex align-items-center gap-2">
-          <i class="bi bi-geo-alt-fill text-success fs-7 me-1"></i> Bagdogra, Siliguri
+          <i class="bi bi-geo-alt-fill text-success fs-7 me-1"></i> <?= htmlspecialchars($addressRegion) ?>
         </span>
       </div>
 
       <!-- Mobile Contact Quick Icons -->
       <div class="d-flex d-md-none align-items-center gap-3 extra-small text-nowrap">
-        <a href="<?= $phonehtml ?>" class="text-white text-decoration-none" title="Call Us"><i class="bi bi-telephone-fill text-warning fs-6"></i></a>
+        <a <?= $phonehtml ?> class="text-white text-decoration-none" title="Call Us"><i class="bi bi-telephone-fill text-warning fs-6"></i></a>
         <a href="<?= $mailhtml ?>" class="text-white text-decoration-none" title="Email Us"><i class="bi bi-envelope-fill text-warning fs-6"></i></a>
       </div>
     </div>
@@ -86,7 +86,7 @@
       
       <!-- Brand Logo -->
       <a href="<?= site_url() ?>" class="navbar-brand d-flex align-items-center m-0 p-0 flex-shrink-1">
-        <img src="<?= base_url('assets/images/logo/logo.webp') ?>" alt="<?= htmlspecialchars($company3) ?> Logo - The Gardenia Estate" class="header-logo img-fluid" loading="eager" fetchpriority="high">
+        <img src="<?= base_url('assets/images/logo/logo.webp') ?>" alt="<?= htmlspecialchars($company3) ?> Logo - <?= htmlspecialchars($company3) ?>" class="header-logo img-fluid" loading="eager" fetchpriority="high">
       </a>
 
       <!-- Header Action Items: Get Quote Button & Toggle Button (With Explicit Mobile Gap) -->
@@ -256,7 +256,7 @@
 
             <!-- Banner Card -->
             <div class="card border-0 rounded-4 overflow-hidden shadow-sm text-center text-white position-relative menu-banner-card">
-              <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="The Gardenia Estate Luxury Plotted Community Banner" class="img-fluid menu-banner-img" loading="lazy">
+              <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="<?= htmlspecialchars($company3) ?> Luxury Plotted Community Banner" class="img-fluid menu-banner-img" loading="lazy">
               <div class="position-absolute top-0 start-0 w-100 h-100 menu-banner-overlay p-4 d-flex flex-column align-items-center justify-content-center">
                 <p class="small fw-semibold mb-3 text-white">Exclusive Plots &amp; Luxury Bungalows for Sale Surrounded by Nature</p>
                 <a href="<?= site_url('about-project') ?>" class="btn btn-outline-light rounded-pill btn-sm px-4 py-2 fw-bold tracking-wide text-uppercase">EXPLORE PROJECT</a>
@@ -285,7 +285,7 @@
               <!-- 2 Contact White Cards (2 per Row on Mobile & Desktop) -->
               <div class="row g-2 mb-3">
                 <div class="col-6">
-                  <a href="<?= $phonehtml ?>" class="card border-0 rounded-4 p-2.5 shadow-sm text-decoration-none text-dark d-flex flex-column align-items-center text-center bg-white nav-contact-card h-100">
+                  <a <?= $phonehtml ?> class="card border-0 rounded-4 p-2.5 shadow-sm text-decoration-none text-dark d-flex flex-column align-items-center text-center bg-white nav-contact-card h-100">
                     <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm mb-1.5 icon-box-42">
                       <i class="bi bi-telephone-fill fs-5"></i>
                     </div>
@@ -295,7 +295,7 @@
                 </div>
 
                 <div class="col-6">
-                  <a href="<?= $megaWhatsappLink ?>" target="_blank" rel="noopener" class="card border-0 rounded-4 p-2.5 shadow-sm text-decoration-none text-dark d-flex flex-column align-items-center text-center bg-white nav-contact-card h-100">
+                  <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="card border-0 rounded-4 p-2.5 shadow-sm text-decoration-none text-dark d-flex flex-column align-items-center text-center bg-white nav-contact-card h-100">
                     <div class="bg-whatsapp-green text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm mb-1.5 icon-box-42">
                       <i class="bi bi-whatsapp fs-5"></i>
                     </div>

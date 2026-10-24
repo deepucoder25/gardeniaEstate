@@ -59,7 +59,7 @@
                             <span class="ms-2 extra-small fw-bold text-muted">5.0 / 5</span>
                         </div>
                         <p class="text-secondary small leading-relaxed mb-4">
-                            "Buying a 1500 Sq.Ft villa plot at Bagdogra through Gardenia Estate was completely seamless. Clear title deeds, fast bank loan approval, and excellent connectivity to the airport and Asian Highway!"
+                            "Buying a 1500 Sq.Ft villa plot at Bagdogra through <?= htmlspecialchars($company3) ?> was completely seamless. Clear title deeds, fast bank loan approval, and excellent connectivity to the airport and Asian Highway!"
                         </p>
                         <div class="d-flex align-items-center gap-3 pt-3 border-top mt-auto">
                             <div class="rounded-circle bg-success-subtle text-success fw-bold d-flex align-items-center justify-content-center icon-box-44">

@@ -23,7 +23,7 @@ try {
                     $img_url = base_url('assets/uploads/gallery/' . $img_name);
                 }
                 
-                $title = !empty($photo->title) ? $photo->title : 'The Gardenia Estate';
+                $title = !empty($photo->title) ? $photo->title : $company3;
                 $subtitle = !empty($photo->album_name) ? $photo->album_name : 'Estate Gallery';
                 
                 $gallery_items[] = [
@@ -61,7 +61,7 @@ try {
              data-index="<?= $index ?>" 
              data-title="<?= htmlspecialchars($item['title']) ?>" 
              data-subtitle="<?= htmlspecialchars($item['subtitle']) ?>">
-          <img src="<?= $item['img'] ?>" alt="<?= htmlspecialchars($item['title']) ?> - The Gardenia Estate Gallery Showcase" class="w-100 h-100 object-fit-cover" loading="lazy">
+          <img src="<?= $item['img'] ?>" alt="<?= htmlspecialchars($item['title']) ?> - <?= htmlspecialchars($company3) ?> Gallery Showcase" class="w-100 h-100 object-fit-cover" loading="lazy">
           <div class="coverflow-overlay position-absolute bottom-0 start-0 w-100 p-3 bg-dark-gradient text-white">
             <span class="fw-bold small d-block"><?= htmlspecialchars($item['title']) ?></span>
             <span class="extra-small text-white-50"><?= htmlspecialchars($item['subtitle']) ?></span>

@@ -32,7 +32,7 @@
                                         <i class="bi bi-person-fill fs-5"></i>
                                     </div>
                                     <div>
-                                        <div class="fw-bold text-dark small mb-0"><?= htmlspecialchars(@$query[0]->author ?? 'The Gardenia Estate Team') ?></div>
+                                        <div class="fw-bold text-dark small mb-0"><?= htmlspecialchars(@$query[0]->author ?? ($company3 . ' Team')) ?></div>
                                         <div class="extra-small text-muted">Project Advisory &amp; Planning</div>
                                     </div>
                                 </div>
@@ -49,9 +49,9 @@
                             $image_path1 = FCPATH . 'uploads/blogs/' . $img_name;
                             $image_path2 = FCPATH . 'assets/uploads/blog/' . $img_name;
                             if (!empty($img_name) && file_exists($image_path1)): ?>
-                                <img src="<?= base_url('uploads/blogs/' . $img_name) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Featured Blog Image The Gardenia Estate" class="img-fluid w-100 blog-details-img rounded-4 max-h-440 object-fit-cover" loading="lazy">
+                                <img src="<?= base_url('uploads/blogs/' . $img_name) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Featured Blog Image <?= htmlspecialchars($company3) ?>" class="img-fluid w-100 blog-details-img rounded-4 max-h-440 object-fit-cover" loading="lazy">
                             <?php else: ?>
-                                <img src="<?= base_url('assets/uploads/blog/' . $img_name) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Featured Blog Image The Gardenia Estate" class="img-fluid w-100 blog-details-img rounded-4 max-h-440 object-fit-cover" loading="lazy" onerror="this.src='<?= base_url('assets/images/slider/gardenia_hero.webp') ?>'">
+                                <img src="<?= base_url('assets/uploads/blog/' . $img_name) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?> - Featured Blog Image <?= htmlspecialchars($company3) ?>" class="img-fluid w-100 blog-details-img rounded-4 max-h-440 object-fit-cover" loading="lazy" onerror="this.src='<?= base_url('assets/images/slider/gardenia_hero.webp') ?>'">
                             <?php endif; ?>
                         </div>
 
@@ -81,7 +81,7 @@
                             <p class="fst-italic text-dark mb-2 fw-medium">
                                 "Land is the only asset class that never depreciates. Choosing a RERA-approved plotted development ensures both security of capital and maximum return on investment."
                             </p>
-                            <footer class="blockquote-footer text-success fw-bold mb-0">The Gardenia Estate Advisory</footer>
+                            <footer class="blockquote-footer text-success fw-bold mb-0"><?= htmlspecialchars($company3) ?> Advisory</footer>
                         </blockquote>
 
                         <!-- Colorful Social Share Strip (Desktop 4-in-1-Row, Mobile 2-in-1-Row) -->
@@ -122,7 +122,7 @@
                                     <i class="bi bi-person-badge fs-3"></i>
                                 </div>
                                 <div class="min-w-0 flex-grow-1 text-break">
-                                    <h6 class="fw-bold text-dark mb-1">Written by The Gardenia Estate Team</h6>
+                                    <h6 class="fw-bold text-dark mb-1">Written by <?= htmlspecialchars($company3) ?> Team</h6>
                                     <p class="extra-small text-muted mb-2 text-break">Project Advisory &amp; Investment Research | WBRERA Reg No: WBRERA/P/DAR/2024/000188</p>
                                     <p class="small text-secondary mb-0">Specializing in premium residential plots and luxury bungalows for sale across Bagdogra and Siliguri.</p>
                                 </div>
@@ -219,11 +219,11 @@
     "datePublished": "<?= date('c', strtotime(@$query[0]->created_at)) ?>",
     "author": {
         "@type": "Person",
-        "name": "<?= addslashes(@$query[0]->author ?? 'The Gardenia Estate') ?>"
+        "name": "<?= addslashes(@$query[0]->author ?? $company3) ?>"
     },
     "publisher": {
         "@type": "Organization",
-        "name": "<?= isset($company3) ? $company3 : 'The Gardenia Estate' ?>",
+        "name": "<?= addslashes($company3) ?>",
         "logo": {
             "@type": "ImageObject",
             "url": "<?= base_url('assets/images/logo/logo.webp') ?>"

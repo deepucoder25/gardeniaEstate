@@ -60,7 +60,7 @@
 
                 <!-- Investment Potential -->
                 <h4 class="fw-bold text-dark mb-3">Investment Potential</h4>
-                <p class="text-secondary mb-2">Investing in plots and bungalows at The Gardenia Estate in Bagdogra offers clear advantages:</p>
+                <p class="text-secondary mb-2">Investing in plots and bungalows at <?= htmlspecialchars($company3) ?> in <?= htmlspecialchars($addressRegion) ?> offers clear advantages:</p>
                 <ul class="text-secondary mb-4 ps-3">
                     <li class="mb-2"><strong>High Returns on Investment:</strong> Rapid infrastructure expansion, highway upgrades, and airport development guarantee strong long-term appreciation.</li>
                     <li class="mb-2"><strong>Clear Legal Titles &amp; Approvals:</strong> Complete peace of mind with verified land ownership, RERA compliance, and streamlined bank loan processing.</li>
@@ -70,7 +70,7 @@
                 <!-- Conclusion -->
                 <h4 class="fw-bold text-dark mb-3">Conclusion</h4>
                 <p class="text-secondary mb-0 leading-relaxed">
-                    Bagdogra stands out as the most promising real estate destination in North Bengal. Its strategic location, robust transportation infrastructure, and scenic natural environment make it an ideal choice for investors seeking solid capital gains and homebuyers seeking a peaceful, well-connected community. Investing in plots and luxury bungalows at The Gardenia Estate represents an exceptional opportunity for long-term prosperity.
+                    Bagdogra stands out as the most promising real estate destination in North Bengal. Its strategic location, robust transportation infrastructure, and scenic natural environment make it an ideal choice for investors seeking solid capital gains and homebuyers seeking a peaceful, well-connected community. Investing in plots and luxury bungalows at <?= htmlspecialchars($company3) ?> represents an exceptional opportunity for long-term prosperity.
                 </p>
 
             </div>

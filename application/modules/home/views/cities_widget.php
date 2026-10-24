@@ -36,17 +36,17 @@ if (!empty($plots)) {
     <div class="text-center mb-4">
       <h2 class="fs-3 fw-bold text-dark mb-2">Prime Locations for Plots &amp; Bungalows</h2>
       <p class="text-secondary small max-w-600 mx-auto">
-        Explore active residential plots and luxury bungalow locations in Bagdogra, Siliguri.
+        Explore active residential plots and luxury bungalow locations in <?= htmlspecialchars($addressRegion) ?>.
       </p>
     </div>
 
     <div class="row g-3 justify-content-center">
-      <?php foreach ($active_cities as $c_name): ?>
+      <?php foreach ($active_cities as $city_item): ?>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card border-0 rounded-4 shadow-sm p-3 bg-white text-center h-100">
             <a href="<?= site_url() ?>#plotsPricingSection" class="text-decoration-none text-dark fw-bold d-flex align-items-center justify-content-center gap-2">
               <i class="bi bi-geo-alt-fill text-danger fs-6"></i>
-              <span><?= htmlspecialchars($c_name) ?></span>
+              <span><?= htmlspecialchars($city_item) ?></span>
             </a>
           </div>
         </div>

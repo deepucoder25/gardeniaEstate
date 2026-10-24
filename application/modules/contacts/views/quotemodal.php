@@ -9,7 +9,7 @@
             <i class="bi bi-flower2 text-gold fs-5"></i>
           </div>
           <div class="ps-1">
-            <h5 class="modal-title fs-5 fw-bold text-white mb-0" id="qteModalLabel">The Gardenia Estate</h5>
+            <h5 class="modal-title fs-5 fw-bold text-white mb-0" id="qteModalLabel"><?= htmlspecialchars($company3) ?></h5>
             <p class="extra-small text-white-50 mb-0">Plots &amp; Bungalows For Sale - Cost Sheet &amp; Free Site Visit Booking</p>
           </div>
         </div>

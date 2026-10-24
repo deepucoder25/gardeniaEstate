@@ -4,7 +4,7 @@
 <?php
 $this->load->view('about/dynamic_breadcrumbs', [
   'bc_h1' => 'Video Gallery',
-  'bc_desc' => 'Explore official walkthrough videos, site tour reels, project progress, and infrastructure developments of The Gardenia Estate.',
+  'bc_desc' => 'Explore official walkthrough videos, site tour reels, project progress, and infrastructure developments of ' . $company3 . '.',
   'breadcrumbs' => [
     ['name' => 'Video Gallery']
   ]
@@ -41,7 +41,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
               <div class="ratio ratio-16x9 bg-dark">
                 <iframe
                   src="<?= htmlspecialchars($vurl) ?>"
-                  title="<?= !empty($v->title) && $v->title !== 'Video' ? htmlspecialchars($v->title) : 'The Gardenia Estate Project Video' ?>"
+                  title="<?= !empty($v->title) && $v->title !== 'Video' ? htmlspecialchars($v->title) : htmlspecialchars($company3 . ' Project Video') ?>"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                   class="border-0">

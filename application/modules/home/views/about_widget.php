@@ -1,19 +1,4 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-
-$company_file = FCPATH . 'assets/company_info_settings.json';
-$company_info = [];
-if (file_exists($company_file)) {
-    $company_info = json_decode(file_get_contents($company_file), true);
-}
-
-$c_name  = !empty($company_info['company_name']) ? $company_info['company_name'] : 'The Gardenia Estate';
-$c_desc  = !empty($company_info['description']) ? $company_info['description'] : 'A premier 50+ Acre luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate RERA-approved registration.';
-$c_loc   = !empty($company_info['location']) ? $company_info['location'] : 'Airport Road, Bagdogra, Siliguri, West Bengal – 734014';
-$c_phone = !empty($company_info['phone']) ? $company_info['phone'] : '+91 98765 43210';
-$c_email = !empty($company_info['email']) ? $company_info['email'] : 'info@thegardeniaestate.in';
-$c_img   = !empty($company_info['image']) ? base_url($company_info['image']) : base_url('assets/images/reviews/bagdogra_plots_bungalows.webp');
-$c_inset = base_url('assets/images/reviews/plot_gardenia_boulevard.webp');
-?>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <style>
 /* BALANCED LUXURY ABOUT SECTION STYLING */
@@ -294,18 +279,18 @@ $c_inset = base_url('assets/images/reviews/plot_gardenia_boulevard.webp');
         <div class="mb-3">
           <span class="gardenia-eyebrow-pill">
             <i class="bi bi-patch-check-fill text-success"></i>
-            WELCOME TO <?= htmlspecialchars($c_name) ?>
+            WELCOME TO <?= $company3 ?>
           </span>
         </div>
 
         <!-- Main Title -->
         <h2 class="gardenia-heading mb-3">
-          <?= htmlspecialchars($c_name) ?>
+          <?= $company3 ?>
         </h2>
 
         <!-- Description Paragraph -->
         <p class="gardenia-paragraph mb-3">
-          <?= nl2br(htmlspecialchars($c_desc)) ?>
+         A premier 50+ Acre luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate RERA-approved registration.
         </p>
 
         <!-- 4 Key Township Highlights Checklist -->
@@ -337,34 +322,30 @@ $c_inset = base_url('assets/images/reviews/plot_gardenia_boulevard.webp');
         </div>
 
         <!-- Location Pill -->
-        <?php if (!empty($c_loc)): ?>
+        <?php if (!empty($address)): ?>
           <div class="mb-2 mt-3">
             <div class="gardenia-contact-pill max-w-100">
               <i class="bi bi-geo-alt-fill text-danger flex-shrink-0 fs-6"></i>
-              <span class="text-truncate"><?= htmlspecialchars($c_loc) ?></span>
+              <span class="text-truncate"><?= htmlspecialchars($address) ?></span>
             </div>
           </div>
         <?php endif; ?>
 
         <!-- Phone & Email Pills -->
         <div class="row g-2 mb-4">
-          <?php if (!empty($c_phone)): ?>
             <div class="col-6">
-              <a href="tel:<?= preg_replace('/\D+/', '', $c_phone) ?>" class="gardenia-contact-pill w-100 justify-content-center">
+              <a <?= $phonehtml ?> class="gardenia-contact-pill w-100 justify-content-center">
                 <i class="bi bi-telephone-fill text-success flex-shrink-0"></i>
-                <span class="text-truncate"><?= htmlspecialchars($c_phone) ?></span>
+                <span class="text-truncate"><?= htmlspecialchars($phone) ?></span>
               </a>
             </div>
-          <?php endif; ?>
 
-          <?php if (!empty($c_email)): ?>
             <div class="col-6">
-              <a href="mailto:<?= htmlspecialchars($c_email) ?>" class="gardenia-contact-pill w-100 justify-content-center">
+              <a href="<?= $mailhtml ?>" class="gardenia-contact-pill w-100 justify-content-center">
                 <i class="bi bi-envelope-fill text-primary flex-shrink-0"></i>
-                <span class="text-truncate"><?= htmlspecialchars($c_email) ?></span>
+                <span class="text-truncate"><?= htmlspecialchars($mail) ?></span>
               </a>
             </div>
-          <?php endif; ?>
         </div>
 
         <!-- Action Buttons with clean gap -->
@@ -390,7 +371,7 @@ $c_inset = base_url('assets/images/reviews/plot_gardenia_boulevard.webp');
           <!-- Main Master Drone Image Frame -->
           <div class="gardenia-main-img-box">
             <div class="ratio ratio-4x3">
-              <img src="<?= $c_img ?>" alt="<?= htmlspecialchars($c_name) ?> - Luxury Plots &amp; Bungalows in Bagdogra Siliguri" class="w-100 h-100 object-fit-cover" loading="lazy">
+              <img src="<?= base_url('assets/images/reviews/bagdogra_plots_bungalows.webp') ?>" alt="<?= $company3 ?> - Luxury Plots &amp; Bungalows in Bagdogra Siliguri" class="w-100 h-100 object-fit-cover" loading="lazy">
             </div>
             
             <!-- Top-Right Floating Proximity Badge -->
@@ -402,10 +383,10 @@ $c_inset = base_url('assets/images/reviews/plot_gardenia_boulevard.webp');
 
           <!-- Secondary Overlapping Inset: Gardens & Luxury Bungalows -->
           <div class="gardenia-inset-box">
-            <img src="<?= $c_inset ?>" alt="<?= htmlspecialchars($c_name) ?> - Landscaped Gardens &amp; Luxury Bungalow Living" loading="lazy">
+            <img src="<?= base_url('assets/images/reviews/gardenia_bungalow_villa.webp') ?>" alt="<?= $company3 ?> - Landscaped Gardens &amp; Luxury Bungalow Living" loading="lazy">
             <div class="gardenia-inset-tag">
-              <i class="bi bi-tree-fill text-success"></i>
-              <span>Landscaped Gardens</span>
+              <i class="bi bi-house-door-fill text-success"></i>
+              <span>Luxury Bungalows</span>
             </div>
           </div>
 

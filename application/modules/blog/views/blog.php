@@ -52,7 +52,7 @@
                         $created_at = isset($b->created_at) ? $b->created_at : date('Y-m-d H:i:s');
                         $day = date('d', strtotime($created_at));
                         $month = date('M', strtotime($created_at));
-                        $author = !empty($b->author) ? $b->author : 'The Gardenia Estate';
+                        $author = !empty($b->author) ? $b->author : $company3;
 
                         $schemaData[] = [
                             "@context" => "https://schema.org",
@@ -66,7 +66,7 @@
                             ],
                             "publisher" => [
                                 "@type" => "Organization",
-                                "name" => isset($company3) ? $company3 : 'The Gardenia Estate',
+                                "name" => $company3,
                                 "logo" => [
                                     "@type" => "ImageObject",
                                     "url" => base_url('assets/images/logo/logo.webp')
@@ -79,7 +79,7 @@
                             <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden blog-card">
                                 <div class="position-relative overflow-hidden">
                                     <a href="<?= $link ?>" class="d-block text-decoration-none">
-                                        <img src="<?= $img ?>" class="card-img-top blog-card-img" alt="<?= htmlspecialchars($b->title) ?> - Real Estate Article The Gardenia Estate" loading="lazy">
+                                        <img src="<?= $img ?>" class="card-img-top blog-card-img" alt="<?= htmlspecialchars($b->title) ?> - Real Estate Article <?= htmlspecialchars($company3) ?>" loading="lazy">
                                     </a>
                                     <span class="position-absolute top-0 end-0 bg-warning text-dark fw-bold px-3 py-1.5 rounded-bottom-start shadow-sm extra-small">
                                         <i class="bi bi-calendar3 me-1"></i><?= $day ?> <?= $month ?>

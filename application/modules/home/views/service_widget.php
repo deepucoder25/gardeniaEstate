@@ -38,7 +38,7 @@ $offerings = [
         <div class="section-header text-center mb-5">
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">OUR PROPERTY OFFERINGS</span>
             <h2 class="display-6 fw-bold text-dark mb-2">Plots &amp; Luxury Bungalows For Sale</h2>
-            <p class="text-secondary small max-w-600 mx-auto">Discover prime residential and commercial land options along with bespoke bungalows in Bagdogra, Siliguri.</p>
+            <p class="text-secondary small max-w-600 mx-auto">Discover prime residential and commercial land options along with bespoke bungalows in <?= htmlspecialchars($addressRegion) ?>.</p>
         </div>
 
         <!-- Grid of Offerings -->

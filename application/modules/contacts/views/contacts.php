@@ -19,7 +19,7 @@
       
       <!-- Card 1: Phone -->
       <div class="col-lg-4 col-sm-6">
-        <a href="<?= $phonehtml ?>" class="card border-0 rounded-4 shadow-sm p-4 h-100 bg-white text-decoration-none contact-info-card border">
+        <a <?= $phonehtml ?> class="card border-0 rounded-4 shadow-sm p-4 h-100 bg-white text-decoration-none contact-info-card border">
           <div class="d-flex align-items-center gap-3">
             <div class="contact-icon-circle flex-shrink-0">
               <i class="bi bi-telephone-fill fs-4"></i>
@@ -91,10 +91,10 @@
               Schedule a free cab pickup from anywhere in Siliguri or Bagdogra Airport for an exclusive guided walkthrough of the 50+ acre township, layout infrastructure, and available plots and luxury bungalows for sale.
             </p>
             <div class="d-flex gap-2">
-              <a href="<?= $phonehtml ?>" class="btn btn-outline-success bg-success text-white btn-sm rounded-pill flex-fill fw-bold py-2">
+              <a <?= $phonehtml ?> class="btn btn-outline-success bg-success text-white btn-sm rounded-pill flex-fill fw-bold py-2">
                 <i class="bi bi-telephone-fill me-1"></i> Call Advisor
               </a>
-              <a href="https://wa.me/<?= preg_replace('/\D+/', '', $phone) ?>" target="_blank" rel="noopener" class="btn btn-success btn-sm rounded-pill flex-fill fw-bold py-2">
+              <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="btn btn-success btn-sm rounded-pill flex-fill fw-bold py-2">
                 <i class="bi bi-whatsapp me-1"></i> WhatsApp Us
               </a>
             </div>
@@ -122,7 +122,7 @@
 
             <div class="p-3 bg-light rounded-3 border-start border-4 border-success">
               <span class="extra-small text-muted d-block leading-relaxed">
-                <i class="bi bi-shield-lock-fill text-success me-1"></i> <strong>Official Sales Office:</strong> The Gardenia Estate. Direct developer pricing with 100% clear legal titles and zero brokerage fees.
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> <strong>Official Sales Office:</strong> <?= htmlspecialchars($company3) ?>. Direct developer pricing with 100% clear legal titles and zero brokerage fees.
               </span>
             </div>
           </div>
@@ -138,7 +138,7 @@
         <h5 class="fw-bold text-dark mb-0 fs-6 d-flex align-items-center gap-2">
           <i class="bi bi-map-fill text-success fs-5"></i> Project Site Map &amp; Directions
         </h5>
-        <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 extra-small fw-bold">Airport Road, Bagdogra, Siliguri</span>
+        <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 extra-small fw-bold"><?= htmlspecialchars($addressRegion) ?></span>
       </div>
       <div class="card-body p-0">
         <div class="ratio ratio-21x9 overflow-hidden min-h-380">
