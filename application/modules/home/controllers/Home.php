@@ -32,10 +32,8 @@ class Home extends MX_Controller
         }
 
         // Canonical Slug Redirect if numeric ID (e.g., plot/2 -> plot/gardenia-commercial-boulevard)
-        $plots_file = FCPATH . 'assets/plots_master.json';
-        if (file_exists($plots_file)) {
-            $plots = json_decode(file_get_contents($plots_file), true);
-            if (is_array($plots)) {
+        $plots = get_plots_master();
+        if (is_array($plots)) {
                 foreach ($plots as $p) {
                     $p_id = isset($p['id']) ? (string)$p['id'] : '';
                     if ((string)$id === $p_id && !empty($p['name'])) {
@@ -48,7 +46,6 @@ class Home extends MX_Controller
                     }
                 }
             }
-        }
 
         $data['selected_plot_id'] = $id;
         $data['title'] = "Plot Details | " . $this->comp['company3'];
@@ -85,12 +82,7 @@ class Home extends MX_Controller
 
     function location()
     {
-        $data['title'] = "Location & Connectivity | " . $this->comp['company3'];
-        $data['description'] = "Strategic location with easy access to Bagdogra International Airport, Asian Highway, and Siliguri city.";
-        $data['module'] = "home";
-        $data['view_file'] = "location";
-        $data['show_breadcrumbs'] = true;
-        echo Modules::run('template/layout2', $data);
+        redirect(site_url());
     }
 
     function faq_page()

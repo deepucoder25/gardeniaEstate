@@ -30,7 +30,7 @@ class Gallery_mdl extends CI_Model
 	   $a=$this->db->insert($this->table,$data);
 	   return $this->db->affected_rows($a);
 	}
-	function view_data($where = null, $select = '*')
+	function view_data($where=null,$select="*")
 	{
 	    $this->db->select($select);
 	    if($where)

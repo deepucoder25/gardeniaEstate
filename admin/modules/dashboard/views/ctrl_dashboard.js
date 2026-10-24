@@ -10,6 +10,8 @@ app.controller('ctrl_dashboard',function($scope,$http)
 		$scope.bookings=data['bookings'] || 0;
 		$scope.contact=data['contact'] || 0;
 		$scope.reviews=data['reviews'] || 0;
+		$scope.plots=data['plots'] || 0;
+		$scope.amenities=data['amenities'] || 0;
 //		$scope.video_row=data['video'];
 //		$scope.album_row=data['album'];
 //		$scope.admin_row=data['admin_profile'];

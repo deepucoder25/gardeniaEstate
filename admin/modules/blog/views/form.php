@@ -1,9 +1,9 @@
 <style>
 /* Modern Admin Panel Overrides */
 .heading { margin-bottom: 25px; }
-.breadcrumb { background: transparent; padding: 0; font-size: 16px; font-weight: 600; color: #094B32; }
-.breadcrumb li a { color: #094B32; text-decoration: none; transition: 0.3s; }
-.breadcrumb li a:hover { color: #A88A4A; }
+.breadcrumb { background: transparent; padding: 0; font-size: 16px; font-weight: 600; color: #4361ee; }
+.breadcrumb li a { color: #4361ee; text-decoration: none; transition: 0.3s; }
+.breadcrumb li a:hover { color: #3f37c9; }
 
 .modern-card {
     background: #ffffff;
@@ -39,16 +39,16 @@
     color: #495057;
 }
 .admin-step.is-active {
-    background: #094B32;
+    background: #4361ee;
     color: #fff;
-    box-shadow: 0 4px 15px rgba(9, 75, 50, 0.3);
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
 }
 
 /* Form Controls */
 .admin-section-title {
     font-size: 18px;
     font-weight: 700;
-    color: #062315;
+    color: #2b3445;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px dashed #e2e8f0;
@@ -67,26 +67,24 @@
     background: #f8fafc;
 }
 .admin-form .form-control:focus {
-    border-color: #094B32;
+    border-color: #4361ee;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(9, 75, 50, 0.15);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
 }
 
 /* Buttons */
 .btn-info {
-    background: #094B32;
+    background: #4361ee;
     border: none;
     border-radius: 8px;
     padding: 10px 25px;
     font-weight: 600;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(9, 75, 50, 0.3);
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
     transition: all 0.3s ease;
 }
 .btn-info:hover {
-    background: #063322;
-    color: #ffffff;
-    box-shadow: 0 6px 20px rgba(9, 75, 50, 0.4);
+    background: #3f37c9;
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
     transform: translateY(-2px);
 }
 .btn-default {

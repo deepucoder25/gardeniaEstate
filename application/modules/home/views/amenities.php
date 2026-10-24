@@ -1,11 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
-$amenities_file = FCPATH . 'assets/amenities_master.json';
-$amenities = [];
-if (file_exists($amenities_file)) {
-    $amenities = json_decode(file_get_contents($amenities_file), true);
-    if (!is_array($amenities)) $amenities = [];
-}
+$amenities = get_amenities_master();
 ?>
 
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->

@@ -4,30 +4,9 @@ class Project_overview extends MX_Controller
 {
     public function index($tab = 'company_info', $plot_id = 0)
     {
-        // 1. Load Company Info Settings
-        $company_file = FCPATH . 'assets/company_info_settings.json';
-        $company_info = [];
-        if (file_exists($company_file)) {
-            $company_info = json_decode(file_get_contents($company_file), true);
-        }
-
-        // 2. Load Amenities Master (Name-only)
-        $amenities_file = FCPATH . 'assets/amenities_master.json';
-        $amenities_master = [];
-        if (file_exists($amenities_file)) {
-            $amenities_master = json_decode(file_get_contents($amenities_file), true);
-        }
-
-        // 3. Load Plots Master
-        $plots_file = FCPATH . 'assets/plots_master.json';
-        $plots_master = [];
-        if (file_exists($plots_file)) {
-            $plots_master = json_decode(file_get_contents($plots_file), true);
-        }
-
-        $data['company_info']     = $company_info;
-        $data['amenities_master'] = is_array($amenities_master) ? $amenities_master : [];
-        $data['plots_master']     = is_array($plots_master) ? $plots_master : [];
+        $data['company_info']     = get_company_info();
+        $data['amenities_master'] = get_amenities_master();
+        $data['plots_master']     = get_plots_master();
         $data['active_tab']       = $tab;
         $data['editing_plot_id']  = intval($plot_id);
 
@@ -43,8 +22,6 @@ class Project_overview extends MX_Controller
     // Save Global Company Info
     public function save_company_info()
     {
-        $file_path = FCPATH . 'assets/company_info_settings.json';
-
         $image_path = isset($_POST['existing_company_image']) ? $_POST['existing_company_image'] : '';
         if (isset($_FILES['company_image']) && $_FILES['company_image']['error'] == 0) {
             $upload_dir = FCPATH . 'assets/images/uploads/';
@@ -71,20 +48,17 @@ class Project_overview extends MX_Controller
             'image'        => $image_path
         ];
 
-        $json_str = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-        if (@file_put_contents($file_path, $json_str) !== false) {
+        if (save_company_info_db($data)) {
             echo "Company Info saved successfully!";
         } else {
             echo "Error saving Company Info settings.";
         }
     }
 
-    // Save Amenities Master (Name-only, icons input removed)
+    // Save Amenities Master
     public function save_amenities()
     {
-        $file_path = FCPATH . 'assets/amenities_master.json';
         $amenities = [];
-
         if (isset($_POST['amenity_name']) && is_array($_POST['amenity_name'])) {
             $id_counter = 1;
             foreach ($_POST['amenity_name'] as $idx => $aname) {
@@ -97,8 +71,7 @@ class Project_overview extends MX_Controller
             }
         }
 
-        $json_str = json_encode($amenities, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-        if (@file_put_contents($file_path, $json_str) !== false) {
+        if (save_amenities_master_db($amenities)) {
             echo "Amenities Master saved successfully!";
         } else {
             echo "Error saving Amenities Master.";
@@ -108,13 +81,6 @@ class Project_overview extends MX_Controller
     // Save Plot / Property (Add or Edit)
     public function save_plot()
     {
-        $file_path = FCPATH . 'assets/plots_master.json';
-        $plots = [];
-        if (file_exists($file_path)) {
-            $plots = json_decode(file_get_contents($file_path), true);
-            if (!is_array($plots)) $plots = [];
-        }
-
         $plot_id = isset($_POST['plot_id']) ? intval($_POST['plot_id']) : 0;
 
         // Image Upload Handling
@@ -158,6 +124,7 @@ class Project_overview extends MX_Controller
         }
 
         $plot_data = [
+            'id'             => $plot_id,
             'name'           => isset($_POST['plot_name']) ? trim($_POST['plot_name']) : 'New Plot Project',
             'about'          => isset($_POST['plot_about']) ? trim($_POST['plot_about']) : '',
             'image'          => $image_path,
@@ -173,33 +140,7 @@ class Project_overview extends MX_Controller
             'amenity_ids'    => $amenity_ids
         ];
 
-        if ($plot_id > 0) {
-            // Update Existing Plot
-            $found = false;
-            foreach ($plots as $k => $p) {
-                if (isset($p['id']) && $p['id'] == $plot_id) {
-                    $plot_data['id'] = $plot_id;
-                    $plots[$k] = $plot_data;
-                    $found = true;
-                    break;
-                }
-            }
-            if (!$found) {
-                $plot_data['id'] = $plot_id;
-                $plots[] = $plot_data;
-            }
-        } else {
-            // Generate new ID
-            $max_id = 0;
-            foreach ($plots as $p) {
-                if (isset($p['id']) && $p['id'] > $max_id) $max_id = $p['id'];
-            }
-            $plot_data['id'] = $max_id + 1;
-            $plots[] = $plot_data;
-        }
-
-        $json_str = json_encode($plots, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-        if (@file_put_contents($file_path, $json_str) !== false) {
+        if (save_plot_db($plot_data)) {
             echo "Plot Project saved successfully!";
         } else {
             echo "Error saving Plot Project.";
@@ -210,18 +151,8 @@ class Project_overview extends MX_Controller
     public function delete_plot($id = 0)
     {
         $id = intval($id);
-        $file_path = FCPATH . 'assets/plots_master.json';
-        if ($id > 0 && file_exists($file_path)) {
-            $plots = json_decode(file_get_contents($file_path), true);
-            if (is_array($plots)) {
-                $filtered = [];
-                foreach ($plots as $p) {
-                    if (isset($p['id']) && $p['id'] != $id) {
-                        $filtered[] = $p;
-                    }
-                }
-                @file_put_contents($file_path, json_encode($filtered, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-            }
+        if ($id > 0) {
+            delete_plot_db($id);
         }
         echo "Plot deleted successfully!";
     }

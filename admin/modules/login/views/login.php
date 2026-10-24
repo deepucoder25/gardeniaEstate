@@ -8,7 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="<?=base_url()?>assets/images/logo/favicon.webp"/>
+    <link rel="icon" type="image/webp" href="<?=base_url()?>assets/images/logo/favicon.webp"/>
     
     <style>
         * {
@@ -19,7 +19,7 @@
 
         body {
             font-family: 'Outfit', sans-serif;
-            background: url('<?=base_url("assets/images/slider/gardenia_hero.png")?>') center center / cover no-repeat;
+            background: url('<?=base_url("assets/images/slider/gardenia_hero.webp")?>') center center / cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -27,11 +27,12 @@
             position: relative;
         }
 
-        /* Dark Overlay Theme Colors */
+        /* Dark Overlay */
         body::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(3, 15, 38, 0.85) 0%, rgba(15, 52, 96, 0.75) 100%);
             z-index: 1;
         }
 
@@ -44,10 +45,12 @@
         }
 
         .login-card {
-            background: rgba(255, 255, 255, 0.96);
-            border: 1px solid rgba(168, 138, 74, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
-            padding: 45px 35px;
+            padding: 50px 40px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -59,47 +62,44 @@
 
         .logo-container {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .logo-container img {
-            max-height: 85px;
-            width: auto;
-            object-fit: contain;
+            width: 160px;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
             transition: transform 0.3s ease;
         }
         
         .logo-container img:hover {
-            transform: scale(1.04);
+            transform: scale(1.05);
         }
 
         .welcome-text {
             text-align: center;
-            color: #062315;
-            margin-bottom: 30px;
+            color: #ffffff;
+            margin-bottom: 35px;
         }
 
         .welcome-text h2 {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             letter-spacing: -0.5px;
-            color: #094B32;
         }
 
         .welcome-text p {
-            color: #556b62;
+            color: #c5d0d9;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         .alert {
             border-radius: 12px;
-            padding: 12px 16px;
-            margin-bottom: 22px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 500;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -107,33 +107,33 @@
         }
 
         .alert-danger {
-            background: #fef2f2;
-            color: #991b1b;
-            border-color: #fecaca;
+            background: rgba(239, 68, 68, 0.1);
+            color: #fca5a5;
+            border-color: rgba(239, 68, 68, 0.2);
         }
 
         .alert-info {
-            background: #f0fdf4;
-            color: #166534;
-            border-color: #bbf7d0;
+            background: rgba(53, 168, 224, 0.1);
+            color: #bae6fd;
+            border-color: rgba(53, 168, 224, 0.2);
         }
 
         .alert-warning {
-            background: #fffbeb;
-            color: #92400e;
-            border-color: #fef3c7;
+            background: rgba(245, 158, 11, 0.1);
+            color: #fcd34d;
+            border-color: rgba(245, 158, 11, 0.2);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             position: relative;
         }
 
         .form-group label {
             display: block;
-            color: #26352F;
+            color: #c5d0d9;
             font-size: 13px;
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 8px;
             letter-spacing: 0.5px;
         }
@@ -147,61 +147,60 @@
             left: 16px;
             top: 50%;
             transform: translateY(-50%);
-            color: #094B32;
+            color: #9ca3af;
             font-size: 18px;
             transition: color 0.3s ease;
         }
 
         .form-control {
             width: 100%;
-            background: #f8faf9;
-            border: 1.5px solid #d2e0d7;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 14px 15px 14px 45px;
-            color: #111827;
+            padding: 15px 15px 15px 45px;
+            color: #ffffff;
             font-family: 'Outfit', sans-serif;
             font-size: 15px;
-            font-weight: 500;
             transition: all 0.3s ease;
         }
 
         .form-control::placeholder {
-            color: #9ca3af;
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .form-control:focus {
             outline: none;
-            background: #ffffff;
-            border-color: #094B32;
-            box-shadow: 0 0 0 4px rgba(9, 75, 50, 0.15);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #35a8e0;
+            box-shadow: 0 0 0 4px rgba(53, 168, 224, 0.15);
         }
 
         .form-control:focus + i {
-            color: #A88A4A;
+            color: #35a8e0;
         }
 
         .btn-submit {
             width: 100%;
-            background: linear-gradient(135deg, #094B32 0%, #062315 100%);
+            background: linear-gradient(135deg, #35a8e0 0%, #0f3d5e 100%);
             color: white;
             border: none;
             border-radius: 12px;
-            padding: 15px;
+            padding: 16px;
             font-family: 'Outfit', sans-serif;
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(9, 75, 50, 0.3);
+            box-shadow: 0 8px 20px rgba(53, 168, 224, 0.3);
             margin-top: 10px;
         }
 
         .btn-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(168, 138, 74, 0.4);
-            background: linear-gradient(135deg, #A88A4A 0%, #856a33 100%);
+            box-shadow: 0 12px 25px rgba(53, 168, 224, 0.4);
+            background: linear-gradient(135deg, #44b6ef 0%, #154c73 100%);
         }
 
         .btn-submit:active {
@@ -209,11 +208,10 @@
         }
 
         .security-footer {
-            margin-top: 25px;
+            margin-top: 30px;
             text-align: center;
             font-size: 12px;
-            font-weight: 600;
-            color: #556b62;
+            color: rgba(255, 255, 255, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -221,7 +219,7 @@
         }
 
         .security-footer i {
-            color: #094B32;
+            color: #34d399;
         }
 
         /* Loading state */
@@ -252,10 +250,10 @@
 
         @media (max-width: 480px) {
             .login-card {
-                padding: 35px 22px;
+                padding: 40px 25px;
             }
             .welcome-text h2 {
-                font-size: 22px;
+                font-size: 24px;
             }
         }
     </style>
@@ -266,7 +264,7 @@
         <div class="login-card">
             
             <div class="logo-container">
-                <img src="<?=base_url("assets/images/logo/logo.webp")?>" alt="The Gardenia Estate Admin Panel Logo" loading="lazy">
+                <img src="<?=base_url("assets/images/logo/logo.webp")?>" alt="Gardenia Estate Logo">
             </div>
 
             <div class="welcome-text">

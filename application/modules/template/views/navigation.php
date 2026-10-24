@@ -28,7 +28,6 @@
       ["@type" => "SiteNavigationElement", "name" => "Project Overview", "url" => site_url('project-overview')],
       ["@type" => "SiteNavigationElement", "name" => "Plots & Pricing", "url" => site_url('plots-pricing')],
       ["@type" => "SiteNavigationElement", "name" => "Amenities", "url" => site_url('amenities')],
-      ["@type" => "SiteNavigationElement", "name" => "Location Map", "url" => site_url('location')],
       ["@type" => "SiteNavigationElement", "name" => "Gallery", "url" => site_url('gallery')],
       ["@type" => "SiteNavigationElement", "name" => "Contact Us", "url" => site_url('contact-us')]
     ]

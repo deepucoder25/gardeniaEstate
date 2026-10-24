@@ -22,10 +22,8 @@
  | a PHP script and you can easily do that on your own.
  |
  */
-  $config['base_url'] = 'http://localhost/gardeniaEstate/';
 
-  // $config['base_url'] = 'https://demo.groveus.com/gardeniaEstate/';
-
+$config['base_url'] = 'http://localhost/gardeniaEstate/';
 /*
  |--------------------------------------------------------------------------
  | Index File 

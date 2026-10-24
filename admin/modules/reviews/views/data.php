@@ -38,7 +38,7 @@
 						<td ng-if="y.rt<3" class='danger'>{{y.rt}}/5</td>
 						<td>{{y.cmt}} 
 						    <div ng-if="y.img">
-						        <img ng-repeat="img in y.img.split(',')" ng-if="img.trim() !== ''" alt="Review image thumbnail" style="width:60px;height:60px; object-fit: cover; margin-right: 5px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;" ng-src="{{ img.indexOf('/') !== -1 ? '<?=base_url()?>' + img.trim() : '<?=base_url('assets/uploads/reviewimg/thumb')?>/' + img.trim() }}" loading="lazy">
+						        <img ng-repeat="img in y.img.split(',')" ng-if="img.trim() !== ''" style="width:60px;height:60px; object-fit: cover; margin-right: 5px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc;" ng-src="{{ img.indexOf('/') !== -1 ? '<?=base_url()?>' + img.trim() : '<?=base_url('assets/uploads/reviewimg/thumb')?>/' + img.trim() }}">
 						    </div>
 						</td>
 						<td>{{y.pd}}</td>

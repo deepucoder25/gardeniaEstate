@@ -53,13 +53,6 @@ app.controller('ctrl_videogallery',function($scope,$http){
         $("#btnsubmit").html('<u><b>U</b></u>pdate Video');
         window.scrollTo(0, 0);
     };
-
-    $scope.cancel_edit=function(){
-        $scope.x = {};
-        $("#btnsubmit").html('<u><b>A</b></u>dd Video');
-        $("#validation").html("");
-        $("#result").html("");
-    };
 	
 	$scope.delete_data=function(x)
 	{

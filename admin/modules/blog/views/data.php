@@ -27,7 +27,7 @@
 						<td>{{y.author}}</td>
 						
 						<td class="img-responsive text-center">
-						    <img ng-if="y.image" ng-src="<?=base_url()?>uploads/blogs/{{y.image}}" onerror="this.src='<?=base_url()?>assets/uploads/blog/{{y.image}}'; this.onerror=function(){this.src='<?=base_url()?>assets/images/slider/gardenia_hero.png';};" style="height: 48px; width: 64px; object-fit: cover; border-radius: 6px;" class="shadow-xs border">
+						    <img ng-if="y.image" ng-src="<?=base_url()?>assets/uploads/blog/thumb/{{y.image}}" style="height: 50px; border-radius: 4px;">
 						</td>
 						
 						<td class="text-center">

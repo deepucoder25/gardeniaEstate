@@ -1,14 +1,11 @@
                 <?php
-                $labels = [];
-                if (file_exists('./assets/menu_labels.json')) {
-                    $labels = json_decode(file_get_contents('./assets/menu_labels.json'), true);
-                }
+                $labels = get_menu_labels();
                 function get_label($labels, $key, $default) {
                     return (isset($labels[$key]) && !empty($labels[$key])) ? htmlspecialchars($labels[$key]) : $default;
                 }
                 function is_visible($labels, $key) {
                     $show_key = "show_" . $key;
-                    return (!isset($labels[$show_key]) || $labels[$show_key] === "1");
+                    return (!isset($labels[$show_key]) || $labels[$show_key] == "1");
                 }
                 
                 // Get layout settings
@@ -189,6 +186,78 @@
                                     </div>
                                     <div class="card-footer">
                                         <span class="view-link">View Details <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+
+                            <!-- Plots & Properties Card -->
+                            <?php if(is_visible($labels, 'dash_plots')): ?>
+                            <div class="<?= $desktop_col ?> <?= $mobile_col ?>" style="margin-bottom: 20px;">
+                                <div class="stat-card card-4" ui-sref="plots_properties">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="fa fa-th-large"></i>
+                                        </div>
+                                        <div class="card-meta">
+                                            <span class="card-badge">REAL ESTATE</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?= get_label($labels, 'dash_plots', 'Plots / Properties') ?></h3>
+                                        <div class="card-value">{{plots || 3}}</div>
+                                        <p class="card-description">Residential plots</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="view-link">Manage Plots <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+
+                            <!-- Amenities Card -->
+                            <?php if(is_visible($labels, 'dash_amenities')): ?>
+                            <div class="<?= $desktop_col ?> <?= $mobile_col ?>" style="margin-bottom: 20px;">
+                                <div class="stat-card card-3" ui-sref="amenities">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="fa fa-tree"></i>
+                                        </div>
+                                        <div class="card-meta">
+                                            <span class="card-badge">FEATURES</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?= get_label($labels, 'dash_amenities', 'Amenities Master') ?></h3>
+                                        <div class="card-value">{{amenities || 8}}</div>
+                                        <p class="card-description">Estate facilities</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="view-link">Manage Amenities <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+
+                            <!-- Company Info Card -->
+                            <?php if(is_visible($labels, 'dash_company_info')): ?>
+                            <div class="<?= $desktop_col ?> <?= $mobile_col ?>" style="margin-bottom: 20px;">
+                                <div class="stat-card card-2" ui-sref="company_info">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="fa fa-info-circle"></i>
+                                        </div>
+                                        <div class="card-meta">
+                                            <span class="card-badge">BRANDING</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?= get_label($labels, 'dash_company_info', 'Company Info') ?></h3>
+                                        <div class="card-value"><i class="fa fa-check text-success"></i></div>
+                                        <p class="card-description">Contact & Location</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="view-link">Edit Info <i class="fa fa-arrow-right"></i></span>
                                     </div>
                                 </div>
                             </div>

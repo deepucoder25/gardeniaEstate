@@ -29,7 +29,7 @@
       <br>
       <div id="result" class="pull-left"></div>
       <div class="form-group col-sm-2" id="webprogress" style="display: none">
-            <img src="<?=base_url("assets/website/img/f.jpg")?>" alt="Progress indicator" class="img-responsive" loading="lazy">
+            <img src="<?=base_url("assets/website/img/f.jpg")?>" class="img-responsive">
       </div>
  </form>
 </div>
@@ -48,7 +48,7 @@
             <span class="label label-success" ng-if="x.status=='1' || x.status==1">Show</span>
             <span class="label label-default" ng-if="x.status=='0' || x.status==0">Hide</span>
         </div>
-        <img ng-src="<?=base_url("assets/uploads/gallery/thumb")?>/{{x.image}}" alt="{{x.title}}" style="height:180px" class="img-responsive" style="object-fit:cover;" loading="lazy">
+        <img ng-src="<?=base_url("assets/uploads/gallery/thumb")?>/{{x.image}}" style="height:180px" class="img-responsive" style="object-fit:cover;">
         <a href="javascript:void(0)" ng-click="delete_data(x)" class="delete" style="opacity:1; transform:none; top:10px; right:10px; background:#e74c3c; border-radius:3px; padding:2px 8px;" title="Delete"><i class="fa fa-trash"></i></a>
         <a href="javascript:void(0)" ng-click="edit_data(x)" class="delete" style="opacity:1; transform:none; top:10px; right:45px; background:#f39c12; border-radius:3px; padding:2px 8px;" title="Edit"><i class="fa fa-pencil"></i></a>
         <a href="javascript:void(0)" ng-click="toggle_status(x)" class="delete" style="opacity:1; transform:none; top:10px; right:75px; background:#0d86c9; border-radius:3px; padding:2px 8px;" title="Show/Hide">{{(x.status=='1' || x.status==1) ? 'Hide' : 'Show'}}</a>

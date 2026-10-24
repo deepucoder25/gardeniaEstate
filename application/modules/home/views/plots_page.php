@@ -1,11 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
-$plots_file = FCPATH . 'assets/plots_master.json';
-$plots = [];
-if (file_exists($plots_file)) {
-    $plots = json_decode(file_get_contents($plots_file), true);
-    if (!is_array($plots)) $plots = [];
-}
+$plots = get_plots_master();
 ?>
 
 <!-- DYNAMIC BREADCRUMB HEADER -->

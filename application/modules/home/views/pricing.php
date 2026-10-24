@@ -1,11 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
-$plots_file = FCPATH . 'assets/plots_master.json';
-$plots = [];
-if (file_exists($plots_file)) {
-    $plots = json_decode(file_get_contents($plots_file), true);
-    if (!is_array($plots)) $plots = [];
-}
+$plots = get_plots_master();
 ?>
 
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->
@@ -25,12 +20,12 @@ if (file_exists($plots_file)) {
   <div class="container py-4">
     
     <!-- Section Header -->
-    <div class="mb-5 text-center max-w-800 mx-auto">
+    <div class="mb-5 text-center max-w-1050 mx-auto">
       <span class="badge bg-success-subtle text-success px-4 py-2 rounded-pill uppercase fw-bold extra-small mb-2 tracking-wide">
         FEATURED DEVELOPMENTS
       </span>
-      <h2 class="display-6 fw-bold text-dark mb-2">
-        Exclusive Plots &amp; Luxury Bungalows For Sale In <?= htmlspecialchars($addressRegion) ?> - <?= htmlspecialchars($company3) ?>
+      <h2 class="fw-bold text-dark mb-2" style="font-size: clamp(1.4rem, 2.1vw, 2rem); line-height: 1.35;">
+        Exclusive Plots &amp; Luxury Bungalows For Sale<br class="d-none d-md-inline"> In <?= htmlspecialchars($addressRegion) ?> – <?= htmlspecialchars($company3) ?>
       </h2>
       <p class="text-secondary fs-6 mb-0">Browse our active residential plots and luxury bungalow developments listed live from our project database.</p>
     </div>

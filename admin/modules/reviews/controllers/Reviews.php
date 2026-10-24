@@ -55,10 +55,18 @@ class Reviews extends MX_Controller
             foreach ($this->db->get("reviews")->result() as $row)
             {
                 if (!empty($row->r_img)) {
-                    $image_delete_path1="./assets/uploads/reviewimg/$row->r_img";
-                    $image_delete_path2="./assets/uploads/reviewimg/thumb/$row->r_img";
-                    if (file_exists($image_delete_path1)) unlink($image_delete_path1);
-                    if (file_exists($image_delete_path2)) unlink($image_delete_path2);
+
+                    $imgs = explode(',', $row->r_img);
+                    foreach ($imgs as $img_item) {
+                        $img_item = trim($img_item);
+                        if (!empty($img_item)) {
+                            if (file_exists(FCPATH . $img_item)) @unlink(FCPATH . $img_item);
+                            $legacy_path1 = "./assets/uploads/reviewimg/$img_item";
+                            $legacy_path2 = "./assets/uploads/reviewimg/thumb/$img_item";
+                            if (file_exists($legacy_path1)) @unlink($legacy_path1);
+                            if (file_exists($legacy_path2)) @unlink($legacy_path2);
+                        }
+                    }
                 }
             }
             $where['r_id']=$_GET['id'];

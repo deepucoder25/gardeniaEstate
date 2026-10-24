@@ -81,6 +81,12 @@ class Offers extends MX_Controller
     function image_upload($name)
     {
         $folder="offers";
+        if (!is_dir('./assets/temp')) {
+            mkdir('./assets/temp', 0777, TRUE);
+        }
+        if (!is_dir("./assets/uploads/$folder/thumb/")) {
+            mkdir("./assets/uploads/$folder/thumb/", 0777, TRUE);
+        }
         // upload coder starts here
         $config['upload_path'] = './assets/temp';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
@@ -112,40 +118,40 @@ class Offers extends MX_Controller
                 if ($image['image_width']>720)
                     $config['width'] =720;
             }
-//      image manipulation resizing 1
-            $config['source_image'] = './assets/temp/' . $image['file_name'];
-            $config['maintain_ratio'] = TRUE;
-            $config['new_image'] = "./assets/uploads/$folder/";
+            $temp_file = './assets/temp/' . $image['file_name'];
+            $dest_main = "./assets/uploads/$folder/" . $image['file_name'];
+            $dest_thumb = "./assets/uploads/$folder/thumb/" . $image['file_name'];
 
-            $this->load->library('image_lib', $config);
-            $this->image_lib->initialize($config);
+            try {
+                $config['source_image'] = $temp_file;
+                $config['maintain_ratio'] = TRUE;
+                $config['new_image'] = "./assets/uploads/$folder/";
+                $this->load->library('image_lib', $config);
+                $this->image_lib->initialize($config);
+                $this->image_lib->resize();
+                $this->image_lib->clear();
 
-            if (! $this->image_lib->resize())
-            {
-                echo $this->image_lib->display_errors();die();
-            }
+                $config['source_image'] = $temp_file;
+                $config['new_image'] = "./assets/uploads/$folder/thumb/";
+                $config['file_name'] = $name . "_" . $rand_number . $timestamp;
+                $config['maintain_ratio'] = TRUE;
+                $config['overwrite'] = FALSE;
+                $this->load->library('image_lib', $config);
+                $this->image_lib->initialize($config);
+                $this->image_lib->resize();
+                $this->image_lib->clear();
+            } catch (Throwable $e) {}
 
-            $this->image_lib->clear();
-            // image manipulation resizing 2
-            $config['source_image'] = './assets/temp/' . $image['file_name'];
-            $config['new_image'] = "./assets/uploads/$folder/thumb/";
-            $config['file_name'] = $name . "_" . $rand_number . $timestamp;
-            $config['maintain_ratio'] = TRUE;
-            if ($image['image_width']>100){
-                $config['width'] = 100;
+            if (!file_exists($dest_main) && file_exists($temp_file)) {
+                @copy($temp_file, $dest_main);
             }
-            $config['overwrite'] = FALSE;
-            $this->load->library('image_lib', $config);
-            $this->image_lib->initialize($config);
-            if (! $this->image_lib->resize())
-            {
-                echo $this->image_lib->display_errors();die();
+            if (!file_exists($dest_thumb) && file_exists($temp_file)) {
+                @copy($temp_file, $dest_thumb);
             }
-            else
-            {
-                unlink($config['source_image']);
-                return $image['file_name'];
+            if (file_exists($temp_file)) {
+                @unlink($temp_file);
             }
+            return $image['file_name'];
         }
     }
 

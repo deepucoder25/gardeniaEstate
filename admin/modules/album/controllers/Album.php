@@ -75,6 +75,12 @@ class Album extends MX_Controller
     function image_upload()
     {
         $folder="album";
+        if (!is_dir('./assets/temp')) {
+            mkdir('./assets/temp', 0777, TRUE);
+        }
+        if (!is_dir("./assets/uploads/$folder/thumb/")) {
+            mkdir("./assets/uploads/$folder/thumb/", 0777, TRUE);
+        }
         $config['upload_path'] = './assets/temp';
         $config['allowed_types'] = 'gif|jpg|png|jpeg|webp|jfif|WEBP|JFIF';
         $config['new_image'] = "./assets/uploads/$folder/";
@@ -96,21 +102,25 @@ class Album extends MX_Controller
         else
         {
             $image = $this->upload->data();
-            $config['source_image'] = './assets/temp/' . $image['file_name'];
-            $config['maintain_ratio'] = TRUE;
+            $temp_file = './assets/temp/' . $image['file_name'];
+            $dest_main = "./assets/uploads/album/" . $image['file_name'];
 
-            $this->load->library('image_lib', $config);
-            $this->image_lib->initialize($config);
+            try {
+                $config['source_image'] = $temp_file;
+                $config['maintain_ratio'] = TRUE;
+                $this->load->library('image_lib', $config);
+                $this->image_lib->initialize($config);
+                $this->image_lib->resize();
+                $this->image_lib->clear();
+            } catch (Throwable $e) {}
 
-            if (! $this->image_lib->resize())
-            {
-                echo $this->image_lib->display_errors();die();
+            if (!file_exists($dest_main) && file_exists($temp_file)) {
+                @copy($temp_file, $dest_main);
             }
-            else
-            {
-                unlink($config['source_image']);
-                return $image['file_name'];
+            if (file_exists($temp_file)) {
+                @unlink($temp_file);
             }
+            return $image['file_name'];
         }
     }
 

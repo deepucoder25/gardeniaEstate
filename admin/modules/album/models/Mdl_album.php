@@ -8,7 +8,7 @@ class Mdl_album extends CI_Model
         parent::__construct();
         $this->table = "album"; //view
     }
-    function view_data($where = null, $select = "*")
+    function view_data($where=null,$select="*")
     {
         $this->db->select($select);
         if($where)

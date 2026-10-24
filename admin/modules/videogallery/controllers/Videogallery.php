@@ -24,9 +24,9 @@ class Videogallery extends MX_Controller
             
             $url = trim($_POST['video_url']);
             if (preg_match('/youtube\.com\/watch\?.*v=([^&]+)/', $url, $matches)) {
-                $url = 'https://www.youtube.com/embed/' . $matches[1];
+                $url = 'https://www.youtube-nocookie.com/embed/' . $matches[1];
             } elseif (preg_match('/youtu\.be\/([^?]+)/', $url, $matches)) {
-                $url = 'https://www.youtube.com/embed/' . $matches[1];
+                $url = 'https://www.youtube-nocookie.com/embed/' . $matches[1];
             }
             $data['video_url'] = $url;
             

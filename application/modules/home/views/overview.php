@@ -1,20 +1,10 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
 // 1. Load Plots Master
-$plots_file = FCPATH . 'assets/plots_master.json';
-$plots = [];
-if (file_exists($plots_file)) {
-    $plots = json_decode(file_get_contents($plots_file), true);
-    if (!is_array($plots)) $plots = [];
-}
+$plots = get_plots_master();
 
 // 2. Load Amenities Master
-$amenities_file = FCPATH . 'assets/amenities_master.json';
-$amenities_master = [];
-if (file_exists($amenities_file)) {
-    $amenities_master = json_decode(file_get_contents($amenities_file), true);
-    if (!is_array($amenities_master)) $amenities_master = [];
-}
+$amenities_master = get_amenities_master();
 
 // 3. Find Selected Plot by ID or Slug Title
 $plot_param = isset($selected_plot_id) ? trim($selected_plot_id) : '';

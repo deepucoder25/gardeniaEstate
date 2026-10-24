@@ -32,10 +32,7 @@
 
 	<div class="table-data admin-table booking-table">
 		<?php
-		$labels = [];
-		if (file_exists('./assets/menu_labels.json')) {
-			$labels = json_decode(file_get_contents('./assets/menu_labels.json'), true);
-		}
+		$labels = get_menu_labels();
 		function get_booking_label($labels, $key, $default) {
 			return (isset($labels[$key]) && !empty($labels[$key])) ? htmlspecialchars($labels[$key]) : $default;
 		}

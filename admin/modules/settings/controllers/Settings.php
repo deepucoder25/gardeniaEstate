@@ -15,7 +15,7 @@ class Settings extends MX_Controller{
         $response = "";
         
         $config['upload_path']          = './assets/images/logo/';
-        $config['allowed_types']        = 'gif|jpg|png|jpeg|ico';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|ico|webp';
         $config['overwrite']            = TRUE;
 
         // Make sure directory exists
@@ -72,19 +72,17 @@ class Settings extends MX_Controller{
     
     public function update_labels()
     {
-        $labels = [];
-        // Read existing labels so we don't overwrite unrelated keys if any
-        if (file_exists('./assets/menu_labels.json')) {
-            $labels = json_decode(file_get_contents('./assets/menu_labels.json'), true) ?: [];
-        }
+        $labels = get_menu_labels();
 
         $default_keys = [
-            'label_dashboard', 'label_blog', 'label_bookings', 'label_contacts', 
+            'label_dashboard', 'label_plots', 'label_amenities', 'label_company_info',
+            'label_blog', 'label_bookings', 'label_contacts', 
             'label_reviews', 'label_gallery', 'label_videogallery', 
-            'label_shipments', 'label_tracking', 'label_logs', 'label_settings',
-            'dash_dashboard', 'dash_blog', 'dash_bookings', 'dash_contacts', 
+            'label_logs', 'label_settings',
+            'dash_dashboard', 'dash_plots', 'dash_amenities', 'dash_company_info',
+            'dash_blog', 'dash_bookings', 'dash_contacts', 
             'dash_reviews', 'dash_gallery', 'dash_videogallery', 
-            'dash_shipments', 'dash_tracking', 'dash_logs', 'dash_settings',
+            'dash_logs', 'dash_settings',
             'dash_desktop_col', 'dash_mobile_col',
             'book_label_date', 'book_label_client', 'book_label_contact',
             'book_label_freight', 'book_label_route', 'book_label_lead',
@@ -99,11 +97,13 @@ class Settings extends MX_Controller{
             // Handle visibility toggles for sidebar and dashboard labels
             if (strpos($key, 'label_') === 0 || (strpos($key, 'dash_') === 0 && $key !== 'dash_desktop_col' && $key !== 'dash_mobile_col')) {
                 $show_key = "show_" . $key;
-                $labels[$show_key] = isset($_POST[$show_key]) ? "1" : "0";
+                if (isset($_POST['settings_submitted']) || isset($_POST[$show_key])) {
+                    $labels[$show_key] = isset($_POST[$show_key]) ? "1" : "0";
+                }
             }
         }
         
-        file_put_contents('./assets/menu_labels.json', json_encode($labels));
+        save_all_menu_labels($labels);
         echo "Menu settings updated successfully.";
     }
 }

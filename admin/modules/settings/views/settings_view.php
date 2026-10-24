@@ -141,14 +141,15 @@
         </div>
         <div class="panel-body">
             <form name="menu_form" id="menu_form">
+                <input type="hidden" name="settings_submitted" value="1">
                 <?php
-                $labels = [];
-                if (file_exists('./assets/menu_labels.json')) {
-                    $labels = json_decode(file_get_contents('./assets/menu_labels.json'), true);
-                }
+                $labels = get_menu_labels();
                 
                 $dashboard_menus = [
                     'dash_dashboard' => 'Dashboard',
+                    'dash_plots' => 'Plots / Properties',
+                    'dash_amenities' => 'Amenities Master',
+                    'dash_company_info' => 'Company Info',
                     'dash_blog' => 'Blog Posts',
                     'dash_bookings' => 'Bookings',
                     'dash_contacts' => 'Contacts',
@@ -161,6 +162,9 @@
                 
                 $default_menus = [
                     'label_dashboard' => 'Dashboard',
+                    'label_plots' => 'Plots / Properties',
+                    'label_amenities' => 'Amenities Master',
+                    'label_company_info' => 'Company Info',
                     'label_blog' => 'Blog',
                     'label_bookings' => 'Bookings',
                     'label_contacts' => 'Contacts',

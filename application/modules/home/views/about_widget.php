@@ -23,9 +23,9 @@
 
 .gardenia-heading {
   color: #172B23;
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.75rem, 2.5vw, 2.35rem);
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -0.5px;
 }
 
@@ -285,7 +285,7 @@
 
         <!-- Main Title -->
         <h2 class="gardenia-heading mb-3">
-          <?= $company3 ?>
+          <?= $company3 ?><span class="d-none d-sm-inline"> – </span><br class="d-none d-md-inline">Luxury Gated Plotted Community
         </h2>
 
         <!-- Description Paragraph -->

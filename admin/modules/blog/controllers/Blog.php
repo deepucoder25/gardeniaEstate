@@ -123,74 +123,81 @@ class Blog extends MX_Controller
             echo $this->mdl_blog->delete_data($where) ? "1" : "0";
         }else echo "Not Deleted";
     }
-        function image_upload($title)
-        {
-            $folder="blog";
-            // upload coder starts here
-            $config['upload_path'] = './assets/temp';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg';
-            $config['new_image'] = "./assets/uploads/$folder/";
-            $config['min_width']=100;
-        
-            $rand_number = mt_rand(0, 85);
-            $timestamp = time();
-//             $title = str_replace(" ", "_", $title);
-            $config['file_name'] =  $rand_number . $timestamp;
-        
-            $config['overwrite'] = false;
-            $config['remove_spaces'] = true;
-        
-            $this->load->library('upload', $config);
-            if (! $this->upload->do_upload('image'))
-            {
-                echo $this->upload->display_errors();
-                die();
-            }
-            else
-            {
-                $image = $this->upload->data();
-                if ($this->input->post('width'))
-                {
-                    $config['width'] = $this->input->post('width');
-                }else{
-                    if ($image['image_width']>720)
-                        $config['width'] =720;
-                }
-                // image manipulation resizing 1
-                $config['source_image'] = './assets/temp/' . $image['file_name'];
-                $config['maintain_ratio'] = TRUE;
-        
-                $this->load->library('image_lib', $config);
-                $this->image_lib->initialize($config);
-        
-                if (! $this->image_lib->resize())
-                {
-                    echo $this->image_lib->display_errors();die();
-                }
-        
-                $this->image_lib->clear();
-                // image manipulation resizing 2
-                $config['source_image'] = './assets/temp/' . $image['file_name'];
-                $config['new_image'] = "./assets/uploads/$folder/thumb/";
-                $config['file_name'] =  $rand_number . $timestamp;
-                $config['maintain_ratio'] = TRUE;
-                if ($image['image_width']>100){
-                    $config['width'] = 100;
-                }
-                $config['overwrite'] = FALSE;
-                $this->load->library('image_lib', $config);
-                $this->image_lib->initialize($config);
-                if (! $this->image_lib->resize())
-                {
-                    echo $this->image_lib->display_errors();die();
-                }
-                else
-                {
-                    unlink($config['source_image']);
-                    return $image['file_name'];
-                }
-            }
+    function image_upload($title)
+    {
+        $folder = "blog";
+        if (!is_dir('./assets/temp')) {
+            @mkdir('./assets/temp', 0777, TRUE);
         }
+        if (!is_dir("./assets/uploads/$folder/")) {
+            @mkdir("./assets/uploads/$folder/", 0777, TRUE);
+        }
+        if (!is_dir("./assets/uploads/$folder/thumb/")) {
+            @mkdir("./assets/uploads/$folder/thumb/", 0777, TRUE);
+        }
+
+        $config['upload_path'] = './assets/temp';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
+        $rand_number = mt_rand(10, 99);
+        $timestamp = time();
+        $config['file_name'] = $rand_number . $timestamp;
+        $config['overwrite'] = false;
+        $config['remove_spaces'] = true;
+
+        $this->load->library('upload', $config);
+        if (!$this->upload->do_upload('image')) {
+            echo $this->upload->display_errors();
+            die();
+        } else {
+            $image = $this->upload->data();
+            $temp_file = './assets/temp/' . $image['file_name'];
+            $dest_main = "./assets/uploads/$folder/" . $image['file_name'];
+            $dest_thumb = "./assets/uploads/$folder/thumb/" . $image['file_name'];
+
+            // Try image resizing if GD is available, otherwise fallback to copy
+            $resized = false;
+            try {
+                $img_cfg['image_library'] = 'gd2';
+                $img_cfg['source_image'] = $temp_file;
+                $img_cfg['new_image'] = "./assets/uploads/$folder/";
+                $img_cfg['maintain_ratio'] = TRUE;
+                $img_cfg['width'] = 800;
+
+                $this->load->library('image_lib');
+                $this->image_lib->initialize($img_cfg);
+                if ($this->image_lib->resize()) {
+                    $resized = true;
+                }
+                $this->image_lib->clear();
+
+                $thumb_cfg['image_library'] = 'gd2';
+                $thumb_cfg['source_image'] = $temp_file;
+                $thumb_cfg['new_image'] = "./assets/uploads/$folder/thumb/";
+                $thumb_cfg['maintain_ratio'] = TRUE;
+                $thumb_cfg['width'] = 250;
+
+                $this->image_lib->initialize($thumb_cfg);
+                $this->image_lib->resize();
+                $this->image_lib->clear();
+            } catch (Throwable $e) {
+                // Ignore GD errors and fallback to direct copy
+            }
+
+            // If resize was not performed or failed, copy directly
+            if (!file_exists($dest_main) && file_exists($temp_file)) {
+                @copy($temp_file, $dest_main);
+            }
+            if (!file_exists($dest_thumb) && file_exists($temp_file)) {
+                @copy($temp_file, $dest_thumb);
+            }
+
+            if (file_exists($temp_file)) {
+                @unlink($temp_file);
+            }
+
+            return $image['file_name'];
+        }
+    }
         
     function remove_image($title)
     {

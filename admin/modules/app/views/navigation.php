@@ -172,10 +172,7 @@
 			</div>
 		</div>
 		<?php
-		$menu_labels = [];
-		if (file_exists('./assets/menu_labels.json')) {
-		    $menu_labels = json_decode(file_get_contents('./assets/menu_labels.json'), true);
-		}
+		$menu_labels = get_menu_labels();
 		
 		function get_label($labels, $key, $default) {
 		    return (isset($labels[$key]) && !empty($labels[$key])) ? htmlspecialchars($labels[$key]) : $default;
@@ -183,7 +180,7 @@
         
         function is_visible($labels, $key) {
             $show_key = "show_" . $key;
-            return (!isset($labels[$show_key]) || $labels[$show_key] === "1");
+            return (!isset($labels[$show_key]) || $labels[$show_key] == "1");
         }
 		?>
 		<ul class="nav panel-list">
@@ -193,15 +190,23 @@
 			</li>
             <?php endif; ?>
 
+            <?php if(is_visible($menu_labels, 'label_company_info')): ?>
 			<li><a accesskey="i" href="#/company_info" title="Company Info"><i class="fa fa-info-circle"></i>
-				<span class="menu-text">Company Info</span></a>
+				<span class="menu-text"><?= get_label($menu_labels, 'label_company_info', 'Company Info') ?></span></a>
 			</li>
+            <?php endif; ?>
+
+            <?php if(is_visible($menu_labels, 'label_plots')): ?>
 			<li><a accesskey="p" href="#/plots_properties" title="Plots / Properties"><i class="fa fa-th-large"></i>
-				<span class="menu-text">Plots/Properties</span></a>
+				<span class="menu-text"><?= get_label($menu_labels, 'label_plots', 'Plots/Properties') ?></span></a>
 			</li>
+            <?php endif; ?>
+
+            <?php if(is_visible($menu_labels, 'label_amenities')): ?>
 			<li><a accesskey="a" href="#/amenities" title="Amenities"><i class="fa fa-tree"></i>
-				<span class="menu-text">Amenities</span></a>
+				<span class="menu-text"><?= get_label($menu_labels, 'label_amenities', 'Amenities') ?></span></a>
 			</li>
+            <?php endif; ?>
             
             <?php if(is_visible($menu_labels, 'label_blog')): ?>
 			<li><a accesskey="b" href="#/blog" title="Blog Management (Alt+B)"><i class="fa fa-newspaper-o"></i>
@@ -250,7 +255,6 @@
 				<span class="menu-text"><?= get_label($menu_labels, 'label_settings', 'Settings') ?></span></a>
 			</li>
             <?php endif; ?>
-
 		</ul>
 	</aside>
 	<section id="main-content">
