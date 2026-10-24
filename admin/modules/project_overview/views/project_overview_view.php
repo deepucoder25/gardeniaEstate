@@ -86,7 +86,7 @@ if ($active_tab == 'company_info') {
                             </div>
                             <div class="col-md-6 form-group">
                                 <span class="po-label">Office Address / Location</span>
-                                <input type="text" class="po-input" name="location" value="<?= isset($company_info['location']) ? htmlspecialchars($company_info['location']) : '' ?>" placeholder="e.g. STRR, Devanahalli, Bengaluru">
+                                <input type="text" class="po-input" name="location" value="<?= isset($company_info['location']) ? htmlspecialchars($company_info['location']) : '' ?>" placeholder="e.g. Airport Road, Bagdogra, Siliguri, West Bengal - 734014">
                             </div>
                         </div>
 
@@ -299,8 +299,8 @@ if ($active_tab == 'company_info') {
                                         <option value="Residential Plots">Residential Plots</option>
                                         <option value="Villa Plots">Villa Plots</option>
                                         <option value="Commercial Plots">Commercial Plots</option>
-                                        <option value="Luxury Apartments">Luxury Apartments</option>
-                                        <option value="Mixed-Use Development">Mixed-Use Development</option>
+                                        <option value="Luxury Bungalow">Luxury Bungalow</option>
+                                        <option value="Bungalow & Villa Plots">Bungalow & Villa Plots</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 form-group">
@@ -338,8 +338,8 @@ if ($active_tab == 'company_info') {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" value="Kempegowda International Airport"></td>
-                                            <td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 15 km" value="15 km"></td>
+                                            <td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" value="Bagdogra International Airport"></td>
+                                            <td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 3 km" value="3 km"></td>
                                             <td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" onclick="$(this).closest('tr').remove();" style="border-radius:6px;" title="Delete Place"><i class="fa fa-trash"></i></button></td>
                                         </tr>
                                     </tbody>
@@ -425,7 +425,7 @@ function openAddPlotForm() {
     $("#plot_image_input").val("");
 
     // Reset nearby places table
-    $("#plotPlacesTable tbody").html('<tr><td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" value="Kempegowda International Airport"></td><td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 15 km" value="15 km"></td><td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td></tr>');
+    $("#plotPlacesTable tbody").html('<tr><td><input type="text" class="po-input" name="place_name[]" placeholder="Place Name" value="Bagdogra International Airport"></td><td><input type="text" class="po-input" name="place_distance[]" placeholder="e.g. 3 km" value="3 km"></td><td style="text-align:center;"><button type="button" class="btn btn-sm btn-danger btn-delete-row" style="border-radius:6px;"><i class="fa fa-trash"></i></button></td></tr>');
 
     $("#plots_table_panel").hide();
     $("#plot_form_panel").fadeIn(200);

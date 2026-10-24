@@ -1,19 +1,20 @@
 <div class="widget-items mb-40">
 	<?php
-	$city = "India";
+	$city = "Bagdogra, Siliguri";
 	$keyw = array(
-		"Movers near me $city", "Packers and movers in $city", "Moving companies near me $city", "Movers $city", "Packers and movers near me $city",
-		"Removal companies in $city", "Moving services in $city", "Cheap movers in $city", "Local movers in $city", "Local moving companies in $city",
-		"$city best moving companies", "House movers $city", "Packers movers $city", "Moving services near $city", "House removals $city", "Cheap moving companies in $city",
-		"Professional movers in $city", "House movers near $city", "Cheap movers $city", "Best packers and movers in $city", "Affordable movers $city", "International movers from $city", "International moving companies in $city"
+		"Plots for sale in $city", "Luxury bungalows for sale in $city", "Residential plots in $city", 
+		"Buy plot in Bagdogra", "Bungalows for sale in Siliguri", "Gated community plots $city", 
+		"Villa plots for sale $city", "Plots near Bagdogra Airport", "The Gardenia Estate plots", 
+		"Commercial plots for sale in $city", "Independent bungalows $city", "RERA approved plots $city", 
+		"Ready to construct plots in $city", "Best plots for sale Siliguri", "Luxury villas and bungalows $city"
 	);
 	?>
-	<h6>Relevant Keywords in <?= $city ?></h6>
-	<ul class="inline">
+	<h6 class="fw-bold text-success mb-3">Popular Searches in <?= $city ?></h6>
+	<ul class="inline list-unstyled d-flex flex-wrap gap-2">
 		<?php
 		shuffle($keyw);
 		foreach ($keyw as $k) { ?>
-			<li class="badge badge-secondary"><?= $k ?></li>
+			<li class="badge bg-light text-dark border p-2"><?= $k ?></li>
 		<?php } ?>
 	</ul>
 </div>

@@ -19,7 +19,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
     <div class="text-center mb-5 max-w-800 mx-auto">
       <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">EXCLUSIVELY FOR YOU</span>
       <h2 class="display-6 text-dark fw-bold mb-2">Project Walkthrough &amp; Video Tours</h2>
-      <p class="text-secondary fs-6 mb-0">Experience the 50+ acre luxury villa plot township through our official video showcases, layout progress, and amenity tours.</p>
+      <p class="text-secondary fs-6 mb-0">Experience the 50+ acre luxury plots &amp; bungalows township through our official video showcases, layout progress, and amenity tours.</p>
     </div>
 
     <!-- Video Grid -->

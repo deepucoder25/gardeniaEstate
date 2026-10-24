@@ -24,7 +24,7 @@
                     Latest Real Estate <span class="text-success">Articles &amp; News</span>
                 </h2>
                 <p class="text-secondary fs-6 mb-0 mx-auto max-w-650">
-                    Stay updated with our latest real estate market trends, plot investment guides, and township developments.
+                    Stay updated with our latest real estate market trends, plot &amp; bungalow investment guides, and township developments.
                 </p>
             </div>
 
@@ -52,7 +52,7 @@
                         $created_at = isset($b->created_at) ? $b->created_at : date('Y-m-d H:i:s');
                         $day = date('d', strtotime($created_at));
                         $month = date('M', strtotime($created_at));
-                        $author = !empty($b->author) ? $b->author : 'Anil Kumar Rauniyar';
+                        $author = !empty($b->author) ? $b->author : 'The Gardenia Estate';
 
                         $schemaData[] = [
                             "@context" => "https://schema.org",

@@ -9,7 +9,7 @@ class Gallery extends MX_Controller {
     function photo_gallery()
     {
         $data['title'] = "Photo Gallery | " . $this->comp['company3'];
-        $data['description'] = "Explore visual renders, aerial views, master plan layouts, and clubhouse designs of The Gardenia Estate STRR Devanahalli.";
+        $data['description'] = "Explore visual renders, aerial views, master plan layouts, and clubhouse designs of The Gardenia Estate in Bagdogra, Siliguri.";
         
         $this->db->where('status', 1);
         $this->db->order_by('auto_id', 'DESC');
@@ -23,7 +23,7 @@ class Gallery extends MX_Controller {
     function video_gallery()
     {
         $data['title'] = "Video Gallery | " . $this->comp['company3'];
-        $data['description'] = "Watch our step-by-step cargo handling processes, transport safety standards, and global freight forwarding operations in action at " . $this->comp['company3'] . ".";
+        $data['description'] = "Watch video walkthroughs, aerial views, and site infrastructure development in action at " . $this->comp['company3'] . ".";
         
         $this->db->where('status', 1);
         $this->db->order_by('auto_id', 'DESC');

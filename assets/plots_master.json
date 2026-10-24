@@ -2,27 +2,27 @@
     {
         "id": 1,
         "name": "Gardenia Phase 1 Villa Plots",
-        "about": "Exclusive RERA-approved luxury villa plots in Devanahalli with 40ft wide internal roads, underground electrical cabling, and 40% open green spaces.",
+        "about": "Exclusive RERA-approved luxury villa plots in Bagdogra, Siliguri with 40ft wide internal roads, underground electrical cabling, and 40% open green spaces.",
         "image": "assets/images/reviews/plot_gardenia_phase1.webp",
         "land_area": "20 Acres",
         "total_plots": "180 Plots",
         "plot_sizes": "1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60)",
         "project_type": "Residential Plots",
         "project_status": "Ongoing",
-        "address": "Satellite Town Ring Road (STRR), Devanahalli, Bengaluru, Karnataka 562110",
-        "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "address": "Airport Road, Bagdogra, Siliguri, West Bengal 734014",
+        "google_map_url": "https://maps.google.com/maps?q=Bagdogra,+Siliguri,+West+Bengal&t=&z=13&ie=UTF8&iwloc=&output=embed",
         "nearby_places": [
             {
-                "name": "Kempegowda International Airport",
-                "distance": "15 km"
+                "name": "Bagdogra International Airport",
+                "distance": "3 km"
             },
             {
-                "name": "STRR Expressway Junction",
+                "name": "Asian Highway 2 (AH2) Junction",
                 "distance": "1.5 km"
             },
             {
-                "name": "KIADB Aerospace Park",
-                "distance": "8 km"
+                "name": "North Bengal University (NBU)",
+                "distance": "7 km"
             }
         ],
         "status": "Active",
@@ -40,22 +40,22 @@
     {
         "id": 2,
         "name": "Gardenia Commercial Boulevard",
-        "about": "Prime high-yield commercial plot spaces positioned directly along the Satellite Town Ring Road (STRR). High visibility and rapid capital appreciation.",
+        "about": "Prime high-yield commercial plot spaces positioned directly along the Asian Highway 2 corridor in Bagdogra. High visibility and rapid capital appreciation.",
         "image": "assets/images/reviews/plot_gardenia_boulevard.webp",
         "land_area": "12 Acres",
         "total_plots": "45 Commercial Plots",
         "plot_sizes": "2400 Sq.Ft (40x60), 4000 Sq.Ft (50x80)",
         "project_type": "Commercial Plots",
         "project_status": "Pre-Launching",
-        "address": "Main STRR Highway Corridor, Devanahalli, North Bengaluru",
-        "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "address": "Main Asian Highway 2 Corridor, Bagdogra, Siliguri, West Bengal",
+        "google_map_url": "https://maps.google.com/maps?q=Bagdogra,+Siliguri,+West+Bengal&t=&z=13&ie=UTF8&iwloc=&output=embed",
         "nearby_places": [
             {
-                "name": "Kempegowda International Airport",
-                "distance": "14 km"
+                "name": "Bagdogra International Airport",
+                "distance": "4 km"
             },
             {
-                "name": "Hardware Park & Financial City",
+                "name": "Siliguri City Center / Matigara",
                 "distance": "9 km"
             }
         ],
@@ -70,24 +70,24 @@
     },
     {
         "id": 3,
-        "name": "Gardenia Sanctuary Estate Phase 2",
-        "about": "Ultra-luxury sanctuary themed villa plots surrounded by dense tree-lined parkways, clubhouse, reflexology tracks, and rainwater harvesting.",
+        "name": "Gardenia Luxury Bungalows (Phase 2)",
+        "about": "Ultra-luxury standalone bungalows for sale nestled amidst scenic green tea gardens, private lawn, modern architecture, clubhouse, and 24/7 security.",
         "image": "assets/images/reviews/plot_gardenia_sanctuary.webp",
         "land_area": "18 Acres",
-        "total_plots": "150 Premium Plots",
-        "plot_sizes": "1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60), 4000 Sq.Ft (50x80)",
-        "project_type": "Residential Plots",
+        "total_plots": "65 Luxury Bungalows",
+        "plot_sizes": "3 BHK & 4 BHK Bungalows (Built on 1500 to 2400 Sq.Ft plots)",
+        "project_type": "Luxury Bungalow",
         "project_status": "Upcoming",
-        "address": "Opp. KIADB IT Park, Devanahalli, Bengaluru",
-        "google_map_url": "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        "address": "Near North Bengal University, Bagdogra, Siliguri, West Bengal",
+        "google_map_url": "https://maps.google.com/maps?q=Bagdogra,+Siliguri,+West+Bengal&t=&z=13&ie=UTF8&iwloc=&output=embed",
         "nearby_places": [
             {
-                "name": "Devanahalli Business Park",
-                "distance": "6 km"
+                "name": "North Bengal Medical College (NBMCH)",
+                "distance": "5 km"
             },
             {
-                "name": "Nandi Hills Expressway",
-                "distance": "20 km"
+                "name": "New Jalpaiguri (NJP) Railway Station",
+                "distance": "16 km"
             }
         ],
         "status": "Active",

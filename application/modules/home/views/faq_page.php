@@ -35,17 +35,16 @@
             <h3 class="accordion-header" id="faqPageHeading1">
               <button class="accordion-button fw-bold text-dark fs-6 py-3 px-4 shadow-none bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqPageCollapse1" aria-expanded="true" aria-controls="faqPageCollapse1">
                 <i class="bi bi-question-circle-fill text-success me-3 fs-5 flex-shrink-0"></i>
-                <span>What plot sizes are available at The Gardenia Estate?</span>
+                <span>What plot and bungalow options are available for sale?</span>
               </button>
             </h3>
             <div id="faqPageCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqPageHeading1" data-bs-parent="#faqAccordionCol1">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                The Gardenia Estate offers multiple plot dimensions:
+                The Gardenia Estate offers premium residential plots and luxury bungalows for sale:
                 <ul class="mt-2 mb-0 ps-3">
-                  <li><strong>1200 Sq.Ft</strong> (30 ft x 40 ft)</li>
-                  <li><strong>1500 Sq.Ft</strong> (30 ft x 50 ft)</li>
-                  <li><strong>2400 Sq.Ft</strong> (40 ft x 60 ft)</li>
-                  <li>Custom odd dimensions and corner plot options.</li>
+                  <li><strong>Residential Plots:</strong> 1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), and 2400 Sq.Ft (40x60).</li>
+                  <li><strong>Luxury Bungalows:</strong> 3 BHK and 4 BHK standalone bungalows built on 1500 to 2400 Sq.Ft plots with private lawns.</li>
+                  <li><strong>Commercial Plots:</strong> High-visibility plots along the Asian Highway 2 corridor.</li>
                 </ul>
               </div>
             </div>
@@ -61,7 +60,7 @@
             </h3>
             <div id="faqPageCollapse2" class="accordion-collapse collapse" aria-labelledby="faqPageHeading2" data-bs-parent="#faqAccordionCol1">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                The project is strategically located along the <strong>Satellite Town Ring Road (STRR) in Devanahalli, Bengaluru</strong>. It is just 15 minutes drive from Kempegowda International Airport (KIAB) and 10 minutes from major IT/Aerospace hubs.
+                The project is strategically located along the <strong>Asian Highway 2 &amp; Airport corridor in Bagdogra, Siliguri</strong>. It is just 5 to 10 minutes drive from Bagdogra International Airport (IXB) and conveniently connected to Siliguri city and North Bengal University.
               </div>
             </div>
           </div>
@@ -99,12 +98,12 @@
             <h3 class="accordion-header" id="faqPageHeading4">
               <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqPageCollapse4" aria-expanded="false" aria-controls="faqPageCollapse4">
                 <i class="bi bi-cash-stack text-success me-3 fs-5 flex-shrink-0"></i>
-                <span>What is the starting price for residential plots?</span>
+                <span>What is the starting price for plots and bungalows?</span>
               </button>
             </h3>
             <div id="faqPageCollapse4" class="accordion-collapse collapse" aria-labelledby="faqPageHeading4" data-bs-parent="#faqAccordionCol2">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                Pre-launch prices start at competitive rates for 1200 Sq.Ft plots. Special launch discounts and easy EMI financing options (up to 80% bank loan approval from leading banks like HDFC, ICICI, and SBI) are currently available for early bookings.
+                Pre-launch prices start at competitive rates for 1200 Sq.Ft plots and customizable luxury bungalows. Special launch discounts and easy EMI financing options (up to 80% bank loan approval from leading banks like HDFC, ICICI, and SBI) are currently available for early bookings.
               </div>
             </div>
           </div>

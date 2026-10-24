@@ -63,13 +63,13 @@ $locations = [
         <div class="row g-3">
             <?php foreach ($locations as $location): 
                 $citySlug = strtolower(str_replace(' ', '-', $location['city']));
-                $link = $citySlug . "-packers-movers-" . $location['state'];
+                $link = "plots";
             ?>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                     <ul class="location-list mb-0">
                         <li>
-                            <a href="<?= site_url($link) ?>" aria-label="Packers and Movers in <?= $location['city'] ?>">
-                                Packers &amp; Movers <?= $location['city'] ?>
+                            <a href="<?= site_url($link) ?>" aria-label="Plots and Bungalows in <?= $location['city'] ?>">
+                                Plots &amp; Bungalows <?= $location['city'] ?>
                             </a>
                         </li>
                     </ul>

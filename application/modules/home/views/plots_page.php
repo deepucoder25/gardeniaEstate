@@ -13,20 +13,20 @@ if (file_exists($company_file)) {
     $company_info = json_decode(file_get_contents($company_file), true);
 }
 $c_name = isset($company_info['company_name']) ? $company_info['company_name'] : 'The Gardenia Estate';
-$c_loc  = isset($company_info['location']) ? $company_info['location'] : 'STRR Devanahalli, Bengaluru';
+$c_loc  = isset($company_info['location']) ? $company_info['location'] : 'Airport Road, Bagdogra, Siliguri';
 ?>
 
 <!-- DYNAMIC BREADCRUMB HEADER -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Plots & Properties Inventory',
-    'bc_desc' => 'Explore transparent plot sizes, RERA approval status, project specs, and available land listings at The Gardenia Estate.',
+    'bc_h1' => 'Plots & Bungalows For Sale',
+    'bc_desc' => 'Explore transparent plot sizes, bungalow specs, RERA approval status, and available listings at The Gardenia Estate.',
     'breadcrumbs' => [
-        ['name' => 'Plots & Inventory']
+        ['name' => 'Plots & Bungalows']
     ]
 ]);
 ?>
 
-<!-- ALL PLOTS INVENTORY SECTION -->
+<!-- ALL PLOTS & BUNGALOWS INVENTORY SECTION -->
 <section class="py-5 bg-light position-relative" id="allPlotsInventorySection">
   <div class="container py-3">
     
@@ -36,9 +36,9 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : 'STRR D
         DIRECT DEVELOPER INVENTORY
       </span>
       <h2 class="display-6 fw-bold text-dark mb-2">
-        Available Villa &amp; Commercial Plots
+        Available Plots &amp; Luxury Bungalows For Sale
       </h2>
-      <p class="text-secondary fs-6 mb-0">Explore our complete portfolio of plots loaded live from our master admin inventory.</p>
+      <p class="text-secondary fs-6 mb-0">Explore our complete portfolio of residential plots and luxury bungalows for sale loaded live from our master admin inventory.</p>
     </div>
 
     <!-- 3-Column Grid Cards -->

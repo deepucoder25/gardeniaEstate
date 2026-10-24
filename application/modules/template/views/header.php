@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php
   if (!@$description) {
-    $description = $company3 . " India offers reliable and efficient moving and storage solutions, ensuring your belongings are transported safely and securely to your new destination.";
+    $description = $company3 . " offers premium residential plots and luxury bungalows for sale in Bagdogra, Siliguri. Gated community with 30+ amenities and WBRERA approval.";
   }
   if (!@$city)
     $city = "$addressRegion";
@@ -104,7 +104,7 @@
       "@type": "Product",
       "sku": "<?= $sku ?>",
       "mpn": "<?= $mpn ?>",
-      "name": "Packers and Movers Services in <?= $city ?>",
+      "name": "Plots & Luxury Bungalows for Sale in <?= $city ?>",
       "image": "<?= $img ?>",
       "description": "<?= @$description ?>",
       "url": "<?= $url ?>",
@@ -127,7 +127,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "price": "4999.00",
+        "price": "4500000.00",
         "priceCurrency": "INR",
         "priceValidUntil": "<?= date("Y-m-") ?>30",
         "availability": "https://schema.org/InStock",

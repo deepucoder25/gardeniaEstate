@@ -47,7 +47,7 @@ try {
                             $avatar_src = (!empty($rev->r_img) && file_exists(FCPATH . $rev->r_img))
                                 ? base_url($rev->r_img) 
                                 : base_url('assets/images/slider/gardenia_hero.webp');
-                            $city_label = !empty($rev->city) ? $rev->city : 'Bengaluru';
+                            $city_label = !empty($rev->city) ? $rev->city : 'Siliguri';
                             $title_label = !empty($rev->r_title) ? $rev->r_title : 'Verified Buyer';
                             $stars = isset($rev->stars) ? intval($rev->stars) : 5;
                         ?>

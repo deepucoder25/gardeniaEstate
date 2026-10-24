@@ -17,7 +17,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           
           <!-- Larger Brand Logo -->
           <a href="<?= site_url() ?>" class="d-inline-block mb-3 text-decoration-none">
-            <img src="<?= base_url('assets/images/logo/logo.webp') ?>" alt="The Gardenia Estate Logo - Luxury Plotted Township Devanahalli" class="footer-logo img-fluid" loading="lazy">
+            <img src="<?= base_url('assets/images/logo/logo.webp') ?>" alt="The Gardenia Estate Logo - Luxury Plotted Township Bagdogra Siliguri" class="footer-logo img-fluid" loading="lazy">
           </a>
 
           <div class="footer-heading-leaf justify-content-center justify-content-md-start mb-3">
@@ -25,7 +25,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           </div>
 
           <p class="small text-muted mb-4 leading-relaxed">
-            The Gardenia Estate is a 50+ Acre luxury residential plotted township situated along STRR Devanahalli, Bengaluru. Featuring 40% open green spaces &amp; 30+ world class amenities.
+            The Gardenia Estate is a 50+ Acre luxury township offering premium residential plots and luxury bungalows for sale situated along Airport Road &amp; Asian Highway 2, Bagdogra, Siliguri. Featuring 40% open green spaces &amp; 30+ world class amenities.
           </p>
 
           <!-- RERA & Bank Loan Badges (Fit Cleanly Inside Footer Column Without Overflowing) -->
@@ -63,7 +63,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
               </li>
               <li>
                 <a href="<?= site_url('plots') ?>" class="footer-nav-link gap-2">
-                  <i class="bi bi-chevron-right text-warning fs-7"></i> Plots &amp; Inventory
+                  <i class="bi bi-chevron-right text-warning fs-7"></i> Plots &amp; Bungalows
                 </a>
               </li>
               <li>
@@ -260,7 +260,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           <i class="bi bi-exclamation-triangle-fill text-warning"></i> REAL ESTATE DISCLAIMER
         </h6>
         <p class="small text-muted mb-4 leading-relaxed text-justify">
-          <strong>Disclaimer :</strong> The Information Provided On This Website Is Intended Exclusively For Informational Purposes And Should Not Be Construed As An Offer Of Services. This Site Is Managed By A RERA Authorized Real Estate Agent Namely &ndash; <strong>Anil Kumar Rauniyar</strong> (RERA Reg No: PRM/KA/RERA/1251/310/AG/170819/000018). The Pricing Information Presented On This Website Is Subject To Alteration Without Advance Notification, And The Assurance Of Property Availability Cannot Be Guaranteed. The Images Showcased On This Website Are For Representational Purposes Only And May Not Accurately Reflect The Actual Properties. We May Share Your Data With Real Estate Regulatory Authority (RERA) Registered Developers For Further Processing As Necessary. Additionally, We May Send Updates And Information To The Mobile Number Or Email Address Registered With Us. All Rights Reserved. Digital Marketing Partner &ndash; <strong>A Z Digital Marketing</strong>.
+          <strong>Disclaimer :</strong> The information and visuals presented on this website are intended exclusively for general informational and marketing purposes and do not constitute a legal offer, binding contract, or warranty. All layouts, plot dimensions, floor plans, specifications, artistic renderings, and amenity details are indicative and subject to change or revision without prior notice as required by competent authorities or under the provisions of the West Bengal Real Estate Regulatory Authority (WBRERA). Pricing and unit availability are dynamic and subject to confirmation at the time of booking. Prospective buyers are advised to verify all project approvals, sanction plans, title deeds, and terms directly with our official sales office before entering into any transaction. <strong>WBRERA Project Registration No: WBRERA/P/DAR/2024/000188</strong>. All Rights Reserved.
         </p>
 
         <!-- BOTTOM BAR: COPYRIGHT & LEGAL LINKS (Tight & Compact Spacing) -->

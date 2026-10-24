@@ -5,7 +5,7 @@
 <!-- BREADCRUMB HEADER -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Customer Reviews & Feedback',
-    'bc_desc' => 'Read real experiences and ratings from our plot owners and property investors.',
+    'bc_desc' => 'Read real experiences and ratings from our plot and bungalow owners and investors.',
     'breadcrumbs' => [
         ['name' => 'Reviews']
     ]
@@ -59,7 +59,7 @@
                             <span class="ms-2 extra-small fw-bold text-muted">5.0 / 5</span>
                         </div>
                         <p class="text-secondary small leading-relaxed mb-4">
-                            "Buying a 1500 Sq.Ft villa plot at Devanahalli through Gardenia Estate was completely seamless. Clear title deeds, fast bank loan approval, and excellent connectivity to STRR!"
+                            "Buying a 1500 Sq.Ft villa plot at Bagdogra through Gardenia Estate was completely seamless. Clear title deeds, fast bank loan approval, and excellent connectivity to the airport and Asian Highway!"
                         </p>
                         <div class="d-flex align-items-center gap-3 pt-3 border-top mt-auto">
                             <div class="rounded-circle bg-success-subtle text-success fw-bold d-flex align-items-center justify-content-center icon-box-44">
@@ -67,7 +67,7 @@
                             </div>
                             <div>
                                 <h6 class="fs-6 fw-bold text-dark mb-0">Anand Kumar</h6>
-                                <span class="extra-small text-muted"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Bengaluru</span>
+                                <span class="extra-small text-muted"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Siliguri</span>
                             </div>
                         </div>
                     </div>

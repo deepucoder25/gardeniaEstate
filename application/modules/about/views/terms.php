@@ -22,7 +22,7 @@
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">USER AGREEMENT</span>
             <h2 class="h2 fw-bold text-dark mb-3">TERMS &amp; CONDITIONS</h2>
             <p class="text-secondary leading-relaxed mb-0">
-              This website is owned and operated by <strong>Anil Kumar Rauniyar</strong>. By visiting our website and accessing the information, resources, services, products, and tools we provide, you understand and agree to accept and adhere to the following terms and conditions as stated in this policy (hereafter referred to as &apos;User Agreement&apos;), along with the terms and conditions as stated in our Privacy Policy.
+              This website is owned and operated by <strong>The Gardenia Estate</strong>. By visiting our website and accessing the information, resources, services, products, and tools we provide, you understand and agree to accept and adhere to the following terms and conditions as stated in this policy (hereafter referred to as &apos;User Agreement&apos;), along with the terms and conditions as stated in our Privacy Policy.
             </p>
           </div>
 
@@ -128,7 +128,7 @@
           <div class="pt-3 border-top">
             <h3 class="h5 fw-bold text-success mb-3 text-uppercase">GOVERNING LAW</h3>
             <p class="text-secondary leading-relaxed mb-0">
-              Any action to enforce this User Agreement shall be brought in the Federal or State courts located in India, Karnataka. You hereby agree to personal jurisdiction by such courts, and waive any jurisdictional, venue, or inconvenient forum objections to such courts.
+              Any action to enforce this User Agreement shall be brought in the courts located in Siliguri, Darjeeling District, West Bengal, India. You hereby agree to personal jurisdiction by such courts, and waive any jurisdictional, venue, or inconvenient forum objections to such courts.
             </p>
           </div>
 

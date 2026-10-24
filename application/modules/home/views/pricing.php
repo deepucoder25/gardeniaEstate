@@ -19,16 +19,16 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : '';
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->
 <?php if (isset($show_breadcrumbs) && $show_breadcrumbs): ?>
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Plots & Properties Inventory',
-    'bc_desc' => 'Explore transparent plot sizes, location, project status, and available land listings.',
+    'bc_h1' => 'Plots & Bungalows For Sale',
+    'bc_desc' => 'Explore transparent plot sizes, bungalow specifications, project status, and available listings.',
     'breadcrumbs' => [
-        ['name' => 'Plots / Properties']
+        ['name' => 'Plots & Bungalows']
     ]
 ]);
 ?>
 <?php endif; ?>
 
-<!-- FEATURED PLOTS / LAND FOR SALE SECTION (MULTI-PLOT GRID) -->
+<!-- FEATURED PLOTS & BUNGALOWS FOR SALE SECTION (MULTI-PLOT GRID) -->
 <section class="py-5 bg-light" id="plotsPricingSection">
   <div class="container py-4">
     
@@ -38,9 +38,9 @@ $c_loc  = isset($company_info['location']) ? $company_info['location'] : '';
         FEATURED DEVELOPMENTS
       </span>
       <h2 class="display-6 fw-bold text-dark mb-2">
-        Land &amp; Plot Projects In <?= !empty($c_loc) ? htmlspecialchars($c_loc) : htmlspecialchars($c_name) ?>
+        Exclusive Plots &amp; Luxury Bungalows For Sale In <?= !empty($c_loc) ? htmlspecialchars($c_loc) : htmlspecialchars($c_name) ?>
       </h2>
-      <p class="text-secondary fs-6 mb-0">Browse our active plot developments listed live from our project database.</p>
+      <p class="text-secondary fs-6 mb-0">Browse our active residential plots and luxury bungalow developments listed live from our project database.</p>
     </div>
 
     <!-- 3-Column Grid Cards -->

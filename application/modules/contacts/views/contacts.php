@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Contact Us',
-    'bc_desc' => 'Get in touch with our expert estate advisory team for plot inquiries, pricing sheets, and site visit booking.',
+    'bc_desc' => 'Get in touch with our expert estate advisory team for plots and bungalows for sale, pricing sheets, and site visit booking.',
     'breadcrumbs' => [
         ['name' => 'Contact Us']
     ]
@@ -88,7 +88,7 @@
               </div>
             </div>
             <p class="small text-secondary leading-relaxed mb-3">
-              Schedule a free cab pickup from anywhere in Bengaluru for an exclusive guided walkthrough of the 50+ acre township, layout infrastructure, and available plot plots.
+              Schedule a free cab pickup from anywhere in Siliguri or Bagdogra Airport for an exclusive guided walkthrough of the 50+ acre township, layout infrastructure, and available plots and luxury bungalows for sale.
             </p>
             <div class="d-flex gap-2">
               <a href="<?= $phonehtml ?>" class="btn btn-outline-success bg-success text-white btn-sm rounded-pill flex-fill fw-bold py-2">
@@ -115,14 +115,14 @@
                 <strong class="text-success">Site Visits Open (10 AM - 5 PM)</strong>
               </li>
               <li class="d-flex justify-content-between pt-1">
-                <span>RERA Registration:</span>
-                <strong class="text-dark extra-small">PRM/KA/RERA/1251/310/AG/170819/000018</strong>
+                <span>WBRERA Registration:</span>
+                <strong class="text-dark extra-small">WBRERA/P/DAR/2024/000188</strong>
               </li>
             </ul>
 
             <div class="p-3 bg-light rounded-3 border-start border-4 border-success">
               <span class="extra-small text-muted d-block leading-relaxed">
-                <i class="bi bi-shield-lock-fill text-success me-1"></i> <strong>Authorized Agent:</strong> Anil Kumar Rauniyar. Official RERA agent providing direct developer pricing with zero brokerage fees.
+                <i class="bi bi-shield-lock-fill text-success me-1"></i> <strong>Official Sales Office:</strong> The Gardenia Estate. Direct developer pricing with 100% clear legal titles and zero brokerage fees.
               </span>
             </div>
           </div>
@@ -138,7 +138,7 @@
         <h5 class="fw-bold text-dark mb-0 fs-6 d-flex align-items-center gap-2">
           <i class="bi bi-map-fill text-success fs-5"></i> Project Site Map &amp; Directions
         </h5>
-        <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 extra-small fw-bold">STRR Devanahalli, Bengaluru</span>
+        <span class="badge bg-success-subtle text-success rounded-pill px-3 py-1 extra-small fw-bold">Airport Road, Bagdogra, Siliguri</span>
       </div>
       <div class="card-body p-0">
         <div class="ratio ratio-21x9 overflow-hidden min-h-380">

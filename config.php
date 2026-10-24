@@ -24,9 +24,8 @@
  */
 //$config['base_url'] = 'https://move4u.com/';http://127.0.0.1/move4u/
 
-// $config['base_url'] = 'https://yeshpackersmovers.com/';
-
-$config['base_url'] = 'https://yeshpackersmovers.com/';
+// $config['base_url'] = 'http://localhost/gardeniaEstate/';
+$config['base_url'] = 'http://localhost/gardeniaEstate/';
 /*
  |--------------------------------------------------------------------------
  | Index File 

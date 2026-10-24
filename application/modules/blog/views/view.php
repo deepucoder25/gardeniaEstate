@@ -32,8 +32,8 @@
                                         <i class="bi bi-person-fill fs-5"></i>
                                     </div>
                                     <div>
-                                        <div class="fw-bold text-dark small mb-0"><?= htmlspecialchars(@$query[0]->author ?? 'Anil Kumar Rauniyar') ?></div>
-                                        <div class="extra-small text-muted">Managing Director &amp; RERA Agent</div>
+                                        <div class="fw-bold text-dark small mb-0"><?= htmlspecialchars(@$query[0]->author ?? 'The Gardenia Estate Team') ?></div>
+                                        <div class="extra-small text-muted">Project Advisory &amp; Planning</div>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-3 text-muted small">
@@ -64,7 +64,7 @@
                                 <div>
                                     <h6 class="fw-bold text-success mb-1 text-uppercase tracking-wide">Key Takeaway Summary</h6>
                                     <p class="small text-dark mb-0 leading-relaxed">
-                                        Investing in residential plots along the Devanahalli STRR corridor provides long-term capital appreciation, complete architectural design freedom, clear legal Khata titles, and proximity to Kempegowda International Airport.
+                                        Investing in residential plots and luxury bungalows along the Bagdogra-Siliguri corridor provides long-term capital appreciation, complete architectural design freedom, clear legal titles, and proximity to Bagdogra International Airport.
                                     </p>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                             <p class="fst-italic text-dark mb-2 fw-medium">
                                 "Land is the only asset class that never depreciates. Choosing a RERA-approved plotted development ensures both security of capital and maximum return on investment."
                             </p>
-                            <footer class="blockquote-footer text-success fw-bold mb-0">Anil Kumar Rauniyar</footer>
+                            <footer class="blockquote-footer text-success fw-bold mb-0">The Gardenia Estate Advisory</footer>
                         </blockquote>
 
                         <!-- Colorful Social Share Strip (Desktop 4-in-1-Row, Mobile 2-in-1-Row) -->
@@ -122,9 +122,9 @@
                                     <i class="bi bi-person-badge fs-3"></i>
                                 </div>
                                 <div class="min-w-0 flex-grow-1 text-break">
-                                    <h6 class="fw-bold text-dark mb-1">Written by Anil Kumar Rauniyar</h6>
-                                    <p class="extra-small text-muted mb-2 text-break">RERA Registered Real Estate Consultant | Reg No: PRM/KA/RERA/1251/310/AG/170819/000018</p>
-                                    <p class="small text-secondary mb-0">Specializing in premium villa plot communities and land development investments across North Bengaluru.</p>
+                                    <h6 class="fw-bold text-dark mb-1">Written by The Gardenia Estate Team</h6>
+                                    <p class="extra-small text-muted mb-2 text-break">Project Advisory &amp; Investment Research | WBRERA Reg No: WBRERA/P/DAR/2024/000188</p>
+                                    <p class="small text-secondary mb-0">Specializing in premium residential plots and luxury bungalows for sale across Bagdogra and Siliguri.</p>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@
                                 <span class="fw-bold text-dark small">RERA Certified Compliance</span>
                             </div>
                             <p class="extra-small text-muted mb-0">
-                                Registration No: PRM/KA/RERA/1251/310/AG/170819/000018. 100% legal title assurance.
+                                Registration No: WBRERA/P/DAR/2024/000188. 100% legal title assurance.
                             </p>
                         </div>
 
@@ -219,7 +219,7 @@
     "datePublished": "<?= date('c', strtotime(@$query[0]->created_at)) ?>",
     "author": {
         "@type": "Person",
-        "name": "<?= addslashes(@$query[0]->author ?? 'Anil Kumar Rauniyar') ?>"
+        "name": "<?= addslashes(@$query[0]->author ?? 'The Gardenia Estate') ?>"
     },
     "publisher": {
         "@type": "Organization",

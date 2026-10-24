@@ -27,7 +27,7 @@
             <!-- Modal Body Form (Compact & 2 Columns per Row on Mobile) -->
             <div class="modal-body p-3 p-md-4">
                 <p class="text-secondary extra-small mb-3">
-                    Tell us about your experience with your plot purchase or site visit. Your feedback helps us improve.
+                    Tell us about your experience with your plot or bungalow purchase or site visit. Your feedback helps us improve.
                 </p>
 
                 <form action="<?= site_url('reviews/submit') ?>" method="POST" enctype="multipart/form-data">
@@ -62,7 +62,7 @@
                             </label>
                             <div class="review-input-box py-2 px-2.5 d-flex align-items-center">
                                 <i class="bi bi-geo-alt text-secondary me-2"></i>
-                                <input type="text" name="city" placeholder="Bengaluru" value="<?= isset($city) ? htmlspecialchars($city) : '' ?>" required class="extra-small border-0 w-100 bg-transparent shadow-none p-0">
+                                <input type="text" name="city" placeholder="Siliguri" value="<?= isset($city) ? htmlspecialchars($city) : '' ?>" required class="extra-small border-0 w-100 bg-transparent shadow-none p-0">
                             </div>
                         </div>
 
@@ -110,7 +110,7 @@
                         <div class="review-textarea-box p-2">
                             <div class="d-flex align-items-start gap-2">
                                 <i class="bi bi-pencil-fill text-secondary mt-1 extra-small"></i>
-                                <textarea name="review" id="review-textarea" rows="2" maxlength="500" placeholder="Share your experience about plot purchase or site visit..." required oninput="updateCharCount(this)" class="extra-small"></textarea>
+                                <textarea name="review" id="review-textarea" rows="2" maxlength="500" placeholder="Share your experience about your plot or bungalow purchase or site visit..." required oninput="updateCharCount(this)" class="extra-small"></textarea>
                             </div>
                             <div class="text-end extra-small text-muted mt-1 font-size-xs-tight">Max 5 MB (JPG, PNG, WEBP)</div>
                         </div>

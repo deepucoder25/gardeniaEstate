@@ -3,8 +3,8 @@
 <!-- Breadcrumbs Section -->
 <?php 
 $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Photo Gallery & Estate Renders',
-    'bc_desc' => 'Explore visual renders, aerial estate views, clubhouse layouts, and plot developments.',
+    'bc_h1' => 'Photo Gallery - Plots & Bungalows',
+    'bc_desc' => 'Explore visual renders, aerial estate views, layout developments, and luxury bungalows for sale.',
     'breadcrumbs' => [
         ['name' => 'Gallery']
     ]
@@ -18,7 +18,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
         <div class="text-center mb-5">
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">Visual Showcase</span>
             <h2 class="display-6 fw-bold text-dark mb-2">The Gardenia Estate &ndash; Photo Gallery</h2>
-            <p class="text-muted">Take a visual tour of our 50+ acre luxury plotted development in STRR Devanahalli.</p>
+            <p class="text-muted">Take a visual tour of our 50+ acre luxury residential plots and bungalows for sale in Bagdogra, Siliguri.</p>
         </div>
 
         <div class="row g-4">

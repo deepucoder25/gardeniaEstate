@@ -14,7 +14,7 @@ class Home extends MX_Controller
 
     function index()
     {
-        $data['title'] = $this->comp['company3'] . " | Luxury Plots STRR Devanahalli";
+        $data['title'] = $this->comp['company3'] . " | Luxury Plots in Bagdogra, Siliguri";
         $data['description'] = "Explore premium residential and commercial plots, world-class amenities, and strategic connectivity.";
         $data['module'] = "home";
         $data['view_file'] = "home";
@@ -61,7 +61,7 @@ class Home extends MX_Controller
     function plots_page()
     {
         $data['title'] = "Plots & Properties Inventory | " . $this->comp['company3'];
-        $data['description'] = "Browse our full inventory of RERA-approved luxury residential and commercial villa plots in STRR Devanahalli.";
+        $data['description'] = "Browse our full inventory of RERA-approved luxury residential and commercial villa plots in Bagdogra, Siliguri.";
         $data['module'] = "home";
         $data['view_file'] = "plots_page";
         $data['show_breadcrumbs'] = true;
@@ -86,7 +86,7 @@ class Home extends MX_Controller
     function location()
     {
         $data['title'] = "Location & Connectivity | " . $this->comp['company3'];
-        $data['description'] = "Strategic location with easy access to Kempegowda International Airport, Highways, and IT Parks.";
+        $data['description'] = "Strategic location with easy access to Bagdogra International Airport, Asian Highway, and Siliguri city.";
         $data['module'] = "home";
         $data['view_file'] = "location";
         $data['show_breadcrumbs'] = true;

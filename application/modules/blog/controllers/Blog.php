@@ -29,7 +29,7 @@ class Blog extends MX_Controller {
                         'slug' => !empty($row['slug']) ? $row['slug'] : $this->slugify($row['title']),
                         'description' => $row['description'],
                         'content' => $row['description'],
-                        'author' => !empty($row['author']) ? $row['author'] : 'Anil Kumar Rauniyar',
+                        'author' => !empty($row['author']) ? $row['author'] : 'The Gardenia Estate',
                         'created_at' => !empty($row['date']) ? $row['date'] : date('Y-m-d H:i:s'),
                         'image' => !empty($row['image']) ? $row['image'] : ''
                     ];

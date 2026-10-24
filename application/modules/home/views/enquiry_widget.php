@@ -54,18 +54,20 @@
                 </div>
               </div>
 
-              <!-- Interested Plot Size Dropdown -->
+              <!-- Interested Plot / Bungalow Dropdown -->
               <div class="col-md-6">
                 <div class="form-group mb-2">
-                  <label class="form-label fw-bold text-dark small">Interested Plot Size <span class="text-danger">*</span></label>
+                  <label class="form-label fw-bold text-dark small">Interested Plot / Bungalow <span class="text-danger">*</span></label>
                   <div class="input-group">
                     <span class="input-group-text bg-light border-end-0"><i class="bi bi-bounding-box-circles text-warning"></i></span>
                     <select name="freight" class="form-select bg-light border-start-0" required>
-                      <option value="" selected disabled>Select Plot Size</option>
-                      <option value="1200 Sq.Ft (30x40)">1200 Sq.Ft (30 x 40 Ft)</option>
-                      <option value="1500 Sq.Ft (30x50)">1500 Sq.Ft (30 x 50 Ft)</option>
-                      <option value="2400 Sq.Ft (40x60)">2400 Sq.Ft (40 x 60 Ft)</option>
-                      <option value="Custom Plot Dimension">Custom / Odd Plot Dimension</option>
+                      <option value="" selected disabled>Select Plot or Bungalow</option>
+                      <option value="Residential Plot (1200 Sq.Ft)">Residential Plot - 1200 Sq.Ft (30 x 40 Ft)</option>
+                      <option value="Residential Plot (1500 Sq.Ft)">Residential Plot - 1500 Sq.Ft (30 x 50 Ft)</option>
+                      <option value="Residential Plot (2400 Sq.Ft)">Residential Plot - 2400 Sq.Ft (40 x 60 Ft)</option>
+                      <option value="Commercial Plot (AH2 Corridor)">Commercial Plot (Asian Highway Corridor)</option>
+                      <option value="Luxury Bungalow (For Sale)">Luxury Bungalow (For Sale)</option>
+                      <option value="Custom Villa Plot Dimension">Custom / Odd Plot Dimension</option>
                     </select>
                   </div>
                 </div>

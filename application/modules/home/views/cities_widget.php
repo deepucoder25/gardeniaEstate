@@ -30,13 +30,13 @@ if (!empty($plots)) {
 ?>
 
 <?php if (!empty($active_cities)): ?>
-<!-- CITIES WHERE WE HAVE PLOTS (100% DYNAMIC FROM ADMIN PLOTS DATA) -->
+<!-- PRIME LOCATIONS FOR PLOTS & BUNGALOWS (100% DYNAMIC FROM ADMIN PLOTS DATA) -->
 <section class="py-5 bg-light border-top border-bottom" id="citiesSection">
   <div class="container py-3">
     <div class="text-center mb-4">
-      <h2 class="fs-3 fw-bold text-dark mb-2">Cities Where We Have Plots</h2>
+      <h2 class="fs-3 fw-bold text-dark mb-2">Prime Locations for Plots &amp; Bungalows</h2>
       <p class="text-secondary small max-w-600 mx-auto">
-        Explore active plot locations configured live in the admin panel.
+        Explore active residential plots and luxury bungalow locations in Bagdogra, Siliguri.
       </p>
     </div>
 

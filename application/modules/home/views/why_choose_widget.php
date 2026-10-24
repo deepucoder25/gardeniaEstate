@@ -14,14 +14,14 @@
     <!-- 4 Feature Cards Row -->
     <div class="row g-4">
       
-      <!-- Card 1: Prime STRR Location -->
+      <!-- Card 1: Prime Bagdogra Location -->
       <div class="col-lg-3 col-md-6">
         <div class="card border-0 rounded-4 shadow-sm p-4 h-100 bg-white bg-opacity-90 text-center">
           <div class="bg-success-subtle text-success rounded-circle p-3 mx-auto mb-3 d-flex align-items-center justify-content-center icon-box-size-60">
             <i class="bi bi-geo-alt-fill fs-3"></i>
           </div>
-          <h5 class="fw-bold text-dark mb-2">Prime STRR Location</h5>
-          <p class="small text-muted mb-0">Situated directly along the Satellite Town Ring Road in Devanahalli, offering seamless connectivity to North Bengaluru's growth corridor.</p>
+          <h5 class="fw-bold text-dark mb-2">Prime Bagdogra Location</h5>
+          <p class="small text-muted mb-0">Situated directly along the Asian Highway &amp; Airport corridor in Bagdogra, offering seamless connectivity to Siliguri and North Bengal's prime growth hub.</p>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
             <i class="bi bi-shield-check fs-3"></i>
           </div>
           <h5 class="fw-bold text-dark mb-2">100% Clear Titles</h5>
-          <p class="small text-muted mb-0">Fully RERA approved with clear land titles and instant plot registration available for immediate villa construction.</p>
+          <p class="small text-muted mb-0">Fully RERA approved with clear land titles and instant registration available for immediate plot possession and luxury bungalow construction.</p>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
             <i class="bi bi-graph-up-arrow fs-3"></i>
           </div>
           <h5 class="fw-bold text-dark mb-2">High Appreciation</h5>
-          <p class="small text-muted mb-0">Devanahalli is Bengaluru's fastest-growing investment hub near KIAB Airport, guaranteeing explosive ROI for early investors.</p>
+          <p class="small text-muted mb-0">Bagdogra-Siliguri is North Bengal's fastest-growing investment hub near the International Airport, guaranteeing explosive ROI for early investors.</p>
         </div>
       </div>
 

@@ -57,9 +57,9 @@
       <!-- Marquee Address & Timings -->
       <div class="flex-grow-1 overflow-hidden mx-md-2">
         <marquee behavior="scroll" direction="left" scrollamount="5" class="mb-0 text-white small fw-bold d-block">
-          <span class="me-4"><i class="bi bi-geo-alt-fill text-warning me-2"></i> Address: STRR-Devanahalli, North Bengaluru, Karnataka - 562110</span>
-          <span class="me-4"><i class="bi bi-patch-check-fill text-warning me-2"></i> RERA Approved: PRM/KA/RERA/1251/310/AG/170819/000018</span>
-          <span class="me-4"><i class="bi bi-tree-fill text-warning me-2"></i> 50+ Acre Luxury Villa Plot Township</span>
+          <span class="me-4"><i class="bi bi-geo-alt-fill text-warning me-2"></i> <?= htmlspecialchars($address) ?></span>
+          <span class="me-4"><i class="bi bi-patch-check-fill text-warning me-2"></i> WBRERA Approved: WBRERA/P/DAR/2024/000188</span>
+          <span class="me-4"><i class="bi bi-tree-fill text-warning me-2"></i> 50+ Acre Luxury Plots &amp; Bungalows Township</span>
           <span class="me-4"><i class="bi bi-clock-fill text-warning me-2"></i> Mon - Sat: 10:00 AM - 6:00 PM</span>
         </marquee>
       </div>
@@ -68,7 +68,7 @@
       <div class="d-none d-lg-flex align-items-center gap-2 text-nowrap">
       
         <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1.5 extra-small fw-bold d-flex align-items-center gap-2">
-          <i class="bi bi-geo-alt-fill text-success fs-7 me-1"></i> STRR Devanahalli
+          <i class="bi bi-geo-alt-fill text-success fs-7 me-1"></i> Bagdogra, Siliguri
         </span>
       </div>
 
@@ -153,11 +153,11 @@
                 <i class="bi bi-chevron-right extra-small text-muted"></i>
               </a>
 
-              <!-- 2.5. Plots & Inventory -->
+              <!-- 2.5. Plots & Bungalows -->
               <a href="<?= site_url('plots') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-grid-3x3-gap-fill text-warning fs-5"></i>
-                  <span>Plots &amp; Inventory</span>
+                  <span>Plots &amp; Bungalows</span>
                 </span>
                 <i class="bi bi-chevron-right extra-small text-muted"></i>
               </a>
@@ -258,7 +258,7 @@
             <div class="card border-0 rounded-4 overflow-hidden shadow-sm text-center text-white position-relative menu-banner-card">
               <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="The Gardenia Estate Luxury Plotted Community Banner" class="img-fluid menu-banner-img" loading="lazy">
               <div class="position-absolute top-0 start-0 w-100 h-100 menu-banner-overlay p-4 d-flex flex-column align-items-center justify-content-center">
-                <p class="small fw-semibold mb-3 text-white">A Premium Villa Plot Community Surrounded by Nature</p>
+                <p class="small fw-semibold mb-3 text-white">Exclusive Plots &amp; Luxury Bungalows for Sale Surrounded by Nature</p>
                 <a href="<?= site_url('about-project') ?>" class="btn btn-outline-light rounded-pill btn-sm px-4 py-2 fw-bold tracking-wide text-uppercase">EXPLORE PROJECT</a>
               </div>
             </div>

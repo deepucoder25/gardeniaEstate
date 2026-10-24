@@ -10,7 +10,7 @@
           </div>
           <div class="ps-1">
             <h5 class="modal-title fs-5 fw-bold text-white mb-0" id="qteModalLabel">The Gardenia Estate</h5>
-            <p class="extra-small text-white-50 mb-0">Plots Pricing, Cost Sheet &amp; Free Site Visit Booking</p>
+            <p class="extra-small text-white-50 mb-0">Plots &amp; Bungalows For Sale - Cost Sheet &amp; Free Site Visit Booking</p>
           </div>
         </div>
         <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -40,17 +40,19 @@
               </div>
             </div>
 
-            <!-- Row 2 - Col 1: Preferred Plot Size / Variant Dropdown -->
+            <!-- Row 2 - Col 1: Preferred Property Type Dropdown -->
             <div class="col-6">
-              <label class="form-label extra-small fw-bold text-dark mb-1">Plot Variant</label>
+              <label class="form-label extra-small fw-bold text-dark mb-1">Plot / Bungalow</label>
               <div class="input-group input-group-sm rounded-3 overflow-hidden estate-form-group">
                 <span class="input-group-text border-0 px-3"><i class="bi bi-house-door-fill text-warning fs-6"></i></span>
                 <select class="form-select border-0 bg-light py-2 text-dark font-sans estate-select-field" name="mfrom">
-                  <option value="">-- Plot Size --</option>
-                  <option value="1200 Sq.Ft (30x40)">1200 Sq.Ft (30'x40')</option>
-                  <option value="1500 Sq.Ft (30x50)">1500 Sq.Ft (30'x50')</option>
-                  <option value="2400 Sq.Ft (40x60)">2400 Sq.Ft (40'x60')</option>
-                  <option value="Custom Plot">Custom Plot</option>
+                  <option value="">-- Select Requirement --</option>
+                  <option value="Residential Plot (1200 Sq.Ft)">Residential Plot - 1200 Sq.Ft (30'x40')</option>
+                  <option value="Residential Plot (1500 Sq.Ft)">Residential Plot - 1500 Sq.Ft (30'x50')</option>
+                  <option value="Residential Plot (2400 Sq.Ft)">Residential Plot - 2400 Sq.Ft (40'x60')</option>
+                  <option value="Commercial Plot">Commercial Plot (AH2 Corridor)</option>
+                  <option value="Luxury Bungalow (For Sale)">Luxury Bungalow (For Sale)</option>
+                  <option value="Custom Villa Plot">Custom Villa Plot</option>
                 </select>
               </div>
             </div>

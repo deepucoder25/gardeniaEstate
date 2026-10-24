@@ -22,7 +22,7 @@
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">LEGAL INFORMATION</span>
             <h2 class="h2 fw-bold text-dark mb-3">PRIVACY POLICY &amp; TERMS OF USE</h2>
             <p class="text-secondary leading-relaxed mb-0">
-              <strong>Anil Kumar Rauniyar</strong> (&quot;Anil Kumar Rauniyar&quot; or &quot;We&quot;) a Real Estate Regulatory Authority (&ldquo;RERA&rdquo;) Registered Agent bearing RERA No: <strong>PRM/KA/RERA/1251/310/AG/170819/000018</strong>. We prioritize your privacy. Our concise Privacy Policy outlines the personal information we collect through our website, including sub-domains and microsites, the purposes of collection we may share it with, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns. We highly recommend reading this Privacy Policy before using services and/or providing personal information.
+              <strong>The Gardenia Estate</strong> (&quot;The Gardenia Estate&quot; or &quot;We&quot;) operates in full compliance with the West Bengal Real Estate Regulatory Authority (WBRERA Registration No: <strong>WBRERA/P/DAR/2024/000188</strong>). We prioritize your privacy. Our Privacy Policy outlines the personal information we collect through our website, including sub-domains and inquiry forms, the purposes of collection, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns.
             </p>
           </div>
 
@@ -40,7 +40,7 @@
                 <strong>&ldquo;Service Providers&rdquo;</strong> includes entities which provide services to and to whom we may disclose your Data for a specific purpose pursuant to a written contract.
               </li>
               <li class="p-3 bg-light rounded-3 border-start border-4 border-success">
-                <strong>&ldquo;Anil Kumar Rauniyar/We&rdquo;</strong> shall mean Anil Kumar Rauniyar, and its subsidiaries, affiliates and associate companies.
+                <strong>&ldquo;The Gardenia Estate/We&rdquo;</strong> shall mean The Gardenia Estate, its development partners, subsidiaries, and affiliates.
               </li>
               <li class="p-3 bg-light rounded-3 border-start border-4 border-success">
                 <strong>&ldquo;User or You&rdquo;</strong> shall mean the natural person who accesses our website/pages or Platform.

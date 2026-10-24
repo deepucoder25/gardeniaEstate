@@ -6,10 +6,10 @@
     <div class="row justify-content-center text-center mb-3">
       <div class="col-lg-10">
         <h1 class="hero-main-title text-white fw-bold display-5 mb-2 text-uppercase tracking-wider" itemprop="name">
-          PRESTIGE GARDENIA ESTATE
+          <?= strtoupper(htmlspecialchars($company3)) ?>
         </h1>
         <p class="hero-subtitle text-white-75 fs-5 fw-medium mb-3" itemprop="description">
-          Pre Launching Luxury Plotted Development in <strong>STRR-Devanahalli, North Bangalore</strong>
+          Luxury Residential Plots &amp; Bungalows For Sale in <strong>Bagdogra, Siliguri</strong>
         </p>
         <div class="hero-chevron-wrap d-flex justify-content-center align-items-center">
           <i class="bi bi-chevron-down text-white fs-3 animate-bounce"></i>
@@ -24,7 +24,7 @@
           <div class="card-body p-4 p-sm-5 text-center">
             
             <h2 class="card-title-sub text-dark fs-5 fw-normal mb-1">
-              Download Prestige Gardenia Estate
+              Download <?= htmlspecialchars($company3) ?>
             </h2>
             <div class="card-title-main text-dark fs-3 fw-bold mb-4 text-uppercase">
               BROCHURE Now!

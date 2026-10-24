@@ -16,7 +16,7 @@ class Timer extends MX_Controller
         if (isset($_POST['timer_target_date'])) {
             $timer_data = [
                 'target_date' => $_POST['timer_target_date'],
-                'heading' => isset($_POST['timer_heading']) && !empty($_POST['timer_heading']) ? $_POST['timer_heading'] : 'Schedule a Site-Visit to The Gardenia Estate STRR Devanahalli',
+                'heading' => isset($_POST['timer_heading']) && !empty($_POST['timer_heading']) ? $_POST['timer_heading'] : 'Schedule a Site-Visit to The Gardenia Estate Bagdogra Siliguri',
                 'tagline' => isset($_POST['timer_tagline']) && !empty($_POST['timer_tagline']) ? $_POST['timer_tagline'] : 'Hurry Up! Enquire Now',
                 'subheading' => isset($_POST['timer_subheading']) && !empty($_POST['timer_subheading']) ? $_POST['timer_subheading'] : 'Pre Launch Prices Applicable On 1st Few Units.'
             ];

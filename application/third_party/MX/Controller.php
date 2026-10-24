@@ -53,16 +53,10 @@ class MX_Controller
 
         $this->comp['phone'] = '+91 91080 34519';
         $this->comp['phonehtml'] = 'tel:+9191080 34519';
-        $this->comp['phone1'] = '+91 91080 34519';
-        $this->comp['phonehtml1'] = 'tel:+9191080 34519';
         $this->comp['supportmail'] = 'info@thegardeniaestate.in';
         $this->comp['replyToMail'] = 'info@thegardeniaestate.in';
         $this->comp['mail'] = 'info@thegardeniaestate.in';
         $this->comp['mailhtml'] = 'mailto:info@thegardeniaestate.in';
-        $this->comp['mail1'] = 'info@thegardeniaestate.in';
-        $this->comp['mailhtml1'] = 'mailto:info@thegardeniaestate.in';
-        $this->comp['tollfree'] = '+91 91080 34519';
-        $this->comp['tollfreehtml'] = 'tel:+9191080 34519';
         $this->comp['company3'] = 'The Gardenia Estate';
         $this->comp['companydomain'] = 'thegardeniaestate.in';
 
@@ -73,13 +67,13 @@ class MX_Controller
         $this->comp['linkedinhtml'] = "";
         $this->comp['whatsapphtml'] = "https://wa.me/919108034519";
 
-        $this->comp['address'] = "Site Office Address: STRR-Devanahalli, North Bengaluru, Karnataka - 562110";
+        $this->comp['address'] = "Site Office Address: Airport Road, Bagdogra, Siliguri, West Bengal - 734014";
         $this->comp['address1'] = $this->comp['address'];
         $this->comp['address2'] = $this->comp['address'];
-        $this->comp['addressRegion'] = $this->comp['address'];
-        $this->comp['postalCode'] = "562110";
-        $this->comp['companystate'] = "Karnataka";
-        $this->comp['gmap'] = "https://maps.google.com/maps?q=Devanahalli,+Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed";
+        $this->comp['addressRegion'] = "Bagdogra, Siliguri, West Bengal";
+        $this->comp['postalCode'] = "734014";
+        $this->comp['companystate'] = "West Bengal";
+        $this->comp['gmap'] = "https://maps.google.com/maps?q=Bagdogra,+Siliguri,+West+Bengal&t=&z=13&ie=UTF8&iwloc=&output=embed";
         $this->comp['themeColor'] = "#094B32";
 
         $this->comp['experience'] = "40+";
@@ -87,16 +81,16 @@ class MX_Controller
 
         $this->comp['happyClients'] = "39,850+";
         $this->comp['yearsExperience'] = "40+";
-        $this->comp['secureShifting'] = "100%";
+        $this->comp['secureInvestment'] = "100%";
         $this->comp['statesCovered'] = "20+";
 
-        $this->comp['sku'] = "PM28957";
-        $this->comp['mpn'] = "SPM28957";
+        $this->comp['sku'] = "GE734014";
+        $this->comp['mpn'] = "GARDENIA-BAGDOGRA";
         // Review
         $this->comp['ratingValue'] = "4.9";
         $this->comp['ratingCount'] = "39850";
         $this->comp['datePublished'] = "15 May, 2026";
-        $this->comp['reviewBody'] = "Best Luxury Plotted Development in Devanahalli, Bangalore.";
+        $this->comp['reviewBody'] = "Best Luxury Plots & Bungalows for Sale in Bagdogra, Siliguri.";
         $this->comp['reviewperson'] = "Ruchi saha";
 
         /* autoload module items */

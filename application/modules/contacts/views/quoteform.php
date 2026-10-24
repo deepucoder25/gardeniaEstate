@@ -28,17 +28,19 @@
         </div>
       </div>
 
-      <!-- Preferred Plot Size -->
+      <!-- Preferred Property Type / Size -->
       <div class="col-md-6">
-        <label class="form-label small fw-bold text-dark mb-1">Plot Size / Variant</label>
+        <label class="form-label small fw-bold text-dark mb-1">Plot / Bungalow Type</label>
         <div class="input-group">
           <span class="input-group-text bg-light border-end-0"><i class="bi bi-house-door-fill text-warning"></i></span>
           <select name="mfrom" class="form-select bg-light border-start-0 py-2.5 px-3 text-secondary">
-            <option value="">-- Select Plot Size --</option>
-            <option value="1200 Sq.Ft (30x40)">1200 Sq.Ft (30 ft x 40 ft)</option>
-            <option value="1500 Sq.Ft (30x50)">1500 Sq.Ft (30 ft x 50 ft)</option>
-            <option value="2400 Sq.Ft (40x60)">2400 Sq.Ft (40 ft x 60 ft)</option>
-            <option value="Custom / Odd Plot">Custom / Odd Plot</option>
+            <option value="">-- Select Plot or Bungalow --</option>
+            <option value="Residential Plot (1200 Sq.Ft)">Residential Plot - 1200 Sq.Ft (30 ft x 40 ft)</option>
+            <option value="Residential Plot (1500 Sq.Ft)">Residential Plot - 1500 Sq.Ft (30 ft x 50 ft)</option>
+            <option value="Residential Plot (2400 Sq.Ft)">Residential Plot - 2400 Sq.Ft (40 ft x 60 ft)</option>
+            <option value="Commercial Plot (AH2 Corridor)">Commercial Plot (Asian Highway Corridor)</option>
+            <option value="Luxury Bungalow (For Sale)">Luxury Bungalow (For Sale)</option>
+            <option value="Custom Villa Plot">Custom Villa Plot</option>
           </select>
         </div>
       </div>

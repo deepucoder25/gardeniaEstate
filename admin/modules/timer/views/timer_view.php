@@ -94,7 +94,7 @@
             <?php
             $timer_conf = [
                 'target_date' => '2026-09-15T23:59', 
-                'heading' => 'Schedule a Site-Visit to The Gardenia Estate STRR Devanahalli', 
+                'heading' => 'Schedule a Site-Visit to The Gardenia Estate Bagdogra Siliguri', 
                 'tagline' => 'Hurry Up! Enquire Now', 
                 'subheading' => 'Pre Launch Prices Applicable On 1st Few Units.'
             ];

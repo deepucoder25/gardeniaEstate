@@ -11,8 +11,8 @@ if (file_exists($amenities_file)) {
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->
 <?php if (isset($show_breadcrumbs) && $show_breadcrumbs): ?>
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'World Class Master Amenities',
-    'bc_desc' => 'Designed for health, recreation, wellness, and family leisure.',
+    'bc_h1' => 'Township Amenities - Plots & Bungalows',
+    'bc_desc' => 'Designed for health, recreation, wellness, and serene family living in Bagdogra, Siliguri.',
     'breadcrumbs' => [
         ['name' => 'Amenities']
     ]
@@ -35,7 +35,7 @@ if (file_exists($amenities_file)) {
     <!-- Section Main Title -->
     <h2 class="display-5 text-dark fw-bold text-center mb-2">Master Amenities</h2>
     <p class="text-secondary fs-6 text-center mb-5 max-w-600 mx-auto">
-      Modern infrastructure &amp; lifestyle features configured directly from the admin panel.
+      Modern infrastructure &amp; lifestyle features designed for plot and luxury bungalow owners in Bagdogra.
     </p>
 
     <!-- Amenities Grid -->

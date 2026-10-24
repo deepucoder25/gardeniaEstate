@@ -6,85 +6,420 @@ if (file_exists($company_file)) {
     $company_info = json_decode(file_get_contents($company_file), true);
 }
 
-$c_name  = !empty($company_info['company_name']) ? $company_info['company_name'] : '';
-$c_desc  = !empty($company_info['description']) ? $company_info['description'] : '';
-$c_loc   = !empty($company_info['location']) ? $company_info['location'] : '';
-$c_phone = !empty($company_info['phone']) ? $company_info['phone'] : '';
-$c_email = !empty($company_info['email']) ? $company_info['email'] : '';
-$c_img   = !empty($company_info['image']) ? base_url($company_info['image']) : base_url('assets/images/slider/gardenia_hero.webp');
+$c_name  = !empty($company_info['company_name']) ? $company_info['company_name'] : 'The Gardenia Estate';
+$c_desc  = !empty($company_info['description']) ? $company_info['description'] : 'A premier 50+ Acre luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate RERA-approved registration.';
+$c_loc   = !empty($company_info['location']) ? $company_info['location'] : 'Airport Road, Bagdogra, Siliguri, West Bengal – 734014';
+$c_phone = !empty($company_info['phone']) ? $company_info['phone'] : '+91 98765 43210';
+$c_email = !empty($company_info['email']) ? $company_info['email'] : 'info@thegardeniaestate.in';
+$c_img   = !empty($company_info['image']) ? base_url($company_info['image']) : base_url('assets/images/reviews/bagdogra_plots_bungalows.webp');
+$c_inset = base_url('assets/images/reviews/plot_gardenia_boulevard.webp');
 ?>
 
-<!-- HOME PAGE ABOUT & BRANDING SECTION (2-COLUMN PREMIUM LAYOUT) -->
-<section class="py-5 bg-white position-relative" id="companyAboutSection">
-  <div class="container py-4">
+<style>
+/* BALANCED LUXURY ABOUT SECTION STYLING */
+.gardenia-about-section {
+  background-color: #FFFFFF;
+}
+
+.gardenia-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(9, 75, 50, 0.08);
+  border: 1px solid rgba(9, 75, 50, 0.16);
+  color: #094B32;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.gardenia-heading {
+  color: #172B23;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.gardenia-paragraph {
+  color: #556B61;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.gardenia-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #26352F;
+}
+
+.gardenia-contact-pill {
+  background: #F7FAF8;
+  border: 1px solid #E4EBE6;
+  border-radius: 50px;
+  padding: 9px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #26352F;
+  transition: all 0.25s ease;
+}
+
+.gardenia-contact-pill:hover {
+  background: #FFFFFF;
+  border-color: #094B32;
+  color: #094B32;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(9, 75, 50, 0.08);
+}
+
+.btn-gardenia-main {
+  background: #094B32;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  padding: 12px 28px;
+  border: 1.5px solid #094B32;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(9, 75, 50, 0.22);
+  transition: all 0.25s ease;
+}
+
+.btn-gardenia-main:hover {
+  background: #0C5C3E;
+  border-color: #0C5C3E;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(9, 75, 50, 0.32);
+  color: #FFFFFF !important;
+}
+
+.btn-gardenia-outline {
+  background: transparent;
+  color: #094B32 !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  padding: 12px 24px;
+  border: 1.5px solid #094B32;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-gardenia-outline:hover {
+  background: rgba(9, 75, 50, 0.06);
+  transform: translateY(-2px);
+  color: #094B32 !important;
+}
+
+/* ARCHITECTURAL IMAGE COMPOSITION STYLING */
+.gardenia-image-wrapper {
+  position: relative;
+  padding: 14px 12px 38px 20px;
+}
+
+/* Offset Gold Geometric Frame */
+.gardenia-gold-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 24px;
+  left: 36px;
+  border: 2px solid rgba(168, 138, 74, 0.38);
+  border-radius: 30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main Master Drone Box */
+.gardenia-main-img-box {
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(9, 75, 50, 0.12);
+  border: 4px solid #FFFFFF;
+}
+
+.gardenia-main-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gardenia-main-img-box:hover img {
+  transform: scale(1.03);
+}
+
+/* Top-Right Floating Proximity Badge */
+.gardenia-pill-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #172B23;
+}
+
+/* Secondary Overlapping Inset: Gardens & Luxury Bungalows */
+.gardenia-inset-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  height: 145px;
+  z-index: 3;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  background: #FFFFFF;
+}
+
+.gardenia-inset-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gardenia-inset-box:hover img {
+  transform: scale(1.05);
+}
+
+.gardenia-inset-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(15, 41, 30, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Floating RERA Badge */
+.gardenia-rera-float {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rera-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #094B32;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 575.98px) {
+  .gardenia-image-wrapper {
+    padding: 0;
+  }
+  .gardenia-gold-backdrop {
+    display: none;
+  }
+  .gardenia-inset-box {
+    display: none;
+  }
+  .gardenia-rera-float {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+
+<!-- HOME PAGE ABOUT & BRANDING SECTION -->
+<section class="gardenia-about-section py-5" id="companyAboutSection">
+  <div class="container py-3">
     <div class="row align-items-center g-4 g-lg-5">
       
-      <!-- LEFT COLUMN: Admin Text Content & Contact Info -->
+      <!-- LEFT COLUMN: Balanced, Clean Content Area -->
       <div class="col-lg-6">
-        <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-3 text-uppercase">
-          WELCOME TO <?= htmlspecialchars($c_name) ?>
-        </span>
+        
+        <!-- Eyebrow Badge -->
+        <div class="mb-3">
+          <span class="gardenia-eyebrow-pill">
+            <i class="bi bi-patch-check-fill text-success"></i>
+            WELCOME TO <?= htmlspecialchars($c_name) ?>
+          </span>
+        </div>
 
-        <h2 class="display-5 fw-bold text-dark mb-3 lh-sm">
+        <!-- Main Title -->
+        <h2 class="gardenia-heading mb-3">
           <?= htmlspecialchars($c_name) ?>
         </h2>
 
-        <p class="text-secondary leading-relaxed fs-6 mb-4">
+        <!-- Description Paragraph -->
+        <p class="gardenia-paragraph mb-3">
           <?= nl2br(htmlspecialchars($c_desc)) ?>
         </p>
 
-        <!-- Company Contact Details Pills (2 per Row for Phone & Email) -->
-        <div class="mb-4">
-          <?php if (!empty($c_loc)): ?>
-            <div class="card border-0 rounded-4 shadow-sm px-3 py-2 bg-light d-inline-flex align-items-center flex-row gap-2 mb-2 max-w-100">
-              <i class="bi bi-geo-alt-fill text-danger fs-6 flex-shrink-0"></i>
-              <span class="fw-bold text-dark extra-small text-truncate"><?= htmlspecialchars($c_loc) ?></span>
+        <!-- 4 Key Township Highlights Checklist -->
+        <div class="row g-2 mb-3.5">
+          <div class="col-6">
+            <div class="gardenia-highlight-item">
+              <i class="bi bi-check-circle-fill text-success fs-6 flex-shrink-0"></i>
+              <span>40% Green Open Space</span>
             </div>
-          <?php endif; ?>
-
-          <div class="row g-2">
-            <?php if (!empty($c_phone)): ?>
-              <div class="col-6">
-                <a href="tel:<?= preg_replace('/\D+/', '', $c_phone) ?>" class="card border-0 rounded-4 shadow-sm px-2.5 py-2 bg-light text-decoration-none d-flex align-items-center justify-content-center flex-row gap-2 h-100">
-                  <i class="bi bi-telephone-fill text-success fs-6 flex-shrink-0"></i>
-                  <span class="fw-bold text-dark extra-small text-truncate"><?= htmlspecialchars($c_phone) ?></span>
-                </a>
-              </div>
-            <?php endif; ?>
-
-            <?php if (!empty($c_email)): ?>
-              <div class="col-6">
-                <a href="mailto:<?= htmlspecialchars($c_email) ?>" class="card border-0 rounded-4 shadow-sm px-2.5 py-2 bg-light text-decoration-none d-flex align-items-center justify-content-center flex-row gap-2 h-100">
-                  <i class="bi bi-envelope-fill text-primary fs-6 flex-shrink-0"></i>
-                  <span class="fw-bold text-dark extra-small text-truncate"><?= htmlspecialchars($c_email) ?></span>
-                </a>
-              </div>
-            <?php endif; ?>
+          </div>
+          <div class="col-6">
+            <div class="gardenia-highlight-item">
+              <i class="bi bi-check-circle-fill text-success fs-6 flex-shrink-0"></i>
+              <span>100% Clear Land Titles</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="gardenia-highlight-item">
+              <i class="bi bi-check-circle-fill text-success fs-6 flex-shrink-0"></i>
+              <span>5 Mins to IXB Airport</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="gardenia-highlight-item">
+              <i class="bi bi-check-circle-fill text-success fs-6 flex-shrink-0"></i>
+              <span>30+ Luxury Amenities</span>
+            </div>
           </div>
         </div>
 
-        <a href="<?= site_url('about-project') ?>" class="btn btn-success rounded-pill px-4 py-2.5 fw-bold shadow-sm d-inline-flex align-items-center gap-2">
-          <span>About Project</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
+        <!-- Location Pill -->
+        <?php if (!empty($c_loc)): ?>
+          <div class="mb-2 mt-3">
+            <div class="gardenia-contact-pill max-w-100">
+              <i class="bi bi-geo-alt-fill text-danger flex-shrink-0 fs-6"></i>
+              <span class="text-truncate"><?= htmlspecialchars($c_loc) ?></span>
+            </div>
+          </div>
+        <?php endif; ?>
+
+        <!-- Phone & Email Pills -->
+        <div class="row g-2 mb-4">
+          <?php if (!empty($c_phone)): ?>
+            <div class="col-6">
+              <a href="tel:<?= preg_replace('/\D+/', '', $c_phone) ?>" class="gardenia-contact-pill w-100 justify-content-center">
+                <i class="bi bi-telephone-fill text-success flex-shrink-0"></i>
+                <span class="text-truncate"><?= htmlspecialchars($c_phone) ?></span>
+              </a>
+            </div>
+          <?php endif; ?>
+
+          <?php if (!empty($c_email)): ?>
+            <div class="col-6">
+              <a href="mailto:<?= htmlspecialchars($c_email) ?>" class="gardenia-contact-pill w-100 justify-content-center">
+                <i class="bi bi-envelope-fill text-primary flex-shrink-0"></i>
+                <span class="text-truncate"><?= htmlspecialchars($c_email) ?></span>
+              </a>
+            </div>
+          <?php endif; ?>
+        </div>
+
+        <!-- Action Buttons with clean gap -->
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <a href="<?= site_url('about-project') ?>" class="btn-gardenia-main">
+            <span>About Project</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="<?= site_url('plots') ?>" class="btn-gardenia-outline">
+            <span>Explore Plots</span>
+          </a>
+        </div>
+
       </div>
 
-      <!-- RIGHT COLUMN: Admin Uploaded Company Image -->
+      <!-- RIGHT COLUMN: Layered Architectural Visual Showcase -->
       <div class="col-lg-6">
-        <div class="position-relative">
-          <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-lg border">
-            <img src="<?= $c_img ?>" alt="<?= htmlspecialchars($c_name) ?> - Luxury Plotted Township Devanahalli" class="img-fluid w-100 object-fit-cover" loading="lazy">
+        <div class="gardenia-image-wrapper">
+          
+          <!-- Decorative Gold Offset Border Behind -->
+          <div class="gardenia-gold-backdrop"></div>
+
+          <!-- Main Master Drone Image Frame -->
+          <div class="gardenia-main-img-box">
+            <div class="ratio ratio-4x3">
+              <img src="<?= $c_img ?>" alt="<?= htmlspecialchars($c_name) ?> - Luxury Plots &amp; Bungalows in Bagdogra Siliguri" class="w-100 h-100 object-fit-cover" loading="lazy">
+            </div>
+            
+            <!-- Top-Right Floating Proximity Badge -->
+            <div class="gardenia-pill-badge">
+              <span>✈️</span>
+              <span>5 Mins to IXB Airport</span>
+            </div>
           </div>
-          <!-- Floating Feature Badge -->
-          <div class="position-absolute bottom-0 start-0 m-4 bg-white rounded-4 shadow-lg p-3 d-flex align-items-center gap-3 border max-w-260">
-            <div class="bg-success text-white rounded-circle p-2.5 d-flex align-items-center justify-content-center flex-shrink-0 icon-box-48">
-              <i class="bi bi-shield-check fs-4"></i>
+
+          <!-- Secondary Overlapping Inset: Gardens & Luxury Bungalows -->
+          <div class="gardenia-inset-box">
+            <img src="<?= $c_inset ?>" alt="<?= htmlspecialchars($c_name) ?> - Landscaped Gardens &amp; Luxury Bungalow Living" loading="lazy">
+            <div class="gardenia-inset-tag">
+              <i class="bi bi-tree-fill text-success"></i>
+              <span>Landscaped Gardens</span>
+            </div>
+          </div>
+
+          <!-- Floating RERA Approval Badge -->
+          <div class="gardenia-rera-float">
+            <div class="rera-icon-box">
+              <i class="bi bi-shield-check"></i>
             </div>
             <div>
-              <div class="fw-bold text-dark small">RERA &amp; Approved</div>
-              <div class="extra-small text-muted">100% Clear Land Titles</div>
+              <div class="fw-bold text-dark small lh-1">RERA &amp; Approved</div>
+              <div class="extra-small text-muted mt-1">100% Clear Land Titles</div>
             </div>
           </div>
+
         </div>
       </div>
 

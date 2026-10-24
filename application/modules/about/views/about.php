@@ -2,7 +2,7 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'About Prestige Gardenia Estate',
+    'bc_h1' => 'About ' . $company3,
     'breadcrumbs' => [
         ['name' => 'About Us']
     ]
@@ -15,62 +15,62 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-11">
                 
-                <h2 class="fw-bold text-dark mb-2">About Prestige Gardenia Estate</h2>
-                <h6 class="text-success fw-bold mb-4">Prestige Gardenia Estate - Pre Launching Luxury Plotted Development in STRR-Devanahalli, North Bangalore.</h6>
+                <h2 class="fw-bold text-dark mb-2">About <?= htmlspecialchars($company3) ?></h2>
+                <h6 class="text-success fw-bold mb-4"><?= htmlspecialchars($company3) ?> - Luxury Residential Plots &amp; Bungalows For Sale in Bagdogra, Siliguri.</h6>
 
                 <p class="text-secondary mb-4 leading-relaxed">
-                    Devanahalli, a rapidly evolving suburb in North Bengaluru, has emerged as a prime destination for real estate investments, particularly in residential plots. Its strategic location, robust infrastructure development, and proximity to key economic hubs make it an attractive choice for investors and homebuyers alike.
+                    Bagdogra, a vibrant and rapidly expanding suburb in Siliguri, North Bengal, has emerged as the premier destination for real estate investments, particularly in luxury residential plots and exclusive bungalows. Its strategic location at the foothills of the Himalayas, proximity to Bagdogra International Airport, and seamless connectivity to the Asian Highway network make it an attractive choice for smart investors and homebuyers seeking bespoke plotted living and luxury bungalows.
                 </p>
 
                 <!-- Strategic Location and Connectivity -->
                 <h4 class="fw-bold text-dark mb-3">Strategic Location and Connectivity</h4>
-                <p class="text-secondary mb-2">Devanahalli’s prominence is largely attributed to its strategic positioning:</p>
+                <p class="text-secondary mb-2">Bagdogra’s prominence is largely attributed to its unmatched strategic positioning:</p>
                 <ul class="text-secondary mb-4 ps-3">
-                    <li class="mb-2"><strong>Proximity to Kempegowda International Airport:</strong> Located approximately 15 km away, the airport enhances the area’s accessibility and appeal to frequent travelers and businesses.</li>
-                    <li class="mb-2"><strong>Excellent Road Connectivity:</strong> The suburb is well-connected through NH 44 and NH 648, facilitating seamless travel to various parts of Bengaluru and beyond.</li>
-                    <li class="mb-2"><strong>Upcoming Infrastructure Projects:</strong> The proposed Satellite Town Ring Road (STRR) and Peripheral Ring Road (PRR) are expected to further improve connectivity and spur real estate development in the region.</li>
+                    <li class="mb-2"><strong>Proximity to Bagdogra International Airport:</strong> Located just 5 to 10 minutes away, the airport provides swift domestic and regional connectivity, making travel effortless for residents and frequent flyers.</li>
+                    <li class="mb-2"><strong>Asian Highway &amp; National Highway Network:</strong> Flanked by Asian Highway 2 (AH2), NH 27, and NH 31, offering smooth 4-lane access to Siliguri city center, Darjeeling, Gangtok, Dooars, and Kolkata.</li>
+                    <li class="mb-2"><strong>Railway &amp; Transit Hubs:</strong> Easy reach to Bagdogra Railway Station and New Jalpaiguri (NJP) Railway Junction, the primary rail transit lifeline connecting North Bengal and the Northeast to the rest of India.</li>
                 </ul>
 
                 <!-- Thriving Real Estate Market -->
                 <h4 class="fw-bold text-dark mb-3">Thriving Real Estate Market</h4>
-                <p class="text-secondary mb-2">Devanahalli’s real estate landscape has witnessed significant growth:</p>
+                <p class="text-secondary mb-2">The real estate landscape in Bagdogra &amp; Siliguri has witnessed transformative growth:</p>
                 <ul class="text-secondary mb-4 ps-3">
-                    <li class="mb-2"><strong>Diverse Property Options:</strong> The area offers a mix of residential plots, apartments, and villas, catering to various budget ranges and preferences.</li>
-                    <li class="mb-2"><strong>Appreciating Property Values:</strong> The demand for plots has led to a steady appreciation in property values, making it a lucrative investment option.</li>
-                    <li class="mb-2"><strong>Gated Communities and Amenities:</strong> Many developments feature gated communities with amenities like parks, clubhouses, and security, enhancing the quality of life for residents.</li>
+                    <li class="mb-2"><strong>Customizable Plots &amp; Luxury Bungalows:</strong> The project offers a versatile selection of residential plots (1200, 1500, and 2400 sq.ft) and standalone luxury bungalows designed for bespoke contemporary living.</li>
+                    <li class="mb-2"><strong>Rapid Capital Appreciation:</strong> As Siliguri expands westward towards the airport and university corridors, land and bungalow values in Bagdogra continue to deliver outstanding returns.</li>
+                    <li class="mb-2"><strong>Lush Green Township &amp; 30+ Amenities:</strong> Designed as a 50+ acre luxury gated township featuring 40% open green landscapes, wide internal asphalt roads, underground utilities, and 24/7 security.</li>
                 </ul>
 
                 <!-- CENTERED COMPACT IMAGE IN THE MIDDLE OF CONTENT -->
                 <div class="my-5 row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-7 text-center">
                         <div class="rounded-4 overflow-hidden shadow-sm">
-                            <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="Prestige Gardenia Estate - Luxury Plotted Development Aerial View Devanahalli" class="img-fluid rounded-4 w-100" loading="lazy">
+                            <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="<?= htmlspecialchars($company3) ?> - Luxury Plotted Development Aerial View Bagdogra Siliguri" class="img-fluid rounded-4 w-100" loading="lazy">
                         </div>
                     </div>
                 </div>
 
                 <!-- Economic and Employment Hubs -->
-                <h4 class="fw-bold text-dark mb-3">Economic and Employment Hubs</h4>
-                <p class="text-secondary mb-2">Several key developments contribute to Devanahalli’s economic growth:</p>
+                <h4 class="fw-bold text-dark mb-3">Economic and Institutional Hubs</h4>
+                <p class="text-secondary mb-2">Several key institutions and growth drivers anchor Bagdogra’s economic future:</p>
                 <ul class="text-secondary mb-4 ps-3">
-                    <li class="mb-2"><strong>BIAL IT Investment Region:</strong> Spanning over 12,000 acres, this project aims to attract IT and aerospace industries, creating numerous job opportunities.</li>
-                    <li class="mb-2"><strong>KIADB Aerospace SEZ:</strong> This Special Economic Zone focuses on aerospace manufacturing and research, further boosting the local economy.</li>
-                    <li class="mb-2"><strong>Global Financial District:</strong> An upcoming financial hub that is expected to house major banking and financial institutions, enhancing the area’s commercial appeal.</li>
+                    <li class="mb-2"><strong>University of North Bengal (NBU):</strong> Located just minutes away, providing a premier academic atmosphere and driving steady residential rental and housing demand.</li>
+                    <li class="mb-2"><strong>North Bengal Medical College &amp; Hospital (NBMCH):</strong> Reputed healthcare and medical hub ensuring quality healthcare infrastructure within easy reach.</li>
+                    <li class="mb-2"><strong>New International Airport Terminal:</strong> The massive upcoming terminal expansion at Bagdogra Airport is set to multiply regional passenger and logistics capacity.</li>
                 </ul>
 
                 <!-- Investment Potential -->
                 <h4 class="fw-bold text-dark mb-3">Investment Potential</h4>
-                <p class="text-secondary mb-2">Investing in plots in Devanahalli offers several advantages:</p>
+                <p class="text-secondary mb-2">Investing in plots and bungalows at The Gardenia Estate in Bagdogra offers clear advantages:</p>
                 <ul class="text-secondary mb-4 ps-3">
-                    <li class="mb-2"><strong>High Returns on Investment:</strong> The area’s rapid development and increasing demand for residential spaces contribute to substantial returns for investors.</li>
-                    <li class="mb-2"><strong>Flexibility in Construction:</strong> Purchasing a plot allows buyers to design and build homes tailored to their preferences and needs.</li>
-                    <li class="mb-2"><strong>Long-Term Appreciation:</strong> Given the ongoing infrastructure projects and economic developments, property values are expected to continue rising over the long term.</li>
+                    <li class="mb-2"><strong>High Returns on Investment:</strong> Rapid infrastructure expansion, highway upgrades, and airport development guarantee strong long-term appreciation.</li>
+                    <li class="mb-2"><strong>Clear Legal Titles &amp; Approvals:</strong> Complete peace of mind with verified land ownership, RERA compliance, and streamlined bank loan processing.</li>
+                    <li class="mb-2"><strong>Serene Hill-Gateway Living:</strong> Enjoy clean air, panoramic tea estate views, and proximity to Darjeeling and Sikkim, making it ideal for both primary homes and luxury holiday bungalows.</li>
                 </ul>
 
                 <!-- Conclusion -->
                 <h4 class="fw-bold text-dark mb-3">Conclusion</h4>
                 <p class="text-secondary mb-0 leading-relaxed">
-                    Devanahalli stands out as a promising destination for real estate investments, particularly in residential plots. Its strategic location, robust infrastructure, and proximity to economic hubs make it an ideal choice for investors seeking high returns and homebuyers looking for a well-connected and rapidly developing neighborhood. As the area continues to evolve, investing in plots in Devanahalli offers a compelling opportunity for long-term growth and prosperity.
+                    Bagdogra stands out as the most promising real estate destination in North Bengal. Its strategic location, robust transportation infrastructure, and scenic natural environment make it an ideal choice for investors seeking solid capital gains and homebuyers seeking a peaceful, well-connected community. Investing in plots and luxury bungalows at The Gardenia Estate represents an exceptional opportunity for long-term prosperity.
                 </p>
 
             </div>
