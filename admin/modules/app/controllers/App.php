@@ -42,7 +42,6 @@ class App extends MX_Controller
             $this->load->view('gallery/ctrl_gallery.js');
             $this->load->view('videogallery/ctrl_videogallery.js');
             $this->load->view('settings/ctrl_settings.js');
-            $this->load->view('timer/ctrl_timer.js');
             $this->load->view('project_overview/ctrl_project_overview.js');
         }
         else redirect('login');

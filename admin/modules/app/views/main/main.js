@@ -113,11 +113,6 @@ app.config(function($stateProvider, $urlRouterProvider)
 	        templateUrl: 'settings',
 	        controller: 'ctrl_settings'
 	    })
-	    .state('timer', {
-	        url: '/timer',
-	        templateUrl: 'timer',
-	        controller: 'ctrl_timer'
-	    })
 	    .state('project_overview', {
 	        url: '/project_overview',
 	        templateUrl: 'project_overview',

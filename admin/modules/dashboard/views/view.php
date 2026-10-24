@@ -241,28 +241,6 @@
                                 </div>
                             </div>
                             <?php endif; ?>
-
-                            <!-- Countdown Timer Card -->
-                            <div class="<?= $desktop_col ?> <?= $mobile_col ?>" style="margin-bottom: 20px;">
-                                <div class="stat-card card-1" ui-sref="timer">
-                                    <div class="card-header">
-                                        <div class="card-icon">
-                                            <i class="fa fa-clock-o"></i>
-                                        </div>
-                                        <div class="card-meta">
-                                            <span class="card-badge">PRE-LAUNCH</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title">Countdown Timer</h3>
-                                        <div class="card-value"><i class="fa fa-clock-o"></i></div>
-                                        <p class="card-description">Launch timer &amp; site visit settings</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <span class="view-link">Manage Timer <i class="fa fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
                             
                         </div>
                     </div>

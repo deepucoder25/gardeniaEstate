@@ -251,9 +251,6 @@
 			</li>
             <?php endif; ?>
 
-			<li><a accesskey="m" href="#/timer" title="Countdown Timer (Alt+M)"><i class="fa fa-clock-o"></i>
-				<span class="menu-text">Countdown Timer</span></a>
-			</li>
 		</ul>
 	</aside>
 	<section id="main-content">
