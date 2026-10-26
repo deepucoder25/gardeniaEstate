@@ -11,9 +11,14 @@
 /* Minimal Supporting CSS for Navigation Drawer */
 :root {
   --bs-font-sans-serif: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --bg-offwhite: #FAFAF7;
+  --bg-cream-estate: #FAF8F5;
   --btn-green: #094B32;
   --btn-gold-hover: #A88A4A;
+  --color-dark-estate: #0C3823;
+  --color-gold-estate: #C5A059;
+  --color-gold-light: #E5C985;
 }
 
 html, body {
@@ -66,29 +71,6 @@ html, body {
   font-size: 0.92rem;
 }
 
-@media (min-width: 768px) {
-  .header-quote-btn {
-    padding: 10px 24px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .header-logo {
-    max-height: 46px;
-    max-width: 145px;
-  }
-
-  .header-quote-btn {
-    padding: 6px 12px;
-    font-size: 0.78rem;
-  }
-
-  .top-header-bar {
-    font-size: 0.78rem;
-  }
-}
-
 .header-quote-btn:hover {
   background-color: var(--btn-gold-hover);
   border-color: var(--btn-gold-hover);
@@ -112,25 +94,6 @@ html, body {
 }
 
 /* Header Action Buttons */
-.action-btn {
-  border: 1.5px solid var(--btn-green);
-  color: var(--btn-green);
-  font-weight: 600;
-  padding: 6px 14px;
-  font-size: 0.9rem;
-  transition: all 0.25s ease-in-out;
-}
-
-.action-btn:hover {
-  background-color: var(--btn-gold-hover);
-  border-color: var(--btn-gold-hover);
-  color: #ffffff;
-}
-
-.action-btn:hover i {
-  color: #ffffff;
-}
-
 .menu-toggle-btn {
   background-color: var(--btn-green);
   color: #ffffff;
@@ -247,10 +210,6 @@ html, body {
   backdrop-filter: blur(1px);
 }
 
-.text-white-90 {
-  color: rgba(255, 255, 255, 0.92);
-}
-
 .nav-contact-card {
   transition: all 0.25s ease-in-out;
   border: 1px solid rgba(9, 75, 50, 0.08);
@@ -262,58 +221,10 @@ html, body {
   box-shadow: 0 8px 20px rgba(9, 75, 50, 0.1);
 }
 
-@media (min-width: 992px) {
-  .border-end-lg {
-    border-right: 1px solid rgba(9, 75, 50, 0.1);
-  }
-}
-
 /* Responsive Offcanvas Placement: Top on Desktop (>=992px), Right on Mobile (<992px) */
 #mainNavbarOffcanvas.offcanvas {
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
   overflow-x: hidden !important;
-}
-
-@media (max-width: 991.98px) {
-  #mainNavbarOffcanvas.offcanvas {
-    top: 0 !important;
-    right: 0 !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 100vh !important;
-    overflow-x: hidden !important;
-    transform: translateX(100%);
-  }
-  #mainNavbarOffcanvas.offcanvas.show {
-    transform: translateX(0) !important;
-  }
-  #mainNavbarOffcanvas.offcanvas.hiding {
-    transform: translateX(100%) !important;
-  }
-}
-
-@media (min-width: 992px) {
-  #mainNavbarOffcanvas.offcanvas {
-    top: 0 !important;
-    right: 0 !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-    overflow-x: hidden !important;
-    transform: translateY(-100%);
-    border-bottom: 3px solid #094B32 !important;
-  }
-  #mainNavbarOffcanvas.offcanvas.show {
-    transform: translateY(0) !important;
-  }
-  #mainNavbarOffcanvas.offcanvas.hiding {
-    transform: translateY(-100%) !important;
-  }
 }
 
 /* ==========================================================================
@@ -429,7 +340,7 @@ html, body {
 }
 
 .extra-small {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
 }
 
 .text-justify {
@@ -482,12 +393,6 @@ html, body {
   box-shadow: 0 12px 28px rgba(168, 138, 74, 0.55);
 }
 
-@media (min-width: 992px) {
-  .border-end-lg {
-    border-right: 1px solid rgba(9, 75, 50, 0.1);
-  }
-}
-
 /* ==========================================================================
    SLIDER SECTION
    Hero Slider Section, Overlay, Typography & Glassmorphism Enquiry Form Bar
@@ -533,10 +438,6 @@ html, body {
 
 .letter-spacing-1 {
   letter-spacing: 1px;
-}
-
-.extra-small {
-  font-size: 0.8rem;
 }
 
 /* Glassmorphism Horizontal Form Bar */
@@ -615,230 +516,9 @@ html, body {
    Newly Launched Single-Row Slider Carousel, and FAQs Accordion & Promo Card
    ========================================================================== */
 
-/* Home Modules - Pricing & Project Overview Styles */
-.pricing-overview-section {
-  background-color: var(--bg-offwhite, #FAFAF7);
-}
-
-.section-title {
-  color: var(--btn-green, #094B32);
-  letter-spacing: 2px;
-}
-
-/* Enquiry Form Parallax Overlay Background */
-.enquiry-section {
-  background-image:  url('../images/slider/gardenia_hero.png');
-  background-size: cover;
-  background-position: center;
-}
-
 /* Why Choose Us Section - Transparent Overlay Background Image */
 .why-choose-section {
   background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('../images/slider/gardenia_hero.png') center / cover no-repeat;
-}
-
-/* Gold Ornament Line Dividers */
-.gold-ornament-divider .ornament-line {
-  display: inline-block;
-  width: 70px;
-  height: 1.5px;
-  background-color: var(--btn-gold-hover, #A88A4A);
-}
-
-.gold-ornament-divider .ornament-icon {
-  color: var(--btn-gold-hover, #A88A4A);
-  font-size: 1rem;
-}
-
-/* Pricing Card Styles */
-.pricing-card {
-  background-color: #ffffff;
-  border: 1px solid rgba(168, 138, 74, 0.25);
-  transition: all 0.35s ease;
-}
-
-.pricing-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(9, 75, 50, 0.12);
-  border-color: var(--btn-gold-hover, #A88A4A);
-}
-
-/* Double Gold-Ring Circular Badge */
-.pricing-icon-badge {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  border: 2.5px solid var(--btn-gold-hover, #A88A4A);
-  padding: 4px;
-  background-color: #ffffff;
-}
-
-.badge-inner-circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: var(--btn-green, #094B32);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 1.65rem;
-}
-
-.pricing-amount {
-  color: var(--btn-green, #094B32);
-  letter-spacing: -0.5px;
-}
-
-/* Card Ornament Divider */
-.card-ornament-divider .card-line {
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: var(--btn-gold-hover, #A88A4A);
-}
-
-.card-ornament-divider .card-ornament-icon {
-  color: var(--btn-gold-hover, #A88A4A);
-  font-size: 0.8rem;
-}
-
-.pricing-type {
-  color: var(--btn-green, #094B32);
-  font-size: 1.15rem;
-}
-
-.pricing-size-pill {
-  background-color: #F4F7F5;
-  border: 1px solid #E2E9E4;
-  color: var(--text-dark, #26352F);
-  font-size: 0.95rem;
-}
-
-/* Enquire Now Button */
-.btn-pricing-enquire {
-  background-color: var(--btn-green, #094B32);
-  border-color: var(--btn-green, #094B32);
-  color: #ffffff;
-  letter-spacing: 1px;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-pricing-enquire:hover,
-.btn-pricing-enquire:focus {
-  background-color: var(--btn-gold-hover, #A88A4A);
-  border-color: var(--btn-gold-hover, #A88A4A);
-  color: #ffffff;
-  box-shadow: 0 6px 20px rgba(168, 138, 74, 0.35);
-}
-
-/* Project Overview Table Card */
-.overview-card {
-  border: 1px solid rgba(168, 138, 74, 0.25);
-  background-color: #ffffff;
-}
-
-.overview-header {
-  background-color: var(--btn-green, #094B32);
-}
-
-.overview-header-divider {
-  color: var(--btn-gold-hover, #A88A4A);
-  opacity: 0.8;
-  font-size: 1.25rem;
-}
-
-.row-icon {
-  color: var(--btn-gold-hover, #A88A4A);
-  font-size: 1.25rem;
-}
-
-.overview-row:hover {
-  background-color: rgba(9, 75, 50, 0.04);
-}
-
-/* AMENITIES & LOCATION MAP SECTIONS */
-.section-title-theme {
-  color: #4a72d4;
-  letter-spacing: -0.5px;
-}
-
-.bounce-chevron-icon {
-  color: #4a72d4;
-  animation: bounceChevron 2s infinite;
-}
-
-@keyframes bounceChevron {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(6px);
-  }
-  60% {
-    transform: translateY(3px);
-  }
-}
-
-.highlights-card {
-  background-color: var(--bg-offwhite, #FAFAF7);
-  border: 1px solid rgba(9, 75, 50, 0.1);
-}
-
-.highlights-heading {
-  color: var(--text-dark, #26352F);
-  border-bottom: 2px solid var(--btn-gold-hover, #A88A4A);
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-.bullet-dot {
-  color: var(--btn-green, #094B32);
-  font-weight: bold;
-}
-
-.amenity-grid-card {
-  background-color: #ffffff;
-  border: 1px solid rgba(9, 75, 50, 0.08);
-  transition: all 0.3s ease-in-out;
-}
-
-.amenity-grid-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--btn-gold-hover, #A88A4A);
-  box-shadow: 0 10px 24px rgba(9, 75, 50, 0.12);
-}
-
-.amenity-icon-box {
-  color: var(--btn-green, #094B32);
-  transition: color 0.3s ease;
-}
-
-.amenity-grid-card:hover .amenity-icon-box {
-  color: var(--btn-gold-hover, #A88A4A);
-}
-
-.amenity-title {
-  color: var(--text-dark, #26352F);
-}
-
-.location-map-section {
-  background-color: var(--bg-offwhite, #FAFAF7);
-}
-
-.location-map-card {
-  border: 1px solid rgba(9, 75, 50, 0.1);
-}
-
-.map-iframe-box iframe {
-  border: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.map-footer-bar {
-  background-color: #ffffff;
-  border-top: 1px solid #eef2f5;
 }
 
 /* Helper Styling Rules for Homepage Modules */
@@ -853,39 +533,12 @@ html, body {
   background: linear-gradient(180deg, transparent 0%, rgba(38, 53, 47, 0.95) 100%);
 }
 
-.amenity-icon-circle {
-  width: 64px;
-  height: 64px;
-  transition: all 0.3s ease;
-}
-
-.amenity-card-item:hover .amenity-icon-circle {
-  background-color: var(--btn-green, #094B32);
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
 .custom-estate-faq .accordion-button:not(.collapsed) {
   background-color: rgba(9, 75, 50, 0.06);
   color: var(--btn-green, #094B32);
 }
 
-/* --- LUXURY ESTATE GLOBAL & AMENITIES DESIGN --- */
-:root {
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --bg-cream-estate: #FAF8F5;
-  --color-dark-estate: #0C3823;
-  --color-gold-estate: #C5A059;
-  --color-gold-light: #E5C985;
-}
-
-body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
-  font-family: var(--font-sans);
-}
-
-.text-dark-estate {
-  color: var(--color-dark-estate);
-}
+/* --- ESTATE THEME DESIGN TOKENS & UTILITIES --- */
 
 .bg-dark-estate {
   background-color: var(--color-dark-estate);
@@ -893,77 +546,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 
 .text-gold {
   color: var(--color-gold-estate);
-}
-
-.border-gold-light {
-  border-color: rgba(197, 160, 89, 0.4);
-}
-
-.amenities-luxury-section {
-  background-color: var(--bg-cream-estate);
-}
-
-/* Gold Line Ornament Divider */
-.gold-line {
-  display: inline-block;
-  width: 60px;
-  height: 1.5px;
-  background-color: var(--color-gold-estate);
-}
-
-.gold-diamond {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  background-color: var(--color-gold-estate);
-  transform: rotate(45deg);
-}
-
-/* Luxury Amenity Cards */
-.amenity-luxury-card {
-  transition: all 0.35s ease;
-  border: 1px solid rgba(197, 160, 89, 0.2);
-}
-
-.amenity-luxury-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(12, 56, 35, 0.08);
-  border-color: var(--color-gold-estate);
-}
-
-/* Icon Container with Circle and Gold Arc Accent */
-.amenity-icon-container {
-  width: 80px;
-  height: 80px;
-}
-
-.icon-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: #F2FAF5;
-  border: 1.5px solid rgba(12, 56, 35, 0.15);
-  transition: all 0.3s ease;
-}
-
-.amenity-luxury-card:hover .icon-circle {
-  background-color: var(--color-dark-estate);
-}
-
-.amenity-luxury-card:hover .icon-circle i {
-  color: #ffffff;
-}
-
-.icon-gold-arc {
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 72px;
-  height: 36px;
-  border-bottom: 2px solid var(--color-gold-estate);
-  border-radius: 0 0 40px 40px;
-  pointer-events: none;
 }
 
 /* Dark Estate Pill Button */
@@ -979,16 +561,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
   border-color: #062315;
   color: #ffffff;
   box-shadow: 0 8px 24px rgba(12, 56, 35, 0.25);
-}
-
-.icon-box-size-48 {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-box-size-60 {
-  width: 60px;
-  height: 60px;
 }
 
 /* --- ESTATE THEME FORM CONTROLS & DROPDOWN STYLES --- */
@@ -1104,52 +676,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 }
 
 /* Mobile Responsive Adjustments for Coverflow Cards */
-@media (max-width: 992px) {
-  .coverflow-stage {
-    height: 390px;
-  }
-  .coverflow-card {
-    width: 270px;
-    height: 350px;
-    margin-top: -175px;
-    margin-left: -135px;
-  }
-  .coverflow-card.side-left {
-    transform: translateX(-56%) scale(0.88);
-  }
-  .coverflow-card.side-right {
-    transform: translateX(56%) scale(0.88);
-  }
-  .coverflow-card.far-left {
-    transform: translateX(-102%) scale(0.75);
-  }
-  .coverflow-card.far-right {
-    transform: translateX(102%) scale(0.75);
-  }
-}
-
-@media (max-width: 576px) {
-  .coverflow-stage {
-    height: 340px;
-  }
-  .coverflow-card {
-    width: 230px;
-    height: 310px;
-    margin-top: -155px;
-    margin-left: -115px;
-  }
-  .coverflow-card.side-left {
-    transform: translateX(-42%) scale(0.86);
-  }
-  .coverflow-card.side-right {
-    transform: translateX(42%) scale(0.86);
-  }
-  .coverflow-card.far-left,
-  .coverflow-card.far-right {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
 
 /* Navigation Circular Buttons (Theme Color #094B32) */
 .coverflow-btn-prev,
@@ -1267,16 +793,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
   color: #26352F;
   max-width: 100%;
   line-height: 1.45;
-}
-
-@media (max-width: 767.98px) {
-  .gardenia-address-pill {
-    border-radius: 12px;
-    align-items: flex-start;
-  }
-  .gardenia-address-pill i {
-    margin-top: 3px;
-  }
 }
 
 .btn-gardenia-main {
@@ -1455,24 +971,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
   flex-shrink: 0;
 }
 
-@media (max-width: 575.98px) {
-  .gardenia-image-wrapper {
-    padding: 0;
-  }
-  .gardenia-gold-backdrop {
-    display: none;
-  }
-  .gardenia-inset-box {
-    display: none;
-  }
-  .gardenia-rera-float {
-    position: static;
-    margin-top: 14px;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
 /* ============================================================
    WHY CHOOSE US WIDGET
    ============================================================ */
@@ -1574,14 +1072,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
     flex-direction: column;
 }
 
-@media (max-width: 991px) {
-    .nl-slide-card {
-        flex: 0 0 calc(100% - 6px);
-        width: calc(100% - 6px);
-        max-width: calc(100% - 6px);
-    }
-}
-
 /* If only 1 card exists */
 .nl-slider-track.single-card .nl-slide-card {
     flex: 0 0 100%;
@@ -1681,13 +1171,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 .portal-rera-pill i {
     color: #38BDF8;
     font-size: 9.5px;
-}
-
-@media (max-width: 576px) {
-    .portal-thumb-box, .portal-thumb-img {
-        width: 110px;
-        height: 95px;
-    }
 }
 
 /* Right Content Info */
@@ -2026,11 +1509,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
   justify-content: center;
 }
 
-.contact-form-card {
-  background-color: #ffffff;
-  border: 1px solid #e9ecef;
-}
-
 /* ==========================================================================
    BLOG MODULE SECTION
    ========================================================================== */
@@ -2097,15 +1575,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 }
 
 /* Social Share Buttons (With Explicit Spacing Between Buttons) */
-.social-share-btns {
-  gap: 12px;
-}
-
-.social-share-btns a {
-  margin-right: 4px;
-  margin-bottom: 4px;
-}
-
 .share-fb {
   background-color: #1877F2;
   border-color: #1877F2;
@@ -2169,9 +1638,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 }
 
 /* Typography & Layout Spacing */
-.leading-relaxed {
-  line-height: 1.8;
-}
 
 .tracking-wide {
   letter-spacing: 0.8px;
@@ -2241,21 +1707,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
   outline: none;
 }
 
-.review-upload-dropzone {
-  background-color: #f8faf9;
-  border: 1.5px dashed #c3d5cb;
-  border-radius: 10px;
-  padding: 8px 12px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.review-upload-dropzone:hover {
-  background-color: #eff6f2;
-  border-color: #0d462b;
-}
-
 .review-rating-card {
   background-color: #f0f7f3;
   border: 1px solid #c8e3d3;
@@ -2288,19 +1739,6 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
   resize: none;
 }
 
-.btn-review-submit {
-  background-color: #0d462b;
-  color: #ffffff;
-  border: none;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.btn-review-submit:hover {
-  background-color: #092818;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -2314,28 +1752,20 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 .icon-box-42 { width: 42px; height: 42px; }
 .icon-box-44 { width: 44px; height: 44px; }
 .icon-box-46 { width: 46px; height: 46px; }
-.icon-box-48 { width: 48px; height: 48px; }
 .icon-box-54 { width: 54px; height: 54px; }
-.icon-box-56 { width: 56px; height: 56px; }
 .icon-box-58 { width: 58px; height: 58px; }
-.icon-box-60 { width: 60px; height: 60px; }
 .icon-box-64 { width: 64px; height: 64px; }
 .icon-box-65 { width: 65px; height: 65px; }
 
-.max-w-260 { max-width: 260px; }
-.max-w-500 { max-width: 500px; }
 .max-w-650 { max-width: 650px; }
 .max-w-800 { max-width: 800px; }
 .max-w-1050 { max-width: 1050px; }
-.max-w-1150 { max-width: 1150px; }
 
-.min-h-350 { min-height: 350px; }
 .min-h-380 { min-height: 380px; }
 .max-h-440 { max-height: 440px; }
 .max-h-85vh { max-height: 85vh; }
 
 .map-iframe-full { border: 0; width: 100%; height: 100%; }
-.z-index-2 { z-index: 2; }
 .font-size-xs-tight { font-size: 0.65rem; }
 .font-size-xs-clean { font-size: 0.68rem; }
 
@@ -2389,4 +1819,191 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, .font-serif {
 .btn:hover svg,
 .float-circle-btn:hover i {
   animation-duration: 0.8s;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (CONSOLIDATED AT THE BOTTOM)
+   All responsive breakpoint overrides grouped cleanly in one location
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Medium Devices and Up (>= 768px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .header-quote-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Large Desktop Screens (>= 992px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .border-end-lg {
+    border-right: 1px solid rgba(9, 75, 50, 0.1);
+  }
+
+  #mainNavbarOffcanvas.offcanvas {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    transform: translateY(-100%);
+    border-bottom: 3px solid #094B32 !important;
+  }
+
+  #mainNavbarOffcanvas.offcanvas.show {
+    transform: translateY(0) !important;
+  }
+
+  #mainNavbarOffcanvas.offcanvas.hiding {
+    transform: translateY(-100%) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Tablets and Below (< 992px / <= 991.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  #mainNavbarOffcanvas.offcanvas {
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    overflow-x: hidden !important;
+    transform: translateX(100%);
+  }
+
+  #mainNavbarOffcanvas.offcanvas.show {
+    transform: translateX(0) !important;
+  }
+
+  #mainNavbarOffcanvas.offcanvas.hiding {
+    transform: translateX(100%) !important;
+  }
+
+  .coverflow-stage {
+    height: 390px;
+  }
+
+  .coverflow-card {
+    width: 270px;
+    height: 350px;
+    margin-top: -175px;
+    margin-left: -135px;
+  }
+
+  .coverflow-card.side-left {
+    transform: translateX(-56%) scale(0.88);
+  }
+
+  .coverflow-card.side-right {
+    transform: translateX(56%) scale(0.88);
+  }
+
+  .coverflow-card.far-left {
+    transform: translateX(-102%) scale(0.75);
+  }
+
+  .coverflow-card.far-right {
+    transform: translateX(102%) scale(0.75);
+  }
+
+  .nl-slide-card {
+    flex: 0 0 calc(100% - 6px);
+    width: calc(100% - 6px);
+    max-width: calc(100% - 6px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Phones and Below (< 768px / <= 767.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .header-logo {
+    max-height: 46px;
+    max-width: 145px;
+  }
+
+  .header-quote-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .top-header-bar {
+    font-size: 0.78rem;
+  }
+
+  .gardenia-address-pill {
+    border-radius: 12px;
+    align-items: flex-start;
+  }
+
+  .gardenia-address-pill i {
+    margin-top: 3px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Extra Small Mobile Handsets (< 576px / <= 575.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  .coverflow-stage {
+    height: 340px;
+  }
+
+  .coverflow-card {
+    width: 230px;
+    height: 310px;
+    margin-top: -155px;
+    margin-left: -115px;
+  }
+
+  .coverflow-card.side-left {
+    transform: translateX(-42%) scale(0.86);
+  }
+
+  .coverflow-card.side-right {
+    transform: translateX(42%) scale(0.86);
+  }
+
+  .coverflow-card.far-left,
+  .coverflow-card.far-right {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .gardenia-image-wrapper {
+    padding: 0;
+  }
+
+  .gardenia-gold-backdrop {
+    display: none;
+  }
+
+  .gardenia-inset-box {
+    display: none;
+  }
+
+  .gardenia-rera-float {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portal-thumb-box,
+  .portal-thumb-img {
+    width: 110px;
+    height: 95px;
+  }
 }
