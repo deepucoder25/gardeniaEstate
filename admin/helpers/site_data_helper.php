@@ -170,3 +170,133 @@ function get_project_overview() {
     }
     return [];
 }
+
+// Newly Launched Projects Functions
+function get_newly_launched_projects($active_only = false) {
+    $db = get_site_db();
+    $projects = [];
+    $query = "SELECT * FROM newly_launched_projects";
+    if ($active_only) {
+        $query .= " WHERE LOWER(status) = 'active'";
+    }
+    $query .= " ORDER BY sort_order ASC, id DESC";
+    $res = $db->query($query);
+    if ($res) {
+        while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
+            $highlights = [];
+            if (!empty($row['highlights'])) {
+                $decoded = json_decode($row['highlights'], true);
+                $highlights = is_array($decoded) ? $decoded : array_filter(array_map('trim', explode("\n", $row['highlights'])));
+            }
+            $row['highlights_list'] = $highlights;
+            $projects[] = $row;
+        }
+    }
+    return $projects;
+}
+
+function get_newly_launched_project_by_id($id) {
+    $db = get_site_db();
+    $stmt = $db->prepare("SELECT * FROM newly_launched_projects WHERE id = :id LIMIT 1");
+    $stmt->bindValue(':id', intval($id), SQLITE3_INTEGER);
+    $res = $stmt->execute();
+    if ($res) {
+        $row = $res->fetchArray(SQLITE3_ASSOC);
+        if ($row) {
+            $highlights = [];
+            if (!empty($row['highlights'])) {
+                $decoded = json_decode($row['highlights'], true);
+                $highlights = is_array($decoded) ? $decoded : array_filter(array_map('trim', explode("\n", $row['highlights'])));
+            }
+            $row['highlights_list'] = $highlights;
+            return $row;
+        }
+    }
+    return null;
+}
+
+function save_newly_launched_project_db($data) {
+    $db = get_site_db();
+    $id = isset($data['id']) ? intval($data['id']) : 0;
+    
+    // Ensure table exists just in case
+    $db->exec("CREATE TABLE IF NOT EXISTS newly_launched_projects (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        tagline TEXT,
+        badge TEXT DEFAULT 'Newly Launched',
+        location TEXT,
+        price TEXT,
+        plot_sizes TEXT,
+        description TEXT,
+        highlights TEXT,
+        image TEXT,
+        brochure TEXT,
+        enquiry_link TEXT,
+        launch_date TEXT,
+        status TEXT DEFAULT 'Active',
+        sort_order INTEGER DEFAULT 0,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )");
+
+    if ($id > 0) {
+        $stmt = $db->prepare("UPDATE newly_launched_projects SET 
+            name = :name,
+            tagline = :tagline,
+            badge = :badge,
+            location = :location,
+            price = :price,
+            plot_sizes = :plot_sizes,
+            description = :description,
+            highlights = :highlights,
+            image = :image,
+            brochure = :brochure,
+            enquiry_link = :enquiry_link,
+            launch_date = :launch_date,
+            status = :status,
+            sort_order = :sort_order
+            WHERE id = :id");
+        $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+    } else {
+        $stmt = $db->prepare("INSERT INTO newly_launched_projects 
+            (name, tagline, badge, location, price, plot_sizes, description, highlights, image, brochure, enquiry_link, launch_date, status, sort_order) 
+            VALUES 
+            (:name, :tagline, :badge, :location, :price, :plot_sizes, :description, :highlights, :image, :brochure, :enquiry_link, :launch_date, :status, :sort_order)");
+    }
+
+    $stmt->bindValue(':name', isset($data['name']) ? trim($data['name']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':tagline', isset($data['tagline']) ? trim($data['tagline']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':badge', isset($data['badge']) ? trim($data['badge']) : 'Newly Launched', SQLITE3_TEXT);
+    $stmt->bindValue(':location', isset($data['location']) ? trim($data['location']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':price', isset($data['price']) ? trim($data['price']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':plot_sizes', isset($data['plot_sizes']) ? trim($data['plot_sizes']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':description', isset($data['description']) ? trim($data['description']) : '', SQLITE3_TEXT);
+    
+    // Normalize highlights to JSON array
+    $highlights = [];
+    if (isset($data['highlights'])) {
+        if (is_array($data['highlights'])) {
+            $highlights = array_values(array_filter(array_map('trim', $data['highlights'])));
+        } else if (is_string($data['highlights'])) {
+            $lines = preg_split('/[\r\n]+/', $data['highlights']);
+            $highlights = array_values(array_filter(array_map('trim', $lines)));
+        }
+    }
+    $stmt->bindValue(':highlights', json_encode($highlights), SQLITE3_TEXT);
+    $stmt->bindValue(':image', isset($data['image']) ? trim($data['image']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':brochure', isset($data['brochure']) ? trim($data['brochure']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':enquiry_link', isset($data['enquiry_link']) ? trim($data['enquiry_link']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':launch_date', isset($data['launch_date']) ? trim($data['launch_date']) : '', SQLITE3_TEXT);
+    $stmt->bindValue(':status', isset($data['status']) ? trim($data['status']) : 'Active', SQLITE3_TEXT);
+    $stmt->bindValue(':sort_order', isset($data['sort_order']) ? intval($data['sort_order']) : 0, SQLITE3_INTEGER);
+
+    return $stmt->execute();
+}
+
+function delete_newly_launched_project_db($id) {
+    $db = get_site_db();
+    $stmt = $db->prepare("DELETE FROM newly_launched_projects WHERE id = :id");
+    $stmt->bindValue(':id', intval($id), SQLITE3_INTEGER);
+    return $stmt->execute();
+}
+

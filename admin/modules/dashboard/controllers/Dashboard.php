@@ -25,6 +25,7 @@ class Dashboard extends MX_Controller
     		"logs"=>$this->db->get('logs')->num_rows(),
             "plots"=>$this->db->get('plots')->num_rows(),
             "amenities"=>$this->db->get('amenities')->num_rows(),
+            "newly_launched"=>$this->db->get('newly_launched_projects')->num_rows(),
         );
         $this->output->set_content_type('application/json')->set_output(json_encode($data));
     }

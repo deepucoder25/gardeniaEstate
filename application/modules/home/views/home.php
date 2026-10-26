@@ -9,6 +9,9 @@ $this->load->view('pricing');
 // 3. Why Choose The Gardenia Estate
 $this->load->view('why_choose_widget');
 
+// 4. Newly Launched Projects (Dynamic from Admin Panel)
+$this->load->view('newly_launched_widget');
+
 // 5. Project Gallery Preview
 $this->load->view('gallery_widget');
 

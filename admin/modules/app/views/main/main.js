@@ -142,5 +142,18 @@ app.config(function($stateProvider, $urlRouterProvider)
 	        url: '/location_map',
 	        templateUrl: 'project_overview/location_map',
 	        controller: 'ctrl_project_overview'
+	    })
+	    .state('newly_launched', {
+	        url: '/newly_launched',
+	        templateUrl: 'newly_launched',
+	        controller: 'ctrl_newly_launched'
 	    });
+});
+
+app.run(function($rootScope, $templateCache) {
+    $rootScope.$on('$stateChangeStart', function(event, toState) {
+        if (toState && toState.templateUrl) {
+            $templateCache.remove(toState.templateUrl);
+        }
+    });
 });

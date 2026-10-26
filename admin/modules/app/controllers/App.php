@@ -43,6 +43,7 @@ class App extends MX_Controller
             $this->load->view('videogallery/ctrl_videogallery.js');
             $this->load->view('settings/ctrl_settings.js');
             $this->load->view('project_overview/ctrl_project_overview.js');
+            $this->load->view('newly_launched/ctrl_newly_launched.js');
         }
         else redirect('login');
     }

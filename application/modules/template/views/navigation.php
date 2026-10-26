@@ -170,20 +170,11 @@
                 <i class="bi bi-chevron-right extra-small text-muted"></i>
               </a>
 
-              <!-- 4. Customer Reviews -->
-              <a href="<?= site_url('reviews') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <!-- 4. Customer Reviews (Connected with Admin) -->
+              <a href="<?= site_url('reviews') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= ($class === 'reviews' || $segment1 === 'reviews') ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-star-fill text-warning fs-5"></i>
                   <span>Customer Reviews</span>
-                </span>
-                <i class="bi bi-chevron-right extra-small text-muted"></i>
-              </a>
-
-              <!-- 5. Testimonials -->
-              <a href="<?= site_url('testimonials') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
-                <span class="d-flex align-items-center gap-3 fw-semibold">
-                  <i class="bi bi-chat-quote-fill text-warning fs-5"></i>
-                  <span>Testimonials</span>
                 </span>
                 <i class="bi bi-chevron-right extra-small text-muted"></i>
               </a>

@@ -71,11 +71,6 @@ $floatingWhatsappLink = !empty($whatsapphtml)
                   <i class="bi bi-chevron-right text-warning fs-7"></i> Customer Reviews
                 </a>
               </li>
-              <li>
-                <a href="<?= site_url('testimonials') ?>" class="footer-nav-link gap-2">
-                  <i class="bi bi-chevron-right text-warning fs-7"></i> Testimonials
-                </a>
-              </li>
             </ul>
           </div>
           <div class="col-6">

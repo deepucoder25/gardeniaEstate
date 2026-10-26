@@ -215,6 +215,30 @@
                             </div>
                             <?php endif; ?>
 
+                            <!-- Newly Launched Projects Card -->
+                            <?php if(is_visible($labels, 'dash_newly_launched')): ?>
+                            <div class="<?= $desktop_col ?> <?= $mobile_col ?>" style="margin-bottom: 20px;">
+                                <div class="stat-card card-1" ui-sref="newly_launched">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="fa fa-rocket"></i>
+                                        </div>
+                                        <div class="card-meta">
+                                            <span class="card-badge">HOT LAUNCH</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?= get_label($labels, 'dash_newly_launched', 'Newly Launched') ?></h3>
+                                        <div class="card-value">{{newly_launched || 0}}</div>
+                                        <p class="card-description">Featured home projects</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="view-link">Manage Launches <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+
                             <!-- Amenities Card -->
                             <?php if(is_visible($labels, 'dash_amenities')): ?>
                             <div class="<?= $desktop_col ?> <?= $mobile_col ?>" style="margin-bottom: 20px;">

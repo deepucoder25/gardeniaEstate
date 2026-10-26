@@ -1,6 +1,72 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- FAQ SECTION (2-Column Layout with Image on Left & Accordion FAQs on Right) -->
+<style>
+.faq-img-card {
+  min-height: 380px;
+  position: relative;
+}
+
+.faq-img-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(5, 20, 15, 0.35) 40%, rgba(4, 18, 13, 0.92) 80%, #03120C 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.faq-promo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.25rem 1.75rem 1.75rem 1.75rem;
+  z-index: 3;
+}
+
+.faq-promo-title {
+  color: #ffffff !important;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.faq-promo-desc {
+  color: #F8FAFC !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+.faq-promo-btn {
+  background: #F59E0B !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 50rem;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.faq-promo-btn:hover {
+  background: #D97706 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+</style>
+
 <section class="faqs-section py-5 bg-light position-relative" id="estateFaqSection">
   <div class="container py-3">
     
@@ -15,13 +81,13 @@
       
       <!-- LEFT COLUMN: Image Card -->
       <div class="col-lg-5 col-md-12">
-        <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 position-relative">
+        <div class="card border-0 rounded-4 overflow-hidden shadow-sm h-100 faq-img-card">
           <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" alt="<?= htmlspecialchars($company3) ?> FAQ &amp; Investment Guide Banner" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="position-absolute bottom-0 start-0 w-100 bg-dark-gradient p-4 text-white">
-            <h5 class="fw-bold mb-1">Have More Questions?</h5>
-            <p class="small mb-3 text-white-50">Our dedicated estate advisory team is available 24/7 to guide your investment.</p>
-            <a href="<?= site_url('contact-us') ?>" class="btn btn-warning btn-sm rounded-pill fw-bold px-3 py-2 text-dark">
-              <i class="bi bi-telephone-fill me-1"></i> Speak to Advisor
+          <div class="faq-promo-overlay text-white">
+            <h5 class="faq-promo-title">Have More Questions?</h5>
+            <p class="faq-promo-desc">Our dedicated estate advisory team is available 24/7 to guide your investment.</p>
+            <a href="<?= site_url('contact-us') ?>" class="faq-promo-btn">
+              <i class="bi bi-telephone-fill"></i> Speak to Advisor
             </a>
           </div>
         </div>

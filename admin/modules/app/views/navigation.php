@@ -202,6 +202,12 @@
 			</li>
             <?php endif; ?>
 
+            <?php if(is_visible($menu_labels, 'label_newly_launched')): ?>
+			<li><a accesskey="n" href="#/newly_launched" title="Newly Launched Projects"><i class="fa fa-rocket" style="color:#D4AF37;"></i>
+				<span class="menu-text"><?= get_label($menu_labels, 'label_newly_launched', 'Newly Launched') ?></span></a>
+			</li>
+            <?php endif; ?>
+
             <?php if(is_visible($menu_labels, 'label_amenities')): ?>
 			<li><a accesskey="a" href="#/amenities" title="Amenities"><i class="fa fa-tree"></i>
 				<span class="menu-text"><?= get_label($menu_labels, 'label_amenities', 'Amenities') ?></span></a>

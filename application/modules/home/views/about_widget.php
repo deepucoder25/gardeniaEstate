@@ -48,15 +48,16 @@
   background: #F7FAF8;
   border: 1px solid #E4EBE6;
   border-radius: 50px;
-  padding: 9px 18px;
+  padding: 8px 18px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 600;
   color: #26352F;
   transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .gardenia-contact-pill:hover {
@@ -65,6 +66,31 @@
   color: #094B32;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(9, 75, 50, 0.08);
+}
+
+.gardenia-address-pill {
+  background: #F7FAF8;
+  border: 1px solid #E4EBE6;
+  border-radius: 50px;
+  padding: 8px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #26352F;
+  max-width: 100%;
+  line-height: 1.45;
+}
+
+@media (max-width: 767.98px) {
+  .gardenia-address-pill {
+    border-radius: 12px;
+    align-items: flex-start;
+  }
+  .gardenia-address-pill i {
+    margin-top: 3px;
+  }
 }
 
 .btn-gardenia-main {
@@ -321,31 +347,31 @@
           </div>
         </div>
 
-        <!-- Location Pill -->
+        <!-- Location Pill (Full Address Visible, No Truncation) -->
         <?php if (!empty($address)): ?>
           <div class="mb-2 mt-3">
-            <div class="gardenia-contact-pill max-w-100">
+            <div class="gardenia-address-pill">
               <i class="bi bi-geo-alt-fill text-danger flex-shrink-0 fs-6"></i>
-              <span class="text-truncate"><?= htmlspecialchars($address) ?></span>
+              <span><?= htmlspecialchars($address) ?></span>
             </div>
           </div>
         <?php endif; ?>
 
-        <!-- Phone & Email Pills -->
-        <div class="row g-2 mb-4">
-            <div class="col-6">
-              <a <?= $phonehtml ?> class="gardenia-contact-pill w-100 justify-content-center">
-                <i class="bi bi-telephone-fill text-success flex-shrink-0"></i>
-                <span class="text-truncate"><?= htmlspecialchars($phone) ?></span>
-              </a>
-            </div>
+        <!-- Phone & Email Pills (Side-by-Side Flex, Full Text Visible, No Truncation) -->
+        <div class="d-flex align-items-center gap-2 mb-4 flex-wrap">
+          <?php if (!empty($phone)): ?>
+            <a <?= $phonehtml ?> class="gardenia-contact-pill">
+              <i class="bi bi-telephone-fill text-success flex-shrink-0"></i>
+              <span><?= htmlspecialchars($phone) ?></span>
+            </a>
+          <?php endif; ?>
 
-            <div class="col-6">
-              <a href="<?= $mailhtml ?>" class="gardenia-contact-pill w-100 justify-content-center">
-                <i class="bi bi-envelope-fill text-primary flex-shrink-0"></i>
-                <span class="text-truncate"><?= htmlspecialchars($mail) ?></span>
-              </a>
-            </div>
+          <?php if (!empty($mail)): ?>
+            <a href="<?= $mailhtml ?>" class="gardenia-contact-pill">
+              <i class="bi bi-envelope-fill text-primary flex-shrink-0"></i>
+              <span><?= htmlspecialchars($mail) ?></span>
+            </a>
+          <?php endif; ?>
         </div>
 
         <!-- Action Buttons with clean gap -->
