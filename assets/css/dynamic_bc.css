@@ -1,6 +1,0 @@
-/* Rich Background Image for Breadcrumbs */
-.breadcrumb-bg {
-    background: linear-gradient(180deg, rgba(7, 35, 23, 0.55) 0%, rgba(13, 70, 43, 0.7) 100%), 
-                url('../images/slider/gardenia_hero.webp') center/cover no-repeat;
-}
-

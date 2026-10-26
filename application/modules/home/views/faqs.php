@@ -1,72 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
+
 <!-- FAQ SECTION (2-Column Layout with Image on Left & Accordion FAQs on Right) -->
-<style>
-.faq-img-card {
-  min-height: 380px;
-  position: relative;
-}
-
-.faq-img-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(5, 20, 15, 0.35) 40%, rgba(4, 18, 13, 0.92) 80%, #03120C 100%);
-  pointer-events: none;
-  border-radius: inherit;
-}
-
-.faq-promo-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 2.25rem 1.75rem 1.75rem 1.75rem;
-  z-index: 3;
-}
-
-.faq-promo-title {
-  color: #ffffff !important;
-  font-size: 1.45rem;
-  font-weight: 800;
-  letter-spacing: -0.3px;
-  margin-bottom: 0.4rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-}
-
-.faq-promo-desc {
-  color: #F8FAFC !important;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.55;
-  margin-bottom: 1.25rem;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
-}
-
-.faq-promo-btn {
-  background: #F59E0B !important;
-  color: #0F172A !important;
-  font-weight: 700 !important;
-  font-size: 0.9rem;
-  padding: 0.55rem 1.25rem;
-  border-radius: 50rem;
-  border: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  transition: all 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-
-.faq-promo-btn:hover {
-  background: #D97706 !important;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
-}
-</style>
-
 <section class="faqs-section py-5 bg-light position-relative" id="estateFaqSection">
   <div class="container py-3">
     

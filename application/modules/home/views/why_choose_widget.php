@@ -1,37 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-<style>
-.why-choose-card {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(226, 232, 240, 0.8) !important;
-  padding: 1.5rem 1.25rem !important;
-}
-.why-choose-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
-  border-color: #CBD5E1 !important;
-}
-.why-choose-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-.why-choose-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 0.75rem;
-}
-.why-choose-title {
-  font-size: 0.93rem !important;
-  font-weight: 700 !important;
-  color: #111827;
-  white-space: nowrap;
-  margin-bottom: 0 !important;
-  letter-spacing: -0.2px;
-}
-</style>
-
 <!-- WHY CHOOSE US SECTION -->
 <section class="why-choose-section py-5 position-relative" id="whyChooseSection">
   <div class="container py-4 position-relative z-1">
@@ -55,7 +23,7 @@
             </div>
             <h5 class="why-choose-title">Prime Bagdogra Location</h5>
           </div>
-          <p class="small text-muted mb-0" style="font-size: 0.875rem; line-height: 1.5;">Situated directly along the Asian Highway &amp; Airport corridor in Bagdogra, offering seamless connectivity to Siliguri and North Bengal's prime growth hub.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Situated directly along the Asian Highway &amp; Airport corridor in Bagdogra, offering seamless connectivity to Siliguri and North Bengal's prime growth hub.</p>
         </div>
       </div>
 
@@ -68,7 +36,7 @@
             </div>
             <h5 class="why-choose-title">100% Clear Titles</h5>
           </div>
-          <p class="small text-muted mb-0" style="font-size: 0.875rem; line-height: 1.5;">Fully RERA approved with clear land titles and instant registration available for immediate plot possession and luxury bungalow construction.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Fully RERA approved with clear land titles and instant registration available for immediate plot possession and luxury bungalow construction.</p>
         </div>
       </div>
 
@@ -81,7 +49,7 @@
             </div>
             <h5 class="why-choose-title">40% Open Green Space</h5>
           </div>
-          <p class="small text-muted mb-0" style="font-size: 0.875rem; line-height: 1.5;">Designed with lush parks, grand clubhouse, wide asphalt roads, and underground electrical utilities for a serene eco-lifestyle.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Designed with lush parks, grand clubhouse, wide asphalt roads, and underground electrical utilities for a serene eco-lifestyle.</p>
         </div>
       </div>
 
@@ -94,7 +62,7 @@
             </div>
             <h5 class="why-choose-title">High Appreciation</h5>
           </div>
-          <p class="small text-muted mb-0" style="font-size: 0.875rem; line-height: 1.5;">Bagdogra-Siliguri is North Bengal's fastest-growing investment hub near the International Airport, guaranteeing explosive ROI for early investors.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Bagdogra-Siliguri is North Bengal's fastest-growing investment hub near the International Airport, guaranteeing explosive ROI for early investors.</p>
         </div>
       </div>
 

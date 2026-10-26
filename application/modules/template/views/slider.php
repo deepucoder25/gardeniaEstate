@@ -1,4 +1,4 @@
-<section class="hero-slider-section position-relative overflow-hidden" style="background-image: url('<?= base_url('assets/images/slider/gardenia_hero.webp?v=' . time()) ?>');" itemscope itemtype="https://schema.org/WPHeader">
+<section class="hero-slider-section position-relative overflow-hidden" itemscope itemtype="https://schema.org/WPHeader">
   <div class="hero-overlay"></div>
   <div class="container position-relative z-index-2 py-4 py-lg-5">
     

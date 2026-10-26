@@ -55,19 +55,14 @@ class Home extends MX_Controller
         echo Modules::run('template/layout2', $data);
     }
 
-    function plots_page()
+    function plots()
     {
-        $data['title'] = "Plots & Properties Inventory | " . $this->comp['company3'];
-        $data['description'] = "Browse our full inventory of RERA-approved luxury residential and commercial villa plots in Bagdogra, Siliguri.";
-        $data['module'] = "home";
-        $data['view_file'] = "plots_page";
-        $data['show_breadcrumbs'] = true;
-        echo Modules::run('template/layout2', $data);
+        redirect('plots');
     }
 
     function pricing()
     {
-        $this->plots_page();
+        redirect('plots');
     }
 
     function amenities()
@@ -85,15 +80,11 @@ class Home extends MX_Controller
         redirect(site_url());
     }
 
-    function faq_page()
+    function faqs()
     {
-        $data['title'] = "Frequently Asked Questions | " . $this->comp['company3'];
-        $data['description'] = "Find quick answers to common queries about plot sizes, pricing, possession, and booking.";
-        $data['module'] = "home";
-        $data['view_file'] = "faq_page";
-        $data['show_breadcrumbs'] = true;
-        echo Modules::run('template/layout2', $data);
+        redirect('faqs');
     }
 
     public function oldurl_to_newurl() {}
 }
+

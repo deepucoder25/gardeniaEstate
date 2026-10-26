@@ -16,10 +16,20 @@ $route['about-us'] = 'about/index';
 $route['project-overview'] = 'home/index';
 $route['plot/(:any)'] = 'home/overview/$1';
 $route['plot/(:num)'] = 'home/overview/$1';
-$route['plots-pricing'] = 'home/plots_page';
-$route['plots-inventory'] = 'home/plots_page';
-$route['plots'] = 'home/plots_page';
-$route['properties'] = 'home/plots_page';
+// Plots & Bungalows Inventory Routes (About Module)
+$route['plots'] = 'about/plots';
+$route['plots-pricing'] = 'about/plots';
+$route['plots-inventory'] = 'about/plots';
+$route['properties'] = 'about/plots';
+$route['about/plots'] = 'about/plots';
+$route['home/plots'] = 'about/plots';
+
+// Frequently Asked Questions Routes (About Module)
+$route['faqs'] = 'about/faqs';
+$route['faq'] = 'about/faqs';
+$route['about/faqs'] = 'about/faqs';
+$route['home/faqs'] = 'about/faqs';
+
 $route['amenities'] = 'home/amenities';
 $route['location'] = 'home/index';
 $route['gallery'] = 'gallery/photo_gallery';
@@ -28,8 +38,6 @@ $route['video-gallery'] = 'gallery/video_gallery';
 $route['contact-us'] = 'contacts/index';
 $route['reviews'] = 'reviews/index';
 $route['testimonials'] = 'reviews/index';
-$route['faqs'] = 'home/faq_page';
-$route['faq'] = 'home/faq_page';
 $route['privacy-policy'] = 'about/privacy';
 $route['terms-and-conditions'] = 'about/terms';
 $route['legal-disclaimer'] = 'about/disclaimer';

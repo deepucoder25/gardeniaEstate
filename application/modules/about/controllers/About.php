@@ -25,6 +25,17 @@ class About extends MX_Controller
         $data['description'] = "Get answers to common queries about plot and bungalow options, pricing, bank loan approval, and site visits at " . $this->comp['company3'] . ".";
         $data['module'] = "about";
         $data['view_file'] = "faqs";
+        $data['show_breadcrumbs'] = true;
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function plots()
+    {
+        $data['title'] = "Plots & Properties Inventory | " . $this->comp['company3'];
+        $data['description'] = "Browse our full inventory of RERA-approved luxury residential and commercial villa plots in Bagdogra, Siliguri.";
+        $data['module'] = "about";
+        $data['view_file'] = "plots";
+        $data['show_breadcrumbs'] = true;
         echo Modules::run('template/layout2', $data);
     }
 

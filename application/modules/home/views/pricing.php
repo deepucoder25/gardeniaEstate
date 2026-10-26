@@ -24,7 +24,7 @@ $plots = get_plots_master();
       <span class="badge bg-success-subtle text-success px-4 py-2 rounded-pill uppercase fw-bold extra-small mb-2 tracking-wide">
         FEATURED DEVELOPMENTS
       </span>
-      <h2 class="fw-bold text-dark mb-2" style="font-size: clamp(1.4rem, 2.1vw, 2rem); line-height: 1.35;">
+      <h2 class="fw-bold text-dark mb-2 pricing-section-heading">
         Exclusive Plots &amp; Luxury Bungalows For Sale<br class="d-none d-md-inline"> In <?= htmlspecialchars($addressRegion) ?> – <?= htmlspecialchars($company3) ?>
       </h2>
       <p class="text-secondary fs-6 mb-0">Browse our active residential plots and luxury bungalow developments listed live from our project database.</p>

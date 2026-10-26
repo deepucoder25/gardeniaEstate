@@ -5,17 +5,20 @@
   $ci =& get_instance();
   $class = strtolower($ci->router->fetch_class());
   $method = strtolower($ci->router->fetch_method());
-  $segment1 = $ci->uri->segment(1);
+  $segment1 = strtolower($ci->uri->segment(1) ?? '');
 
-  // Determine active tab
-  $active_tab = '';
-  if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
-    $active_tab = 'home';
-  } elseif ($class === 'about' || in_array($segment1, ['about-us', 'about-project', 'why-choose-us', 'faqs', 'testimonials'])) {
-    $active_tab = 'about';
-  } elseif ($class === 'contacts' || $segment1 === 'contact-us') {
-    $active_tab = 'contact';
-  }
+  // Exact active page detection
+  $is_home = (empty($segment1) || $segment1 === 'home') && ($class === 'home' && in_array($method, ['index', '']));
+  $is_about = in_array($segment1, ['about-project', 'about-us', 'about']) || ($class === 'about' && in_array($method, ['index', 'choose']));
+  $is_plots = in_array($segment1, ['plots', 'plots-pricing', 'plots-inventory', 'properties', 'plot']) || ($class === 'about' && in_array($method, ['plots', 'plots_page', 'pricing']));
+  $is_gallery = $class === 'gallery' || in_array($segment1, ['gallery', 'photo-gallery', 'video-gallery']);
+  $is_reviews = $class === 'reviews' || in_array($segment1, ['reviews', 'testimonials']) || ($class === 'about' && $method === 'testimonials');
+  $is_faqs = in_array($segment1, ['faqs', 'faq', 'faq-page']) || ($class === 'about' && in_array($method, ['faqs', 'faq', 'faq_page']));
+  $is_contact = $class === 'contacts' || in_array($segment1, ['contact-us', 'contacts']);
+  $is_blog = $class === 'blog' || in_array($segment1, ['blog', 'blogs']);
+  $is_privacy = in_array($segment1, ['privacy-policy', 'privacy']) || ($class === 'about' && $method === 'privacy');
+  $is_terms = in_array($segment1, ['terms-and-conditions', 'terms']) || ($class === 'about' && $method === 'terms');
+  $is_disclaimer = in_array($segment1, ['legal-disclaimer', 'disclaimer']) || ($class === 'about' && $method === 'disclaimer');
   ?>
 
   <!-- SEO Friendly SiteNavigationElement Schema -->
@@ -135,7 +138,7 @@
             <div class="d-flex flex-column pe-lg-2">
               
               <!-- 1. Home -->
-              <a href="<?= site_url() ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $active_tab === 'home' ? ' active' : '' ?>">
+              <a href="<?= site_url() ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_home ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-house-door-fill text-warning fs-5"></i>
                   <span>Home</span>
@@ -144,7 +147,7 @@
               </a>
 
               <!-- 2. About Project -->
-              <a href="<?= site_url('about-project') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $active_tab === 'about' ? ' active' : '' ?>">
+              <a href="<?= site_url('about-project') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_about ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-info-circle-fill text-warning fs-5"></i>
                   <span>About Project</span>
@@ -153,7 +156,7 @@
               </a>
 
               <!-- 2.5. Plots & Bungalows -->
-              <a href="<?= site_url('plots') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('plots') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_plots ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-grid-3x3-gap-fill text-warning fs-5"></i>
                   <span>Plots &amp; Bungalows</span>
@@ -162,7 +165,7 @@
               </a>
 
               <!-- 3. Gallery -->
-              <a href="<?= site_url('gallery') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('gallery') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_gallery ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-images text-warning fs-5"></i>
                   <span>Gallery</span>
@@ -171,7 +174,7 @@
               </a>
 
               <!-- 4. Customer Reviews (Connected with Admin) -->
-              <a href="<?= site_url('reviews') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= ($class === 'reviews' || $segment1 === 'reviews') ? ' active' : '' ?>">
+              <a href="<?= site_url('reviews') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_reviews ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-star-fill text-warning fs-5"></i>
                   <span>Customer Reviews</span>
@@ -180,7 +183,7 @@
               </a>
 
               <!-- 6. FAQ's -->
-              <a href="<?= site_url('faqs') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('faqs') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_faqs ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-question-circle-fill text-warning fs-5"></i>
                   <span>FAQ's</span>
@@ -189,7 +192,7 @@
               </a>
 
               <!-- 7. Contact Us -->
-              <a href="<?= site_url('contact-us') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $active_tab === 'contact' ? ' active' : '' ?>">
+              <a href="<?= site_url('contact-us') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_contact ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <i class="bi bi-telephone-fill text-warning fs-5"></i>
                   <span>Contact Us</span>
@@ -208,7 +211,7 @@
 
             <div class="d-flex flex-column pe-lg-2 mb-3">
               <!-- 1. Blogs & Articles -->
-              <a href="<?= site_url('blog') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('blog') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_blog ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <span class="nav-icon-box bg-success text-white"><i class="bi bi-newspaper"></i></span>
                   <span>Blogs &amp; Articles</span>
@@ -217,7 +220,7 @@
               </a>
 
               <!-- 2. Privacy Policy -->
-              <a href="<?= site_url('privacy-policy') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('privacy-policy') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_privacy ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <span class="nav-icon-box bg-primary text-white"><i class="bi bi-shield-check"></i></span>
                   <span>Privacy Policy</span>
@@ -226,7 +229,7 @@
               </a>
 
               <!-- 3. Terms & Conditions -->
-              <a href="<?= site_url('terms-and-conditions') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('terms-and-conditions') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_terms ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <span class="nav-icon-box bg-warning text-dark"><i class="bi bi-file-earmark-text"></i></span>
                   <span>Terms &amp; Conditions</span>
@@ -235,7 +238,7 @@
               </a>
 
               <!-- 4. Legal Disclaimer -->
-              <a href="<?= site_url('legal-disclaimer') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill">
+              <a href="<?= site_url('legal-disclaimer') ?>" class="d-flex align-items-center justify-content-between nav-drawer-pill<?= $is_disclaimer ? ' active' : '' ?>">
                 <span class="d-flex align-items-center gap-3 fw-semibold">
                   <span class="nav-icon-box bg-danger text-white"><i class="bi bi-bank"></i></span>
                   <span>Legal Disclaimer</span>
