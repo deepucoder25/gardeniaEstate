@@ -13,7 +13,8 @@ class Gallery extends MX_Controller {
         
         $this->db->where('status', 1);
         $this->db->order_by('auto_id', 'DESC');
-        $data['photos'] = $this->db->get('gallery')->result();
+        $res = $this->db->get('gallery');
+        $data['photos'] = ($res && is_object($res)) ? $res->result() : [];
         
         $data['module'] = "gallery";
         $data['view_file'] = "photo-gallery";
@@ -27,7 +28,8 @@ class Gallery extends MX_Controller {
         
         $this->db->where('status', 1);
         $this->db->order_by('auto_id', 'DESC');
-        $data['videos'] = $this->db->get('video_gallery')->result();
+        $res = $this->db->get('video_gallery');
+        $data['videos'] = ($res && is_object($res)) ? $res->result() : [];
         
         $data['module'] = "gallery";
         $data['view_file'] = "video-gallery";

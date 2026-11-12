@@ -7,7 +7,8 @@ $CI->load->database();
 $gallery_items = [];
 
 try {
-    $db_photos = $CI->db->order_by('auto_id', 'DESC')->get('gallery')->result();
+    $res = $CI->db->order_by('auto_id', 'DESC')->get('gallery');
+    $db_photos = ($res && is_object($res)) ? $res->result() : [];
     if (!empty($db_photos)) {
         foreach ($db_photos as $photo) {
             // Check status if set
