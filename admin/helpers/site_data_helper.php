@@ -103,7 +103,7 @@ function get_default_company_info() {
         'company_name' => 'The Gardenia Estate',
         'phone'        => '+91 89676 30333',
         'email'        => 'info@thegardeniaestate.in',
-        'description'  => 'A premier 250 Bigha luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate registration.',
+        'description'  => 'A premier 250 Bigha luxury township offering residential plots for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate registration.',
         'location'     => 'Airport Road, Bagdogra, Siliguri, West Bengal – 734014',
         'image'        => 'assets/images/reviews/bagdogra_plots_bungalows.webp'
     ];
@@ -189,14 +189,14 @@ function get_default_project_overview() {
     return [
         'id'                     => 1,
         'project_name'           => 'The Gardenia Estate',
-        'short_description'      => 'Luxury Residential Plots & Bungalows For Sale in Bagdogra, Siliguri.',
-        'full_description'       => 'Bagdogra, a rapidly evolving prime hub in Siliguri, North Bengal, has emerged as a premier destination for real estate investments, particularly in luxury residential plots and exclusive bungalows. Its strategic location near the international airport, robust infrastructure development, and seamless connectivity make it an attractive choice for investors and homebuyers seeking plots and luxury bungalows for sale.',
+        'short_description'      => 'Luxury Residential Plots For Sale in Bagdogra, Siliguri.',
+        'full_description'       => 'Bagdogra, a rapidly evolving prime hub in Siliguri, North Bengal, has emerged as a premier destination for luxury residential plotted township living. Its strategic location near Bagdogra International Airport, robust infrastructure development, and seamless connectivity make it an attractive choice for homebuyers seeking bespoke residential plots for sale.',
         'location'               => 'Airport Road, Bagdogra, Siliguri, West Bengal - 734014',
         'total_land_area'        => '250 Bigha',
-        'total_plots'            => '500+ Premium Plots & Bungalows',
+        'total_plots'            => '500+ Premium Plots',
         'plot_sizes'             => '1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60)',
-        'project_type'           => 'Residential Plots & Luxury Bungalows',
-        'project_status'         => 'Pre-Launching',
+        'project_type'           => 'Residential Plots',
+        'project_status'         => 'Ongoing',
         'master_plan_image'      => 'assets/images/uploads/master_plan_1788329113.png',
         'master_plan_description'=> '40% Open spaces with tree-lined avenues, reflexology parks, underground cabling & 24/7 security.',
         'amenities'              => [
@@ -223,37 +223,7 @@ function get_default_project_overview() {
 }
 
 function get_default_newly_launched_projects() {
-    return [
-        [
-            'id'             => 1,
-            'name'           => 'Gardenia Grandeur - Phase 2',
-            'tagline'        => 'Premium Villa Plots & Smart Living Community',
-            'badge'          => 'Newly Launched',
-            'location'       => 'Near Bihta Airport & Outer Ring Road, Patna',
-            'price'          => '₹ 14.50 Lacs Onwards',
-            'plot_sizes'     => '1000, 1500 & 2400 Sq.Ft.',
-            'description'    => 'An ultra-modern gated plotted township designed with wide roads, lush greenery, and rapid connectivity to commercial hubs and airport.',
-            'highlights'     => json_encode([
-                'Immediate Registry & Mutation',
-                '30 & 40 Ft. Wide Black-Top Roads',
-                '24x7 Gated Security & Street Lights',
-                'Landscaped Green Parks & Underground Drainage'
-            ]),
-            'image'          => 'assets/images/slider/gardenia_hero.webp',
-            'brochure'       => null,
-            'enquiry_link'   => null,
-            'launch_date'    => null,
-            'status'         => 'Active',
-            'sort_order'     => 1,
-            'created_at'     => '2026-10-26 04:43:35',
-            'highlights_list'=> [
-                'Immediate Registry & Mutation',
-                '30 & 40 Ft. Wide Black-Top Roads',
-                '24x7 Gated Security & Street Lights',
-                'Landscaped Green Parks & Underground Drainage'
-            ]
-        ]
-    ];
+    return [];
 }
 
 // Menu Labels

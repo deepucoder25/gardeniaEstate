@@ -7,7 +7,7 @@
     <!-- Section Header -->
     <div class="text-center mb-5">
       <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase"><?= htmlspecialchars($company3) ?> Advantage</span>
-      <h2 class="display-6 text-dark fw-bold mb-2">Why Invest in <?= htmlspecialchars($company3) ?>?</h2>
+      <h2 class="display-6 text-dark fw-bold mb-2">Why Choose <?= htmlspecialchars($company3) ?>?</h2>
       <div class="divider-line-gold mx-auto"></div>
     </div>
 
@@ -23,7 +23,7 @@
             </div>
             <h5 class="why-choose-title">Prime Strategic Location</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc">Situated directly along Asian Highway 2 &amp; the Airport corridor in <?= htmlspecialchars($addressRegion) ?>, offering seamless connectivity and rapid regional growth.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Situated directly along Asian Highway 2 &amp; Airport Road in <?= htmlspecialchars($addressRegion) ?>, offering effortless connectivity to daily essentials and transit hubs.</p>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
             </div>
             <h5 class="why-choose-title">100% Clear Titles</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc">Verified clear freehold land titles and instant registration available for immediate residential plot possession and home construction.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Verified clear freehold land titles and instant registration available for immediate residential plot possession and custom home construction.</p>
         </div>
       </div>
 
@@ -53,16 +53,16 @@
         </div>
       </div>
 
-      <!-- Card 4: High Capital Growth -->
+      <!-- Card 4: 30+ Modern Amenities & Peaceful Living -->
       <div class="col-lg-3 col-md-6">
         <div class="card border-0 rounded-4 shadow-sm h-100 bg-white bg-opacity-90 why-choose-card">
           <div class="why-choose-header">
             <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center why-choose-icon">
-              <i class="bi bi-graph-up-arrow fs-5"></i>
+              <i class="bi bi-house-heart-fill fs-5"></i>
             </div>
-            <h5 class="why-choose-title">High Appreciation</h5>
+            <h5 class="why-choose-title">30+ Modern Amenities</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc"><?= htmlspecialchars($addressRegion) ?> is North Bengal's top investment hub near the International Airport, offering explosive ROI for plot buyers.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Designed for serene family living with 24/7 gated security, grand clubhouse, kids play zone, landscaped parks, and nature-friendly surroundings.</p>
         </div>
       </div>
 
