@@ -88,7 +88,7 @@
               </div>
             </div>
             <p class="small text-secondary leading-relaxed mb-3">
-              Schedule a free cab pickup from anywhere in Siliguri or Bagdogra Airport for an exclusive guided walkthrough of the 50+ acre township, layout infrastructure, and available plots and luxury bungalows for sale.
+              Schedule a free cab pickup from anywhere in Siliguri or Bagdogra Airport for an exclusive guided walkthrough of the 250 Bigha township, layout infrastructure, and available plots and luxury bungalows for sale.
             </p>
             <div class="d-flex gap-2">
               <a <?= $phonehtml ?> class="btn btn-outline-success bg-success text-white btn-sm rounded-pill flex-fill fw-bold py-2">
@@ -115,8 +115,8 @@
                 <strong class="text-success">Site Visits Open (10 AM - 5 PM)</strong>
               </li>
               <li class="d-flex justify-content-between pt-1">
-                <span>WBRERA Registration:</span>
-                <strong class="text-dark extra-small">WBRERA/P/DAR/2024/000188</strong>
+                <span>Legal Status:</span>
+                <strong class="text-dark extra-small">100% Clear Land Titles</strong>
               </li>
             </ul>
 

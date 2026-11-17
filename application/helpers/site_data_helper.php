@@ -101,9 +101,9 @@ function get_default_company_info() {
     return [
         'id'           => 1,
         'company_name' => 'The Gardenia Estate',
-        'phone'        => '+91 98765 43210',
+        'phone'        => '+91 89676 30333',
         'email'        => 'info@thegardeniaestate.in',
-        'description'  => 'A premier 50+ Acre luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate RERA-approved registration.',
+        'description'  => 'A premier 250 Bigha luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate registration.',
         'location'     => 'Airport Road, Bagdogra, Siliguri, West Bengal – 734014',
         'image'        => 'assets/images/reviews/bagdogra_plots_bungalows.webp'
     ];
@@ -118,7 +118,7 @@ function get_default_amenities_master() {
         ['id' => 5, 'name' => 'Clubhouse & Swimming Pool'],
         ['id' => 6, 'name' => 'Rainwater Harvesting System'],
         ['id' => 7, 'name' => 'Avenue Plantation & Reflexology Track'],
-        ['id' => 8, 'name' => 'RERA Approved Clear Title Plots']
+        ['id' => 8, 'name' => '100% Clear Title Plots']
     ];
 }
 
@@ -127,10 +127,10 @@ function get_default_plots() {
         [
             'id'             => 1,
             'name'           => 'Gardenia Phase 1 Villa Plots',
-            'about'          => 'Exclusive RERA-approved luxury villa plots in Bagdogra, Siliguri with 40ft wide internal roads, underground electrical cabling, and 40% open green spaces.',
+            'about'          => 'Exclusive luxury villa plots in Bagdogra, Siliguri with 40ft wide internal roads, underground electrical cabling, and 40% open green spaces.',
             'image'          => 'assets/images/reviews/plot_gardenia_phase1.webp',
-            'land_area'      => '20 Acres',
-            'total_plots'    => '180 Plots',
+            'land_area'      => '250 Bigha',
+            'total_plots'    => '500+ Plots',
             'plot_sizes'     => '1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60)',
             'project_type'   => 'Residential Plots',
             'project_status' => 'Ongoing',
@@ -161,7 +161,7 @@ function get_default_plots() {
                 ['name' => 'Siliguri City Center / Matigara', 'distance' => '9 km']
             ],
             'amenity_ids'    => [2, 3, 4, 6, 8],
-            'status'         => 'Active'
+            'status'         => 'Inactive'
         ],
         [
             'id'             => 3,
@@ -180,7 +180,7 @@ function get_default_plots() {
                 ['name' => 'New Jalpaiguri (NJP) Railway Station', 'distance' => '16 km']
             ],
             'amenity_ids'    => [1, 2, 3, 4, 5, 6, 7, 8],
-            'status'         => 'Active'
+            'status'         => 'Inactive'
         ]
     ];
 }
@@ -192,7 +192,7 @@ function get_default_project_overview() {
         'short_description'      => 'Luxury Residential Plots & Bungalows For Sale in Bagdogra, Siliguri.',
         'full_description'       => 'Bagdogra, a rapidly evolving prime hub in Siliguri, North Bengal, has emerged as a premier destination for real estate investments, particularly in luxury residential plots and exclusive bungalows. Its strategic location near the international airport, robust infrastructure development, and seamless connectivity make it an attractive choice for investors and homebuyers seeking plots and luxury bungalows for sale.',
         'location'               => 'Airport Road, Bagdogra, Siliguri, West Bengal - 734014',
-        'total_land_area'        => '50+ Acres',
+        'total_land_area'        => '250 Bigha',
         'total_plots'            => '500+ Premium Plots & Bungalows',
         'plot_sizes'             => '1200 Sq.Ft (30x40), 1500 Sq.Ft (30x50), 2400 Sq.Ft (40x60)',
         'project_type'           => 'Residential Plots & Luxury Bungalows',

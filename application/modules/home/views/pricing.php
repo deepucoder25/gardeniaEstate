@@ -6,16 +6,16 @@ $plots = get_plots_master();
 <!-- Breadcrumbs Section (Only shown on dedicated page) -->
 <?php if (isset($show_breadcrumbs) && $show_breadcrumbs): ?>
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Plots & Bungalows For Sale',
-    'bc_desc' => 'Explore transparent plot sizes, bungalow specifications, project status, and available listings.',
+    'bc_h1' => 'Residential Plots For Sale',
+    'bc_desc' => 'Explore transparent plot sizes, specifications, project status, and available listings.',
     'breadcrumbs' => [
-        ['name' => 'Plots & Bungalows']
+        ['name' => 'Plots']
     ]
 ]);
 ?>
 <?php endif; ?>
 
-<!-- FEATURED PLOTS & BUNGALOWS FOR SALE SECTION (MULTI-PLOT GRID) -->
+<!-- FEATURED PLOTS FOR SALE SECTION (MULTI-PLOT GRID) -->
 <section class="py-5 bg-light" id="plotsPricingSection">
   <div class="container py-4">
     
@@ -25,14 +25,20 @@ $plots = get_plots_master();
         FEATURED DEVELOPMENTS
       </span>
       <h2 class="fw-bold text-dark mb-2 pricing-section-heading">
-        Exclusive Plots &amp; Luxury Bungalows For Sale<br class="d-none d-md-inline"> In <?= htmlspecialchars($addressRegion) ?> – <?= htmlspecialchars($company3) ?>
+        Exclusive Residential Plots For Sale<br class="d-none d-md-inline"> In <?= htmlspecialchars($addressRegion) ?> – <?= htmlspecialchars($company3) ?>
       </h2>
-      <p class="text-secondary fs-6 mb-0">Browse our active residential plots and luxury bungalow developments listed live from our project database.</p>
+      <p class="text-secondary fs-6 mb-0">Browse our active residential plot developments listed live from our project database.</p>
     </div>
 
-    <!-- 3-Column Grid Cards -->
+    <!-- Grid Cards -->
     <?php if (!empty($plots)): ?>
-      <div class="row g-4 mb-4">
+      <?php
+        $active_plots = array_filter($plots, function($item) {
+            return !isset($item['status']) || strtolower($item['status']) !== 'inactive';
+        });
+        $card_col = (count($active_plots) == 1) ? 'col-lg-5 col-md-7 col-12' : 'col-lg-4 col-md-6';
+      ?>
+      <div class="row g-4 mb-4 justify-content-center">
         <?php foreach ($plots as $p): 
             if (isset($p['status']) && strtolower($p['status']) == 'inactive') continue;
 
@@ -45,7 +51,7 @@ $plots = get_plots_master();
             }
             $p_img = !empty($p['image']) ? (base_url($p['image']) . '?v=2') : base_url('assets/images/slider/gardenia_hero.webp');
         ?>
-          <div class="col-lg-4 col-md-6">
+          <div class="<?= $card_col ?>">
             <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden bg-white border">
               
               <!-- Card Thumbnail & Status Badges -->

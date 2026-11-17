@@ -25,13 +25,13 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           </div>
 
           <p class="small text-muted mb-4 leading-relaxed">
-            <?= htmlspecialchars($company3) ?> is a 50+ Acre luxury township offering premium residential plots and luxury bungalows for sale situated along Airport Road &amp; Asian Highway 2, <?= htmlspecialchars($addressRegion) ?>. Featuring 40% open green spaces &amp; 30+ world class amenities.
+            <?= htmlspecialchars($company3) ?> is a 250 Bigha luxury township offering premium residential plots for sale situated along Airport Road &amp; Asian Highway 2, <?= htmlspecialchars($addressRegion) ?>. Featuring 40% open green spaces &amp; 30+ world class amenities.
           </p>
 
           <!-- RERA & Bank Loan Badges (Fit Cleanly Inside Footer Column Without Overflowing) -->
           <div class="d-flex align-items-center gap-2 gap-sm-3 mb-3 flex-wrap flex-xl-nowrap max-w-100">
             <span class="badge bg-light text-success border border-success-subtle rounded-pill  gap-2 py-2 px-2.5 shadow-xs fw-bold d-inline-flex align-items-center text-nowrap extra-small">
-              <i class="bi bi-patch-check-fill text-success fs-6  me-1.5"></i><span>RERA Approved</span>
+              <i class="bi bi-patch-check-fill text-success fs-6  me-1.5"></i><span>Clear Titles</span>
             </span>
             <span class="badge bg-light text-warning-emphasis border border-warning-subtle rounded-pill gap-2 py-2 px-2.5 shadow-xs fw-bold d-inline-flex align-items-center text-nowrap extra-small">
               <i class="bi bi-bank2 text-warning fs-6 me-1.5"></i><span>Bank Loan Approved</span>
@@ -63,7 +63,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
               </li>
               <li>
                 <a href="<?= site_url('plots') ?>" class="footer-nav-link gap-2">
-                  <i class="bi bi-chevron-right text-warning fs-7"></i> Plots &amp; Bungalows
+                  <i class="bi bi-chevron-right text-warning fs-7"></i> Plots
                 </a>
               </li>
               <li>
@@ -229,7 +229,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
               <i class="bi bi-patch-check-fill fs-5"></i>
             </div>
             <div class="text-start">
-              <div class="fw-bold text-dark extra-small text-md-small lh-sm">50+ Acres Township</div>
+              <div class="fw-bold text-dark extra-small text-md-small lh-sm">250 Bigha Township</div>
             </div>
           </div>
         </div>
@@ -255,7 +255,7 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           <i class="bi bi-exclamation-triangle-fill text-warning"></i> REAL ESTATE DISCLAIMER
         </h6>
         <p class="small text-muted mb-4 leading-relaxed text-justify">
-          <strong>Disclaimer :</strong> The information and visuals presented on this website are intended exclusively for general informational and marketing purposes and do not constitute a legal offer, binding contract, or warranty. All layouts, plot dimensions, floor plans, specifications, artistic renderings, and amenity details are indicative and subject to change or revision without prior notice as required by competent authorities or under the provisions of the West Bengal Real Estate Regulatory Authority (WBRERA). Pricing and unit availability are dynamic and subject to confirmation at the time of booking. Prospective buyers are advised to verify all project approvals, sanction plans, title deeds, and terms directly with our official sales office before entering into any transaction. <strong>WBRERA Project Registration No: WBRERA/P/DAR/2024/000188</strong>. All Rights Reserved.
+          <strong>Disclaimer :</strong> The information and visuals presented on this website are intended exclusively for general informational and marketing purposes and do not constitute a legal offer, binding contract, or warranty. All layouts, plot dimensions, floor plans, specifications, artistic renderings, and amenity details are indicative and subject to change or revision without prior notice as required by competent authorities. Pricing and unit availability are dynamic and subject to confirmation at the time of booking. Prospective buyers are advised to verify all project approvals, sanction plans, title deeds, and terms directly with our official sales office before entering into any transaction. All Rights Reserved.
         </p>
 
         <!-- BOTTOM BAR: COPYRIGHT & LEGAL LINKS (Tight & Compact Spacing) -->

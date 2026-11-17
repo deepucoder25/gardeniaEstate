@@ -79,7 +79,7 @@
                         <blockquote class="p-4 bg-light border-start border-4 border-success rounded-3 mb-5 position-relative">
                             <i class="bi bi-quote fs-1 text-success-subtle position-absolute top-0 end-0 me-3 mt-1"></i>
                             <p class="fst-italic text-dark mb-2 fw-medium">
-                                "Land is the only asset class that never depreciates. Choosing a RERA-approved plotted development ensures both security of capital and maximum return on investment."
+                                "Land is the only asset class that never depreciates. Choosing a verified plotted development ensures both security of capital and maximum return on investment."
                             </p>
                             <footer class="blockquote-footer text-success fw-bold mb-0"><?= htmlspecialchars($company3) ?> Advisory</footer>
                         </blockquote>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="min-w-0 flex-grow-1 text-break">
                                     <h6 class="fw-bold text-dark mb-1">Written by <?= htmlspecialchars($company3) ?> Team</h6>
-                                    <p class="extra-small text-muted mb-2 text-break">Project Advisory &amp; Investment Research | WBRERA Reg No: WBRERA/P/DAR/2024/000188</p>
+                                    <p class="extra-small text-muted mb-2 text-break">Project Advisory &amp; Investment Research | 100% Clear Title Assurance</p>
                                     <p class="small text-secondary mb-0">Specializing in premium residential plots and luxury bungalows for sale across Bagdogra and Siliguri.</p>
                                 </div>
                             </div>
@@ -189,14 +189,14 @@
                             </button>
                         </div>
 
-                        <!-- RERA Compliance Card -->
+                        <!-- Clear Title Compliance Card -->
                         <div class="card border-0 rounded-4 shadow-sm p-3 bg-light text-center">
                             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
                                 <i class="bi bi-shield-check text-success fs-4"></i>
-                                <span class="fw-bold text-dark small">RERA Certified Compliance</span>
+                                <span class="fw-bold text-dark small">100% Clear Title Assurance</span>
                             </div>
                             <p class="extra-small text-muted mb-0">
-                                Registration No: WBRERA/P/DAR/2024/000188. 100% legal title assurance.
+                                Verified land ownership &amp; immediate plot registration.
                             </p>
                         </div>
 

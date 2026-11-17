@@ -51,8 +51,8 @@ class MX_Controller
         $this->load = clone load_class('Loader');
         $this->load->initialize($this);
 
-        $this->comp['phone'] = '+91 91080 34519';
-        $this->comp['phonehtml'] = 'href="tel:+9191080 34519"';
+        $this->comp['phone'] = '+91 89676 30333';
+        $this->comp['phonehtml'] = 'href="tel:+918967630333"';
         $this->comp['supportmail'] = 'info@thegardeniaestate.in';
         $this->comp['replyToMail'] = 'info@thegardeniaestate.in';
         $this->comp['mail'] = 'info@thegardeniaestate.in';
@@ -65,7 +65,7 @@ class MX_Controller
         $this->comp['instagramhtml'] = "";
         $this->comp['twitterhtml'] = "";
         $this->comp['linkedinhtml'] = "";
-        $this->comp['whatsapphtml'] = "https://wa.me/919108034519";
+        $this->comp['whatsapphtml'] = "https://wa.me/918967630333";
 
         $this->comp['address'] = "Site Office Address: Airport Road, Bagdogra, Siliguri, West Bengal - 734014";
         $this->comp['address1'] = $this->comp['address'];

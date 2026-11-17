@@ -22,14 +22,14 @@
           
             <h2 class="h2 fw-bold text-dark mb-3">REAL ESTATE LEGAL DISCLAIMER</h2>
             <p class="text-secondary leading-relaxed mb-0">
-              The information and materials provided on this website are intended exclusively for general informational and marketing purposes and should not be construed as a binding legal offer or contract. <?= htmlspecialchars($company3) ?> is a luxury plotted and bungalow development in <?= htmlspecialchars($addressRegion) ?> registered under the West Bengal Real Estate Regulatory Authority (WBRERA Reg No: <strong>WBRERA/P/DAR/2024/000188</strong>).
+              The information and materials provided on this website are intended exclusively for general informational and marketing purposes and should not be construed as a binding legal offer or contract. <?= htmlspecialchars($company3) ?> is a luxury plotted and bungalow development in <?= htmlspecialchars($addressRegion) ?> with clear legal land titles.
             </p>
           </div>
 
           <!-- Section 1: Official Project Representation -->
           <div class="mb-4">
             <h3 class="h5 fw-bold text-success mb-3 text-uppercase d-flex align-items-center gap-2">
-              <i class="bi bi-patch-check-fill text-success"></i> 1. Official Project Representation &amp; WBRERA Compliance
+              <i class="bi bi-patch-check-fill text-success"></i> 1. Official Project Representation &amp; Legal Compliance
             </h3>
             <p class="text-secondary leading-relaxed mb-0">
               This website serves as the official digital marketing platform for <strong><?= htmlspecialchars($company3) ?></strong>. All communications, site visit arrangements, cost sheet distribution, and booking documentation are conducted directly through our authorized sales advisory team and verified developers. All transactions, plot allocations, and bungalow sales are subject to official sale agreements and conveyance deeds executed directly with the project developers.
@@ -42,7 +42,7 @@
               <i class="bi bi-info-circle-fill text-success"></i> 2. Informational &amp; Non-Binding Notice
             </h3>
             <p class="text-secondary leading-relaxed mb-0">
-              While we strive to ensure that all information, master plans, plot dimensions, and amenity details displayed on this website are accurate and up-to-date, users should independently verify all project details with the sales office or official RERA portal prior to making any financial commitments, plot bookings, or bungalow purchases. Neither the owner nor the website operators shall be held liable for decisions made based solely on the content published on this site.
+              While we strive to ensure that all information, master plans, plot dimensions, and amenity details displayed on this website are accurate and up-to-date, users should independently verify all project details with the sales office prior to making any financial commitments, plot bookings, or bungalow purchases. Neither the owner nor the website operators shall be held liable for decisions made based solely on the content published on this site.
             </p>
           </div>
 

@@ -23,7 +23,7 @@
 
         <!-- Description Paragraph -->
         <p class="gardenia-paragraph mb-3">
-         A premier 50+ Acre luxury township offering residential plots and luxury bungalows for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate RERA-approved registration.
+         A premier 250 Bigha luxury township offering residential plots for sale along Airport Road & Asian Highway 2, Bagdogra, Siliguri featuring 40% open green space, 30+ world-class amenities, and immediate registration.
         </p>
 
         <!-- 4 Key Township Highlights Checklist -->
@@ -119,7 +119,7 @@
             <img src="<?= base_url('assets/images/reviews/gardenia_bungalow_villa.webp') ?>" alt="<?= $company3 ?> - Landscaped Gardens &amp; Luxury Bungalow Living" loading="lazy">
             <div class="gardenia-inset-tag">
               <i class="bi bi-house-door-fill text-success"></i>
-              <span>Luxury Bungalows</span>
+              <span>Residential Plots</span>
             </div>
           </div>
 
@@ -129,7 +129,7 @@
               <i class="bi bi-shield-check"></i>
             </div>
             <div>
-              <div class="fw-bold text-dark small lh-1">RERA &amp; Approved</div>
+              <div class="fw-bold text-dark small lh-1">100% Approved</div>
               <div class="extra-small text-muted mt-1">100% Clear Land Titles</div>
             </div>
           </div>

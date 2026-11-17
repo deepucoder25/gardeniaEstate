@@ -18,7 +18,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
         <div class="text-center mb-5">
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">Visual Showcase</span>
             <h2 class="display-6 fw-bold text-dark mb-2"><?= htmlspecialchars($company3) ?> &ndash; Photo Gallery</h2>
-            <p class="text-muted">Take a visual tour of our 50+ acre luxury residential plots and bungalows for sale in <?= htmlspecialchars($addressRegion) ?>.</p>
+            <p class="text-muted">Take a visual tour of our 250 Bigha luxury residential plots and bungalows for sale in <?= htmlspecialchars($addressRegion) ?>.</p>
         </div>
 
         <div class="row g-4">

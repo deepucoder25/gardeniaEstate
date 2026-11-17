@@ -22,7 +22,7 @@
             <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">LEGAL INFORMATION</span>
             <h2 class="h2 fw-bold text-dark mb-3">PRIVACY POLICY &amp; TERMS OF USE</h2>
             <p class="text-secondary leading-relaxed mb-0">
-              <strong><?= htmlspecialchars($company3) ?></strong> (&quot;<?= htmlspecialchars($company3) ?>&quot; or &quot;We&quot;) operates in full compliance with the West Bengal Real Estate Regulatory Authority (WBRERA Registration No: <strong>WBRERA/P/DAR/2024/000188</strong>). We prioritize your privacy. Our Privacy Policy outlines the personal information we collect through our website, including sub-domains and inquiry forms, the purposes of collection, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns.
+              <strong><?= htmlspecialchars($company3) ?></strong> (&quot;<?= htmlspecialchars($company3) ?>&quot; or &quot;We&quot;) operates with full legal compliance and verified clear land titles. We prioritize your privacy. Our Privacy Policy outlines the personal information we collect through our website, including sub-domains and inquiry forms, the purposes of collection, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns.
             </p>
           </div>
 
@@ -68,10 +68,10 @@
               While visiting to this website, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
             </p>
             <ul class="row g-2 list-unstyled mb-4">
-              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-envelope-fill text-success me-2"></i>Email address</li></div>
-              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-person-fill text-success me-2"></i>First name and last name</li></div>
-              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-telephone-fill text-success me-2"></i>Phone number</li></div>
-              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-geo-alt-fill text-success me-2"></i>Address, State, Province, ZIP/Postal code, City</li></div>
+              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-envelope-fill text-success me-2"></i><?= $mail ?></li></div>
+              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-person-fill text-success me-2"></i><?= $company3 ?></li></div>
+              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-telephone-fill text-success me-2"></i><?= $phone ?></li></div>
+              <div class="col-md-6"><li class="bg-light p-2.5 px-3 rounded-3 text-secondary"><i class="bi bi-geo-alt-fill text-success me-2"></i><?= $address ?></li></div>
             </ul>
 
             <h4 class="h6 fw-bold text-dark mb-2">We may use Personal Data for the following purposes:</h4>
@@ -85,7 +85,7 @@
             <h4 class="h6 fw-bold text-dark mb-2">We may share Your personal information in the following situations:</h4>
             <ul class="text-secondary leading-relaxed mb-0 ps-3">
               <li class="mb-2"><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our associates and any other subsidiaries, that We control or that are under common control with Us.</li>
-              <li class="mb-2"><strong>With Authorized Developers:</strong> We may disclose Your personal information with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary.</li>
+              <li class="mb-2"><strong>With Authorized Developers:</strong> We may disclose Your personal information with authorized project developers for further processing as necessary.</li>
               <li class="mb-2"><strong>With Your consent:</strong> We may disclose Your personal information for any other purpose with Your consent.</li>
             </ul>
           </div>

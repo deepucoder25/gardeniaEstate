@@ -13,7 +13,7 @@ class About extends MX_Controller
     function choose()
     {
         $data['title'] = "Why Choose Us | " . $this->comp['company3'];
-        $data['description'] = "Discover why customers and investors trust " . $this->comp['company3'] . " for safe, RERA-approved luxury plots and bungalows for sale in Bagdogra, Siliguri.";
+        $data['description'] = "Discover why customers and investors trust " . $this->comp['company3'] . " for safe, clear-title luxury plots and bungalows for sale in Bagdogra, Siliguri.";
         $data['module'] = "about";
         $data['view_file'] = "choose";
         echo Modules::run('template/layout2', $data);
@@ -32,7 +32,7 @@ class About extends MX_Controller
     function plots()
     {
         $data['title'] = "Plots & Properties Inventory | " . $this->comp['company3'];
-        $data['description'] = "Browse our full inventory of RERA-approved luxury residential and commercial villa plots in Bagdogra, Siliguri.";
+        $data['description'] = "Browse our full inventory of verified luxury residential and commercial villa plots in Bagdogra, Siliguri.";
         $data['module'] = "about";
         $data['view_file'] = "plots";
         $data['show_breadcrumbs'] = true;
@@ -67,7 +67,7 @@ class About extends MX_Controller
                 'city' => 'Delhi',
                 'plot' => 'Plot No. C-15',
                 'stars' => 5,
-                'desc' => 'Clear documentation and RERA registration gave us complete peace of mind. We visited the site on Saturday and booked our plot immediately. The location proximity to Bagdogra Airport & Asian Highway is a huge plus!',
+                'desc' => 'Clear documentation and transparent registration gave us complete peace of mind. We visited the site on Saturday and booked our plot immediately. The location proximity to Bagdogra Airport & Asian Highway is a huge plus!',
                 'initials' => 'AV',
                 'bg' => 'bg-dark'
             ],
@@ -112,7 +112,7 @@ class About extends MX_Controller
                 'city' => 'Pune',
                 'plot' => 'Plot No. C-30',
                 'stars' => 5,
-                'desc' => 'Smooth experience dealing with The Gardenia Estate team. All WBRERA paperwork and registration support was provided promptly.',
+                'desc' => 'Smooth experience dealing with The Gardenia Estate team. All legal paperwork and registration support was provided promptly.',
                 'initials' => 'SG',
                 'bg' => 'bg-success'
             ],
@@ -201,7 +201,7 @@ class About extends MX_Controller
     function disclaimer()
     {
         $data['title'] = "Legal Disclaimer | " . $this->comp['company3'];
-        $data['description'] = "Official RERA real estate legal disclaimer and website usage terms for " . $this->comp['company3'] . " plots and bungalows.";
+        $data['description'] = "Official real estate legal disclaimer and website usage terms for " . $this->comp['company3'] . " plots and bungalows.";
         $data['module'] = "about";
         $data['view_file'] = "disclaimer";
         echo Modules::run('template/layout2', $data);

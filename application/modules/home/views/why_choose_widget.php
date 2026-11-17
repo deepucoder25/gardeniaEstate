@@ -6,7 +6,7 @@
     
     <!-- Section Header -->
     <div class="text-center mb-5">
-      <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">The Gardenia Advantage</span>
+      <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase"><?= htmlspecialchars($company3) ?> Advantage</span>
       <h2 class="display-6 text-dark fw-bold mb-2">Why Invest in <?= htmlspecialchars($company3) ?>?</h2>
       <div class="divider-line-gold mx-auto"></div>
     </div>
@@ -14,20 +14,20 @@
     <!-- 4 Feature Cards Row -->
     <div class="row g-3 g-xl-4">
       
-      <!-- Card 1: Prime Bagdogra Location -->
+      <!-- Card 1: Prime Location -->
       <div class="col-lg-3 col-md-6">
         <div class="card border-0 rounded-4 shadow-sm h-100 bg-white bg-opacity-90 why-choose-card">
           <div class="why-choose-header">
             <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center why-choose-icon">
               <i class="bi bi-geo-alt-fill fs-5"></i>
             </div>
-            <h5 class="why-choose-title">Prime Bagdogra Location</h5>
+            <h5 class="why-choose-title">Prime Strategic Location</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc">Situated directly along the Asian Highway &amp; Airport corridor in Bagdogra, offering seamless connectivity to Siliguri and North Bengal's prime growth hub.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Situated directly along Asian Highway 2 &amp; the Airport corridor in <?= htmlspecialchars($addressRegion) ?>, offering seamless connectivity and rapid regional growth.</p>
         </div>
       </div>
 
-      <!-- Card 2: 100% Legal & Approved -->
+      <!-- Card 2: 100% Clear Titles -->
       <div class="col-lg-3 col-md-6">
         <div class="card border-0 rounded-4 shadow-sm h-100 bg-white bg-opacity-90 why-choose-card">
           <div class="why-choose-header">
@@ -36,20 +36,20 @@
             </div>
             <h5 class="why-choose-title">100% Clear Titles</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc">Fully RERA approved with clear land titles and instant registration available for immediate plot possession and luxury bungalow construction.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Verified clear freehold land titles and instant registration available for immediate residential plot possession and home construction.</p>
         </div>
       </div>
 
-      <!-- Card 3: World-Class Amenities -->
+      <!-- Card 3: 250 Bigha Green Township -->
       <div class="col-lg-3 col-md-6">
         <div class="card border-0 rounded-4 shadow-sm h-100 bg-white bg-opacity-90 why-choose-card">
           <div class="why-choose-header">
             <div class="bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center why-choose-icon">
               <i class="bi bi-tree-fill fs-5"></i>
             </div>
-            <h5 class="why-choose-title">40% Open Green Space</h5>
+            <h5 class="why-choose-title">250 Bigha Green Township</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc">Designed with lush parks, grand clubhouse, wide asphalt roads, and underground electrical utilities for a serene eco-lifestyle.</p>
+          <p class="small text-muted mb-0 why-choose-desc">Master-planned gated community featuring 40% open green landscapes, lush parks, wide asphalt roads, and underground electrical utilities.</p>
         </div>
       </div>
 
@@ -62,7 +62,7 @@
             </div>
             <h5 class="why-choose-title">High Appreciation</h5>
           </div>
-          <p class="small text-muted mb-0 why-choose-desc">Bagdogra-Siliguri is North Bengal's fastest-growing investment hub near the International Airport, guaranteeing explosive ROI for early investors.</p>
+          <p class="small text-muted mb-0 why-choose-desc"><?= htmlspecialchars($addressRegion) ?> is North Bengal's top investment hub near the International Airport, offering explosive ROI for plot buyers.</p>
         </div>
       </div>
 

@@ -5,15 +5,15 @@ $plots = get_plots_master();
 
 <!-- DYNAMIC BREADCRUMB HEADER -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Plots & Bungalows For Sale',
-    'bc_desc' => 'Explore transparent plot sizes, bungalow specs, RERA approval status, and available listings at ' . $company3 . '.',
+    'bc_h1' => 'Residential Plots For Sale',
+    'bc_desc' => 'Explore transparent plot sizes, specifications, legal approval status, and available listings at ' . $company3 . '.',
     'breadcrumbs' => [
-        ['name' => 'Plots & Bungalows']
+        ['name' => 'Plots']
     ]
 ]);
 ?>
 
-<!-- ALL PLOTS & BUNGALOWS INVENTORY SECTION -->
+<!-- ALL PLOTS INVENTORY SECTION -->
 <section class="py-5 bg-light position-relative" id="allPlotsInventorySection">
   <div class="container py-3">
     
@@ -23,14 +23,20 @@ $plots = get_plots_master();
         DIRECT DEVELOPER INVENTORY
       </span>
       <h2 class="display-6 fw-bold text-dark mb-2">
-        Available Plots &amp; Luxury Bungalows For Sale
+        Available Residential Plots For Sale
       </h2>
-      <p class="text-secondary fs-6 mb-0">Explore our complete portfolio of residential plots and luxury bungalows for sale loaded live from our master admin inventory.</p>
+      <p class="text-secondary fs-6 mb-0">Explore our complete portfolio of residential plots for sale loaded live from our master admin inventory.</p>
     </div>
 
-    <!-- 3-Column Grid Cards -->
+    <!-- Grid Cards -->
     <?php if (!empty($plots)): ?>
-      <div class="row g-4 mb-4" id="plotsGrid">
+      <?php
+        $active_plots = array_filter($plots, function($item) {
+            return !isset($item['status']) || strtolower($item['status']) !== 'inactive';
+        });
+        $card_col = (count($active_plots) == 1) ? 'col-lg-5 col-md-7 col-12' : 'col-lg-4 col-md-6';
+      ?>
+      <div class="row g-4 mb-4 justify-content-center" id="plotsGrid">
         <?php foreach ($plots as $p): 
             if (isset($p['status']) && strtolower($p['status']) == 'inactive') continue;
 
@@ -47,7 +53,7 @@ $plots = get_plots_master();
             $p_slug = trim(preg_replace('/[\s-]+/', '-', $p_slug), '-');
             if (empty($p_slug)) $p_slug = $p['id'];
         ?>
-          <div class="col-lg-4 col-md-6">
+          <div class="<?= $card_col ?>">
             <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden bg-white border">
               
               <!-- Card Thumbnail & Status Badges -->

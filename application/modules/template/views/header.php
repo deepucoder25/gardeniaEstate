@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php
   if (!@$description) {
-    $description = $company3 . " offers premium residential plots and luxury bungalows for sale in Bagdogra, Siliguri. Gated community with 30+ amenities and WBRERA approval.";
+    $description = $company3 . " offers premium residential plots for sale in Bagdogra, Siliguri. Gated community with 30+ amenities and 100% clear legal titles.";
   }
   if (!@$city)
     $city = "$addressRegion";
@@ -104,7 +104,7 @@
       "@type": "Product",
       "sku": "<?= $sku ?>",
       "mpn": "<?= $mpn ?>",
-      "name": "Plots & Luxury Bungalows for Sale in <?= $city ?>",
+      "name": "Residential Plots for Sale in <?= $city ?>",
       "image": "<?= $img ?>",
       "description": "<?= @$description ?>",
       "url": "<?= $url ?>",

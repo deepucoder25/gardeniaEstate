@@ -5,7 +5,7 @@
 		"Plots for sale in $city", "Luxury bungalows for sale in $city", "Residential plots in $city", 
 		"Buy plot in Bagdogra", "Bungalows for sale in Siliguri", "Gated community plots $city", 
 		"Villa plots for sale $city", "Plots near Bagdogra Airport", "The Gardenia Estate plots", 
-		"Commercial plots for sale in $city", "Independent bungalows $city", "RERA approved plots $city", 
+		"Commercial plots for sale in $city", "Independent bungalows $city", "Clear title plots $city", 
 		"Ready to construct plots in $city", "Best plots for sale Siliguri", "Luxury villas and bungalows $city"
 	);
 	?>

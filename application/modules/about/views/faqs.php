@@ -20,7 +20,7 @@
     <div class="text-center mb-5 max-w-800 mx-auto">
       <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-2 text-uppercase">GOT QUESTIONS?</span>
       <h2 class="display-6 fw-bold text-dark mb-2">Frequently Asked Questions</h2>
-      <p class="text-secondary fs-6 mb-0">Browse answers to common queries regarding plot investments, RERA approvals, and payment options.</p>
+      <p class="text-secondary fs-6 mb-0">Browse answers to common queries regarding plot investments, legal approvals, and payment options.</p>
     </div>
 
     <!-- 2 ACCORDION COLUMNS ON DESKTOP (col-md-6) & 1 ON MOBILE (col-12) -->
@@ -118,7 +118,7 @@
             </h3>
             <div id="faqPageCollapse5" class="accordion-collapse collapse" aria-labelledby="faqPageHeading5" data-bs-parent="#faqAccordionCol2">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                The project is fully RERA approved with completed layout infrastructure (roads, underground power, water lines). Plots are <strong>ready for immediate registration and villa construction</strong>.
+                The project has completed layout infrastructure (roads, underground power, water lines). Plots are <strong>ready for immediate registration and villa construction</strong>.
               </div>
             </div>
           </div>
@@ -128,12 +128,12 @@
             <h3 class="accordion-header" id="faqPageHeading6">
               <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqPageCollapse6" aria-expanded="false" aria-controls="faqPageCollapse6">
                 <i class="bi bi-shield-check text-success me-3 fs-5 flex-shrink-0"></i>
-                <span>Is the project RERA approved and bank loan eligible?</span>
+                <span>Are the plots legal title verified and bank loan eligible?</span>
               </button>
             </h3>
             <div id="faqPageCollapse6" class="accordion-collapse collapse" aria-labelledby="faqPageHeading6" data-bs-parent="#faqAccordionCol2">
               <div class="accordion-body px-4 pb-4 pt-0 text-secondary small leading-relaxed">
-                Yes, <?= htmlspecialchars($company3) ?> is 100% RERA approved with 100% clear title. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
+                Yes, <?= htmlspecialchars($company3) ?> has 100% verified clear land titles. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
               </div>
             </div>
           </div>

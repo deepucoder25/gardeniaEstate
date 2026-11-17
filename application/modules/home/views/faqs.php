@@ -88,7 +88,7 @@
             </h3>
             <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#estateFaqAccordion">
               <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
-                The project is fully RERA approved with completed layout infrastructure (roads, underground power, water lines). Plots are <strong>ready for immediate registration and villa construction</strong>.
+                The project has completed layout infrastructure (roads, underground power, water lines). Plots are <strong>ready for immediate registration and villa construction</strong>.
               </div>
             </div>
           </div>
@@ -117,12 +117,12 @@
           <div class="accordion-item border-0 rounded-4 shadow-sm mb-3 overflow-hidden">
             <h3 class="accordion-header" id="faqHeading6">
               <button class="accordion-button collapsed fw-bold text-dark fs-6 py-3 px-4 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-                <i class="bi bi-shield-check text-success me-3 fs-5"></i> Is the project RERA approved and bank loan eligible?
+                <i class="bi bi-shield-check text-success me-3 fs-5"></i> Are the plots legal title verified and bank loan eligible?
               </button>
             </h3>
             <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#estateFaqAccordion">
               <div class="accordion-body px-4 pb-4 pt-0 text-muted leading-relaxed">
-                Yes, <?= htmlspecialchars($company3) ?> is 100% WBRERA approved (Reg No: <strong>WBRERA/P/DAR/2024/000188</strong>) with 100% clear title. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
+                Yes, <?= htmlspecialchars($company3) ?> has 100% verified clear land titles. Home loans up to 80% are pre-approved by leading nationalized and private banks including SBI, HDFC, ICICI, and Axis Bank.
               </div>
             </div>
           </div>

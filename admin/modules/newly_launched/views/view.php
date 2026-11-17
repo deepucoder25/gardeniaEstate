@@ -137,8 +137,8 @@
 
                             <div class="col-md-6 form-group">
                                 <label class="nl-label">Direct Contact Phone Number</label>
-                                <input type="text" class="nl-input" name="enquiry_link" id="nl_enquiry_link" placeholder="e.g. +91 91080 34519 (Leave blank for Controller.php default)">
-                                <span class="nl-help-text">Directly displayed on the call button on the project card. If left blank, Controller.php phone (+91 91080 34519) will be shown.</span>
+                                <input type="text" class="nl-input" name="enquiry_link" id="nl_enquiry_link" placeholder="e.g. +91 89676 30333 (Leave blank for Controller.php default)">
+                                <span class="nl-help-text">Directly displayed on the call button on the project card. If left blank, Controller.php phone (+91 89676 30333) will be shown.</span>
                             </div>
                         </div>
 
@@ -150,7 +150,7 @@
                                     <input type="file" class="nl-input" name="project_image" id="nl_file_input" accept="image/*" onchange="previewNlImage(this)" style="flex:1;">
                                     <img src="<?= base_url('assets/images/slider/gardenia_hero.webp') ?>" id="nl_img_thumb" style="width:60px; height:50px; object-fit:cover; border-radius:6px; border:1px solid #CBD5E1; background:#E2E8F0;" alt="Current photo">
                                 </div>
-                                <span class="nl-help-text">Square photo for thumbnail box (with RERA badge on home page)</span>
+                                <span class="nl-help-text">Square photo for thumbnail box (with Verified badge on home page)</span>
                             </div>
 
                             <div class="col-md-3 form-group">
@@ -224,7 +224,7 @@
                                     <td>
                                         <div style="position:relative; width:75px; height:62px;">
                                             <img ng-src="{{p.image ? (baseUrl + p.image) : (baseUrl + 'assets/images/slider/gardenia_hero.webp')}}" class="table-square-img" alt="Square photo">
-                                            <span style="position:absolute; bottom:2px; left:2px; background:rgba(15,23,42,0.9); color:#38BDF8; font-size:8px; font-weight:800; padding:1px 4px; border-radius:3px;">RERA</span>
+                                            <span style="position:absolute; bottom:2px; left:2px; background:rgba(15,23,42,0.9); color:#38BDF8; font-size:8px; font-weight:800; padding:1px 4px; border-radius:3px;">VERIFIED</span>
                                         </div>
                                     </td>
                                     <td>
@@ -258,7 +258,7 @@
                                             <i class="fa fa-tag" style="color:#0284C7;"></i> {{p.tagline || 'Get preferred options @zero brokerage'}}
                                         </div>
                                         <div style="font-size:11px; color:#0284C7; margin-top:3px; font-weight:600;">
-                                            <i class="fa fa-phone"></i> {{p.enquiry_link || '+91 91080 34519 (Controller default)'}}
+                                            <i class="fa fa-phone"></i> {{p.enquiry_link || '+91 89676 30333 (Controller default)'}}
                                         </div>
                                     </td>
                                     <td>

@@ -75,7 +75,7 @@ if ($active_tab == 'company_info') {
                             </div>
                             <div class="col-md-6 form-group">
                                 <span class="po-label">Contact Phone</span>
-                                <input type="text" class="po-input" name="phone" value="<?= isset($company_info['phone']) ? htmlspecialchars($company_info['phone']) : '' ?>" placeholder="e.g. +91 9876543210">
+                                <input type="text" class="po-input" name="phone" value="<?= isset($company_info['phone']) ? htmlspecialchars($company_info['phone']) : '' ?>" placeholder="e.g. +91 8967630333">
                             </div>
                         </div>
 
@@ -279,8 +279,8 @@ if ($active_tab == 'company_info') {
                             <!-- 3. Land Specs -->
                             <div class="row" style="margin-top:15px;">
                                 <div class="col-md-4 form-group">
-                                    <span class="po-label">Total Land Area (n Acres)</span>
-                                    <input type="text" class="po-input" name="total_land_area" id="form_total_land_area" placeholder="e.g. 10 Acres">
+                                    <span class="po-label">Total Land Area</span>
+                                    <input type="text" class="po-input" name="total_land_area" id="form_total_land_area" placeholder="e.g. 250 Bigha">
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <span class="po-label">Total Plots (n)</span>

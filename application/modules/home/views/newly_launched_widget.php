@@ -2,7 +2,7 @@
 
 $new_projects = get_newly_launched_projects(true); // Active projects only
 $CI =& get_instance();
-$controller_phone = !empty($CI->comp['phone']) ? $CI->comp['phone'] : (!empty($phone) ? $phone : '+91 91080 34519');
+$controller_phone = !empty($CI->comp['phone']) ? $CI->comp['phone'] : (!empty($phone) ? $phone : '+91 89676 30333');
 ?>
 
 <?php if (!empty($new_projects)): ?>
@@ -63,7 +63,7 @@ $controller_phone = !empty($CI->comp['phone']) ? $CI->comp['phone'] : (!empty($p
                                     <img src="<?= $p_img ?>" alt="<?= htmlspecialchars($p['name']) ?> thumbnail" class="portal-thumb-img" loading="lazy">
                                     <div class="portal-rera-pill">
                                         <i class="bi bi-shield-fill-check"></i>
-                                        <span>RERA</span>
+                                        <span>VERIFIED</span>
                                     </div>
                                 </div>
 

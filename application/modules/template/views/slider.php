@@ -14,7 +14,7 @@
           <?= strtoupper(htmlspecialchars($company3)) ?>
         </h1>
         <p class="hero-subtitle text-white text-opacity-90 fs-5 fw-medium mb-0" itemprop="description">
-          Luxury Residential Plots &amp; Bungalows For Sale in <strong><?= htmlspecialchars($addressRegion) ?></strong>
+          Luxury Residential Plots For Sale in <strong><?= htmlspecialchars($addressRegion) ?></strong>
         </p>
       </div>
     </div>
@@ -45,7 +45,7 @@
             <form id="heroQuoteForm" class="ajax-form" data-url="<?= site_url('contacts/booking') ?>" data-result="heroFormResults" onsubmit="return false;">
               <div class="row g-2 g-md-3 align-items-center">
                 <!-- Name Field -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-4">
                   <div class="input-group custom-input-group">
                     <span class="input-group-text bg-white border-end-0 ps-3">
                       <i class="bi bi-person-fill text-muted"></i>
@@ -55,7 +55,7 @@
                 </div>
 
                 <!-- Phone Field -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-4">
                   <div class="input-group custom-input-group">
                     <span class="input-group-text bg-white border-end-0 ps-3">
                       <i class="bi bi-telephone-fill text-muted"></i>
@@ -64,18 +64,8 @@
                   </div>
                 </div>
 
-                <!-- Email Field -->
-                <div class="col-lg-3 col-md-6">
-                  <div class="input-group custom-input-group">
-                    <span class="input-group-text bg-white border-end-0 ps-3">
-                      <i class="bi bi-envelope-fill text-muted"></i>
-                    </span>
-                    <input type="email" name="email" class="form-control border-start-0 fs-6" placeholder="Email Address *" required>
-                  </div>
-                </div>
-
                 <!-- CTA Submit Button -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-4">
                   <button type="submit" class="btn btn-theme-cta text-white fw-bold px-3 w-100 rounded-3 text-uppercase fs-6 d-flex align-items-center justify-content-center gap-2 shadow-sm">
                     <i class="bi bi-download fs-5"></i>
                     <span>DOWNLOAD BROCHURE</span>
